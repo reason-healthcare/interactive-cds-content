@@ -18,11 +18,11 @@ InstanceOf: Encounter
 Usage: #example
 * status = #in-progress
 * class = $ActCode#AMB "ambulatory"
-* subject = Reference(Patient1)
+* subject = Reference(Patient2)
 * participant
   * type = $ParticipationType#PPRF "primary performer"
-  * individual = Reference(Practitioner1)
-* serviceProvider = Reference(Organization1)
+  * individual = Reference(Practitioner2)
+* serviceProvider = Reference(Organization2)
 
 Instance: MedicationRequest2
 InstanceOf: MedicationRequest
