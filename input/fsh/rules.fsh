@@ -9,7 +9,7 @@ RuleSet: DefinitionMetadata(id, type)
 
 RuleSet: ConformanceMetadata
 * ^meta.profile = $cpg-casefeaturedefinition
-* ^extension[$cpg-knowledgeCapability][+].valueCode = #sharable
+* ^extension[$cpg-knowledgeCapability][+].valueCode = #shareable
 * ^extension[$cpg-knowledgeCapability][+].valueCode = #computable
 * ^extension[$cpg-knowledgeCapability][+].valueCode = #publishable
 * ^extension[$cpg-knowledgeRepresentationLevel].valueCode = #structured

@@ -67,6 +67,7 @@ dependencies:
 parameters:
   path-binary: ./input/cql
   excludettl: true
+  suppressedWarningFile: ./input/ignoreWarnings.txt
 #   validation: [allow-any-extensions, no-broken-links]
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮

@@ -5,4 +5,4 @@ Usage: #definition
 * description = "Order hemogram plus platelet count labratory panel"
 * doNotPerform = false
 * kind = #ServiceRequest
-* productCodeableConcept = $LOINC#58410-2 "Complete blood count panel"
+* productCodeableConcept = $LOINC#58410-2 "CBC panel - Blood by Automated count"
