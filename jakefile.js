@@ -13,11 +13,11 @@ const codeSystemDir = path.resolve(
   path.join(__dirname, 'input', 'vocabulary', 'codesystem')
 )
 
-desc('(default task) runs build:publish')
-task('default', ['build:publish'], () => {})
+desc('(default task) runs build:publish and simplifier')
+task('default', ['build:publish', 'simplifier'], () => {})
 
-desc('Builds the and uploads to Simplifier project')
-task('simplifier', ['build:publish'], () => run('./bin/simplifier-sync ./output'))
+desc('Uploads to Simplifier project')
+task('simplifier', () => run('./bin/simplifier-sync ./output'))
 
 namespace('build', () => {
   desc('Run sushi')
