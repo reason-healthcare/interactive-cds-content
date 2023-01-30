@@ -17,7 +17,7 @@ desc('(default task) runs build:publish')
 task('default', ['build:publish'], () => {})
 
 desc('Builds the and uploads to Simplifier project')
-task('simplifier', ['build:publish'], () => run('./bin/simplifier-sync'))
+task('simplifier', ['build:publish'], () => run('./bin/simplifier-sync ./output'))
 
 namespace('build', () => {
   desc('Run sushi')
