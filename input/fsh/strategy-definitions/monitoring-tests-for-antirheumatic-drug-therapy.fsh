@@ -2,6 +2,12 @@ Instance: MonitoringTestsForAntirheumaticDrugTherapy
 InstanceOf: $cpg-strategydefinition
 Usage: #definition
 * insert DefinitionMetadata(MonitoringTestsForAntirheumaticDrugTherapy, PlanDefinition)
+* useContext[+]
+  * code = #venue
+  * valueCodeableConcept = $RoleCode#PC "Primary care clinic"
+* useContext[+]
+  * code = #venue
+  * valueCodeableConcept = $RoleCode#OF "Outpatient Facility"
 * description = """
 * As the individual efficacy and tolerability of drug therapy cannot be predicted, patients should be closely monitored by laboratory tests (see safety monitoring tables 1 and 2) and clinically.
 * Recommendations concerning safety monitoring of antirheumatic medication vary to some extent in different areas. Consult local recommendations.

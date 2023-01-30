@@ -6,10 +6,17 @@ Alias: $ATC = http://www.whocc.no/atc
 Alias: $ICD10 = http://hl7.org/fhir/sid/icd-10
 Alias: $RXNORM = http://www.nlm.nih.gov/research/umls/rxnorm
 
-
 Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
 Alias: $ParticipationType =  http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode 
+Alias: $RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias: $evidence-quality = http://terminology.hl7.org/CodeSystem/evidence-quality
+Alias: $recommendation-strength = http://terminology.hl7.org/CodeSystem/recommendation-strength 
+
+// Related core extensions
+Alias: $cqf-qualityOfEvidence = http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence
+Alias: $cqf-strengthOfRecommendation = http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation
+
 
 // CPG Extensions
 Alias: $cpg-collectWith = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-collectWith
@@ -18,6 +25,7 @@ Alias: $cpg-assertionExpression = http://hl7.org/fhir/uv/cpg/StructureDefinition
 Alias: $cpg-featureExpression = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-featureExpression
 Alias: $cpg-knowledgeCapability = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability
 Alias: $cpg-knowledgeRepresentationLevel = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel
+Alias: $cpg-directionOfRecommendation = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-directionOfRecommendation
 
 // CPG Profiles
 Alias: $cpg-shareableactivitydefinition = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareableactivitydefinition
@@ -49,3 +57,4 @@ Alias: $cpg-reportflagactivity = http://hl7.org/fhir/uv/cpg/StructureDefinition/
 
 // CPG Codesystems
 Alias: $cpg-common-process = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process
+Alias: $cpg-recommendation-direction = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-recommendation-direction
