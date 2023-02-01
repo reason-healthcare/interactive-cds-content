@@ -19,23 +19,25 @@ task('default', ['build:publish', 'simplifier'], () => {})
 desc('Uploads to Simplifier project')
 task('simplifier', () => run('./bin/simplifier-sync ./output'))
 
+task('clear', () => {
+  // Setup target dirs
+  run(
+    `rm -rf ${testDir} && rm -rf ${valueSetDir} && rm -rf ${codeSystemDir} && mkdir -p ${valueSetDir} && mkdir -p ${codeSystemDir}`
+  )
+})
+
 namespace('build', () => {
   desc('Run sushi')
-  task('sushi', () => run('sushi .'))
+  task('sushi', ['clear'], () => run('sushi .'))
 
   desc('Run IG Publisher')
-  task('publish', () => run('./_genonce.sh'))
+  task('publish', ['clear'], () => run('./_genonce.sh'))
 })
 
 namespace('test', () => {
   // If there is a patient in the bundle, and the bundle has a meta.tag 'test'
   desc('Prepare for VSCode plugin, see README.md')
-  task('prepare', ['build:sushi'], () => {
-    // Setup target dirs
-    run(
-      `rm -rf ${testDir} && mkdir -p ${valueSetDir} && mkdir -p ${codeSystemDir}`
-    )
-
+  task('prepare', ['clear', 'build:sushi'], () => {
     // Vocabulary
     const valueSets = generatedResourcesByResourceType('ValueSet')
     Object.keys(valueSets).forEach((file) => {
