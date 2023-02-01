@@ -18,9 +18,12 @@ Usage: #definition
     * kind = #applicability
     * expression
       * language = #text/cql-identifier
-      * expression = "Should order CBC if on antirheumatic drug therapy"
+      * expression = "Should order CBC if on Methotrexate therapy and missing test"
   * input[+]
     * type = #Observation
     * profile = Canonical(ActiveMethotrexateFeature)
+  * input[+]
+    * type = #Observation
+    * profile = Canonical(LastCbcPanelReportDateFeature)
   * code = $cpg-common-process#diagnostic-testing
   * definitionCanonical = Canonical(OrderCBCActivity)
