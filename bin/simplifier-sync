@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+SIMPLIFIER_EMAIL=brian@vermonster.com
+SIMPLIFIER_PROJECT=cpg-training-bkaney
+SIMPLIFIER_PASSWORD=HnvHicP7
 
 if [[ -z "$SIMPLIFIER_EMAIL" ]]; then
    echo Must set SIMPLIFIER_EMAIL
@@ -21,6 +24,7 @@ echo
 echo Converting $outputdir/package.r4.tgz to $outputdir/package.zip
 echo
 tar xzf $outputdir/package.r4.tgz && zip $outputdir/package.zip $(tar tf $outputdir/package.r4.tgz)
+rm -rf package
 
 echo
 token=$( curl -X POST https://api.simplifier.net/token \

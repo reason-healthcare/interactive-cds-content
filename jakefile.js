@@ -30,6 +30,7 @@ namespace('build', () => {
 namespace('test', () => {
   desc('Clean test -related directories')
   task('clear', () => {
+    console.log("Clearning out tests...")
     run(
       `rm -rf ${testDir} && rm -rf ${valueSetDir} && rm -rf ${codeSystemDir} ` +
         `&& mkdir -p ${valueSetDir} && mkdir -p ${codeSystemDir}`

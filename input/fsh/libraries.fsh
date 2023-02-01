@@ -30,6 +30,14 @@ Usage: #definition
 * type = $library-type#logic-library
 * content.id = "ig-loader-ActiveSulfasalazineFeatureLogic.cql"
 
+Instance: LastCbcPanelReportDateFeatureLogic
+InstanceOf: $cpg-executablelibrary
+Usage: #definition
+* insert DefinitionMetadata(LastCbcPanelReportDateFeatureLogic, Library)
+* description = "Case Feature Definition Logic for CBC Panel Report Date"
+* type = $library-type#logic-library
+* content.id = "ig-loader-LastCbcPanelReportDateFeatureLogic.cql"
+
 Instance: ApplicabilityLogic
 InstanceOf: $cpg-executablelibrary
 Usage: #definition
