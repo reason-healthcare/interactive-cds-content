@@ -9,8 +9,8 @@ Usage: #definition
   * citation = "Criswell LA, Saag KG, Sems KM et al. Moderate-term, low-dose corticosteroids for rheumatoid arthritis. Cochrane Database Syst Rev 2000;(2):CD001158 PubMed."
   * url = "https://pubmed.ncbi.nlm.nih.gov/10796420"
 * action
-  * title = "Order monitoring tests for antirheumatic drug therapy."
-  * description = "Order monitoring tests for antirheumatic drug therapy."
+  * title = "Order monitoring tests for antirheumatic drug therapy (Sulfasalazine)."
+  * description = "Order monitoring tests for antirheumatic drug therapy (Sulfasalazine)."
   * extension[$cqf-qualityOfEvidence].valueCodeableConcept = $evidence-quality#high
   * extension[$cqf-strengthOfRecommendation].valueCodeableConcept = $recommendation-strength#strong
   * extension[$cpg-directionOfRecommendation].valueCodeableConcept = $cpg-recommendation-direction#for
