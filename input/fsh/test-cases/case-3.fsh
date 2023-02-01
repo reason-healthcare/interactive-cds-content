@@ -1,65 +1,3 @@
-Instance: BundleCase3
-InstanceOf: Bundle
-Usage: #example
-* meta.tag.code = #test
-* type = #transaction
-* entry[+].fullUrl = "http://example.org/Patient/Patient3"
-* entry[=].request.method = #PUT
-* entry[=].request.url = "Patient/Patient3"
-* entry[=].resource = Patient3
-* entry[+].fullUrl = "http://example.org/Practitioner/Practitioner3"
-* entry[=].request.method = #PUT
-* entry[=].request.url = "Practitioner/Practitioner3"
-* entry[=].resource = Practitioner3
-* entry[+].fullUrl = "http://example.org/Organization/Organization3"
-* entry[=].request.method = #PUT
-* entry[=].request.url = "Organization/Organization3"
-* entry[=].resource = Organization3
-* entry[+].fullUrl = "http://example.org/Encounter/Encounter3"
-* entry[=].request.method = #PUT
-* entry[=].request.url = "Encounter/Encounter3"
-* entry[=].resource = Encounter3
-* entry[+].fullUrl = "http://example.org/MedicationRequest/MedicationRequest3"
-* entry[=].request.method = #PUT
-* entry[=].request.url = "MedicationRequest/MedicationRequest3"
-* entry[=].resource = MedicationRequest3
-* entry[+].fullUrl = "https://example.com/base/DiagnosticReport/101"
-* entry[=].resource = Instance-for-BundleCase3-1
-* entry[+].fullUrl = "https://example.com/base/Observation/r1"
-* entry[=].resource = r1
-* entry[+].fullUrl = "https://example.com/base/Observation/r2"
-* entry[=].resource = r2
-* entry[+].fullUrl = "https://example.com/base/Observation/r3"
-* entry[=].resource = r3
-* entry[+].fullUrl = "https://example.com/base/Observation/r4"
-* entry[=].resource = r4
-* entry[+].fullUrl = "https://example.com/base/Observation/r5"
-* entry[=].resource = r5
-* entry[+].fullUrl = "https://example.com/base/Observation/r6"
-* entry[=].resource = r6
-* entry[+].fullUrl = "https://example.com/base/Observation/r7"
-* entry[=].resource = r7
-* entry[+].fullUrl = "https://example.com/base/Observation/r8"
-* entry[=].resource = r8
-* entry[+].fullUrl = "https://example.com/base/Observation/r9"
-* entry[=].resource = r9
-* entry[+].fullUrl = "https://example.com/base/Observation/r10"
-* entry[=].resource = r10
-* entry[+].fullUrl = "https://example.com/base/Observation/r11"
-* entry[=].resource = r11
-* entry[+].fullUrl = "https://example.com/base/Observation/r12"
-* entry[=].resource = r12
-* entry[+].fullUrl = "https://example.com/base/Observation/r13"
-* entry[=].resource = r13
-* entry[+].fullUrl = "https://example.com/base/Observation/r14"
-* entry[=].resource = r14
-* entry[+].fullUrl = "https://example.com/base/Observation/r15"
-* entry[=].resource = r15
-* entry[+].fullUrl = "https://example.com/base/Observation/r16"
-* entry[=].resource = r16
-* entry[+].fullUrl = "https://example.com/base/Observation/r17"
-* entry[=].resource = r17
-
 Instance: Patient3
 InstanceOf: Patient
 Usage: #example
@@ -327,3 +265,65 @@ Usage: #example
 * performer = Reference(Organization3)
 * valueQuantity = 0.92 '10*9/L' "x10*9/L"
 * referenceRange.high = 0.21 '10*9/L' "x10*9/L"
+
+Instance: BundleCase3
+InstanceOf: Bundle
+Usage: #example
+* meta.tag.code = #test
+* type = #transaction
+* entry[+].fullUrl = "http://example.org/Patient/Patient3"
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Patient/Patient3"
+* entry[=].resource = Patient3
+* entry[+].fullUrl = "http://example.org/Practitioner/Practitioner3"
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Practitioner/Practitioner3"
+* entry[=].resource = Practitioner3
+* entry[+].fullUrl = "http://example.org/Organization/Organization3"
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Organization/Organization3"
+* entry[=].resource = Organization3
+* entry[+].fullUrl = "http://example.org/Encounter/Encounter3"
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Encounter/Encounter3"
+* entry[=].resource = Encounter3
+* entry[+].fullUrl = "http://example.org/MedicationRequest/MedicationRequest3"
+* entry[=].request.method = #PUT
+* entry[=].request.url = "MedicationRequest/MedicationRequest3"
+* entry[=].resource = MedicationRequest3
+* entry[+].fullUrl = "https://example.com/base/DiagnosticReport/101"
+* entry[=].resource = Instance-for-BundleCase3-1
+* entry[+].fullUrl = "https://example.com/base/Observation/r1"
+* entry[=].resource = r1
+* entry[+].fullUrl = "https://example.com/base/Observation/r2"
+* entry[=].resource = r2
+* entry[+].fullUrl = "https://example.com/base/Observation/r3"
+* entry[=].resource = r3
+* entry[+].fullUrl = "https://example.com/base/Observation/r4"
+* entry[=].resource = r4
+* entry[+].fullUrl = "https://example.com/base/Observation/r5"
+* entry[=].resource = r5
+* entry[+].fullUrl = "https://example.com/base/Observation/r6"
+* entry[=].resource = r6
+* entry[+].fullUrl = "https://example.com/base/Observation/r7"
+* entry[=].resource = r7
+* entry[+].fullUrl = "https://example.com/base/Observation/r8"
+* entry[=].resource = r8
+* entry[+].fullUrl = "https://example.com/base/Observation/r9"
+* entry[=].resource = r9
+* entry[+].fullUrl = "https://example.com/base/Observation/r10"
+* entry[=].resource = r10
+* entry[+].fullUrl = "https://example.com/base/Observation/r11"
+* entry[=].resource = r11
+* entry[+].fullUrl = "https://example.com/base/Observation/r12"
+* entry[=].resource = r12
+* entry[+].fullUrl = "https://example.com/base/Observation/r13"
+* entry[=].resource = r13
+* entry[+].fullUrl = "https://example.com/base/Observation/r14"
+* entry[=].resource = r14
+* entry[+].fullUrl = "https://example.com/base/Observation/r15"
+* entry[=].resource = r15
+* entry[+].fullUrl = "https://example.com/base/Observation/r16"
+* entry[=].resource = r16
+* entry[+].fullUrl = "https://example.com/base/Observation/r17"
+* entry[=].resource = r17
