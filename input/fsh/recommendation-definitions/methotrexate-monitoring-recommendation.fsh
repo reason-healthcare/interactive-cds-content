@@ -3,7 +3,7 @@ InstanceOf: $cpg-recommendationdefinition
 Usage: #definition
 * insert DefinitionMetadata(MethotrexateMonitoringRecommendation, PlanDefinition)
 * description = "Monitoring tests for antirheumatic drug therapy for Methotrexate."
-* library = Canonical(ApplicabilityLogic)
+* library[+] = Canonical(ApplicabilityLogic)
 * relatedArtifact[+]
   * type = #citation
   * citation = "Criswell LA, Saag KG, Sems KM et al. Moderate-term, low-dose corticosteroids for rheumatoid arthritis. Cochrane Database Syst Rev 2000;(2):CD001158 PubMed."
@@ -19,5 +19,8 @@ Usage: #definition
     * expression
       * language = #text/cql-identifier
       * expression = "Should order CBC if on antirheumatic drug therapy"
+  * input[+]
+    * type = #Observation
+    * profile = Canonical(ActiveMethotrexateFeature)
   * code = $cpg-common-process#diagnostic-testing
   * definitionCanonical = Canonical(OrderCBCActivity)
