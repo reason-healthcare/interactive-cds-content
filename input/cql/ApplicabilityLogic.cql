@@ -4,11 +4,13 @@ using FHIR version '4.0.1'
 
 include FHIRHelpers version '0.1.0'
 include ActiveMethotrexateFeatureLogic version '0.1.0' called ActiveMethotrexateFeature
+include ActiveSulfasalazineFeatureLogic version '0.1.0' called ActiveSulfasalazineFeature
 
 context Patient
 
 define "On antirheumatic drug therapy":
-  ActiveMethotrexateFeature."On Methotrexate".value as boolean
+  ActiveMethotrexateFeature."On Methotrexate".value as boolean or
+  ActiveSulfasalazineFeature."On Sulfasalazine".value as boolean
 
 define "Missing last CBC result":
   true

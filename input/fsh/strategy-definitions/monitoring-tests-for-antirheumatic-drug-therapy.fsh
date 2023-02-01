@@ -52,3 +52,8 @@ Tests should also be performed 2-3 weeks after any increase in drug dose. ESR an
     * description = "Recommend testing due to Methotrexate"
     * code = $cpg-common-process#guideline-based-care
     * definitionCanonical = Canonical(MethotrexateMonitoringRecommendation)
+  * action[+]
+    * title = "Recommend testing due to Sulfasalazine"
+    * description = "Recommend testing due to Sulfasalazine"
+    * code = $cpg-common-process#guideline-based-care
+    * definitionCanonical = Canonical(SulfasalazineMonitoringRecommendation)

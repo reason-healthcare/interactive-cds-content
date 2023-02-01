@@ -1,0 +1,124 @@
+{
+  "resourceType": "Bundle",
+  "id": "BundleCase3",
+  "meta": {
+    "tag": [
+      {
+        "code": "test"
+      }
+    ]
+  },
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "http://example.org/Patient/Patient3",
+      "request": {
+        "method": "PUT",
+        "url": "Patient/Patient3"
+      },
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient3",
+        "name": [
+          {
+            "family": "patient3"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Practitioner/Practitioner3",
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/Practitioner3"
+      },
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Practitioner3",
+        "name": [
+          {
+            "family": "practitioner3"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Organization/Organization3",
+      "request": {
+        "method": "PUT",
+        "url": "Organization/Organization3"
+      },
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Organization3",
+        "name": "organization3"
+      }
+    },
+    {
+      "fullUrl": "http://example.org/Encounter/Encounter3",
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/Encounter3"
+      },
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Encounter3",
+        "status": "in-progress",
+        "class": {
+          "code": "AMB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/Patient3"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "code": "PPRF",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/Practitioner3"
+            }
+          }
+        ],
+        "serviceProvider": {
+          "reference": "Organization/Organization3"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://example.org/MedicationRequest/MedicationRequest3",
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/MedicationRequest3"
+      },
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "MedicationRequest3",
+        "status": "active",
+        "intent": "order",
+        "subject": {
+          "reference": "Patient/Patient3"
+        },
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "code": "373988",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "display": "Sulfasalazine Enema"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

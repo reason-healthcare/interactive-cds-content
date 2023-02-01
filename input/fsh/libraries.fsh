@@ -22,6 +22,13 @@ Usage: #definition
 * type = $library-type#logic-library
 * content.id = "ig-loader-ActiveMethotrexateFeatureLogic.cql"
 
+Instance: ActiveSulfasalazineFeatureLogic
+InstanceOf: $cpg-executablelibrary
+Usage: #definition
+* insert DefinitionMetadata(ActiveSulfasalazineFeatureLogic, Library)
+* description = "Case Feature Definition Logic for Active Sulfasalazine"
+* type = $library-type#logic-library
+* content.id = "ig-loader-ActiveSulfasalazineFeatureLogic.cql"
 
 Instance: ApplicabilityLogic
 InstanceOf: $cpg-executablelibrary

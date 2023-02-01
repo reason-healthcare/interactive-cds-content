@@ -14,7 +14,7 @@ const codeSystemDir = path.resolve(
 )
 
 desc('(default task) runs build:publish and simplifier')
-task('default', ['build:publish', 'simplifier'], () => {})
+task('default', ['build:publish', 'simplifier'], () => { })
 
 desc('Uploads to Simplifier project')
 task('simplifier', () => run('./bin/simplifier-sync ./output'))
@@ -48,6 +48,9 @@ namespace('test', () => {
     run(
       `cp -f ${resourcePath}/ValueSet* ${valueSetDir} 2>&1 >/dev/null || true`
     )
+    run(
+      `cp -f ${generatedResourcePath}/ValueSet* ${valueSetDir} 2>&1 >/dev/null || true`
+    )
 
     const codeSystems = generatedResourcesByResourceType('CodeSystem')
     Object.keys(codeSystems).forEach((file) => {
@@ -60,6 +63,9 @@ namespace('test', () => {
     })
     run(
       `cp -f ${resourcePath}/CodeSystem* ${codeSystemDir} 2>&1 >/dev/null || true`
+    )
+    run(
+      `cp -f ${generatedResourcePath}/CodeSystem* ${codeSystemDir} 2>&1 >/dev/null || true`
     )
 
     // Tests
