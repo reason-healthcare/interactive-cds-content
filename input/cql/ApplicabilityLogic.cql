@@ -13,7 +13,8 @@ define "On antirheumatic drug therapy":
   ActiveSulfasalazineFeature."On Sulfasalazine".value as boolean
 
 define "Missing last CBC result":
-  true
+  [DiagnosticReport: "CBC Panel"] CBCReport
+  where CBCReport.status not in { 'final' }
 
 /**
  * @description
