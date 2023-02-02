@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-
-# You can type your actual values here...
-#SIMPLIFIER_EMAIL=<your-email>
-#SIMPLIFIER_PROJECT=<your-project>
-#SIMPLIFIER_PASSWORD=<your-password>
+SIMPLIFIER_EMAIL=brian@vermonster.com
+SIMPLIFIER_PROJECT=cpg-training-bkaney
+SIMPLIFIER_PASSWORD=HnvHicP7
 
 if [[ -z "$SIMPLIFIER_EMAIL" ]]; then
    echo Must set SIMPLIFIER_EMAIL

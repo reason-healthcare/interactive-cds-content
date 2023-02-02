@@ -41,12 +41,12 @@ namespace('test', () => {
   desc('Prepare for VSCode plugin, see README.md')
   task('prepare', ['test:clear', 'build:sushi'], () => {
     // Vocabulary
-    const valueSets = generatedResourcesByResourceType('ValueSet')
-    Object.keys(valueSets).forEach((file) => {
-      run(
-        `cp -f ${path.join(generatedResourcePath, file)} ${(valueSetDir, file)}`
-      )
-    })
+    // const valueSets = generatedResourcesByResourceType('ValueSet')
+    // Object.keys(valueSets).forEach((file) => {
+    //   run(
+    //     `cp -f ${path.join(generatedResourcePath, file)} ${(valueSetDir, file)}`
+    //   )
+    // })
     run(
       `cp -f ${resourcePath}/ValueSet* ${valueSetDir} 2>&1 >/dev/null || true`
     )
@@ -54,15 +54,15 @@ namespace('test', () => {
       `cp -f ${generatedResourcePath}/ValueSet* ${valueSetDir} 2>&1 >/dev/null || true`
     )
 
-    const codeSystems = generatedResourcesByResourceType('CodeSystem')
-    Object.keys(codeSystems).forEach((file) => {
-      run(
-        `echo cp -f ${path.join(generatedResourcePath, file)} ${path.join(
-          codeSystemDir,
-          file
-        )}`
-      )
-    })
+    // const codeSystems = generatedResourcesByResourceType('CodeSystem')
+    // Object.keys(codeSystems).forEach((file) => {
+    //   run(
+    //     `echo cp -f ${path.join(generatedResourcePath, file)} ${path.join(
+    //       codeSystemDir,
+    //       file
+    //     )}`
+    //   )
+    // })
     run(
       `cp -f ${resourcePath}/CodeSystem* ${codeSystemDir} 2>&1 >/dev/null || true`
     )
