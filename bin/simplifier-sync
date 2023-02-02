@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-SIMPLIFIER_EMAIL=brian@vermonster.com
-SIMPLIFIER_PROJECT=cpg-training-bkaney
-SIMPLIFIER_PASSWORD=HnvHicP7
+
+# Change this if you want...
+# SIMPLIFIER_EMAIL=<email>
+# SIMPLIFIER_PROJECT=<project>
+# SIMPLIFIER_PASSWORD=<pass>
 
 if [[ -z "$SIMPLIFIER_EMAIL" ]]; then
    echo Must set SIMPLIFIER_EMAIL
