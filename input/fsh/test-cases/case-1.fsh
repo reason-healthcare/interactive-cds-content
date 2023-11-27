@@ -13,6 +13,12 @@ InstanceOf: Organization
 Usage: #example
 * name = "organization1"
 
+Instance: Condition1
+InstanceOf: Condition
+Usage: #example
+* subject = Reference(Patient1)
+* recordedDate = "2023-01-01"
+
 Instance: Encounter1
 InstanceOf: Encounter
 Usage: #example
@@ -42,3 +48,6 @@ Usage: #example
 * entry[+]
   * insert BundleEntryPut(Encounter/Encounter1)
   * resource = Encounter1
+* entry[+]
+  * insert BundleEntryPut(Condition/Condition1)
+  * resource = Condition1

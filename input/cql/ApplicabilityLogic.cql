@@ -22,6 +22,14 @@ define "On Sulfasalazine therapy":
   else
     false
 
+define "Condition":
+  First([Condition] M
+    sort by recordedDate
+  )
+
+define "Timing of Service":
+  "Condition".recordedDate.value
+
 /**
  * @description
  * This is true if: there are no results, or the results are older than 6 months

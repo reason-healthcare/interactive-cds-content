@@ -6,6 +6,14 @@ Usage: #definition
 * type = $library-type#logic-library
 * content.id = "ig-loader-FHIRHelpers.cql"
 
+Instance: FHIRCommon
+InstanceOf: $cpg-executablelibrary
+Usage: #definition
+* insert DefinitionMetadata(FHIRCommon, Library)
+* description = "FHIR Helpers Library"
+* type = $library-type#logic-library
+* content.id = "ig-loader-FHIRCommon.cql"
+
 Instance: Common
 InstanceOf: $cpg-executablelibrary
 Usage: #definition
