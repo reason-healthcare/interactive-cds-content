@@ -19,8 +19,9 @@ InstanceOf: Observation
 Usage: #example
 * status = #final
 * code = http://example.org/CodeSystem/CaseFeatureCodes#on-medication-sulfasalazine
-* subject = Reference(Patient4)
+* subject = Reference(Patient7)
 * performer = Reference(OrganizationShared)
+* valueBoolean = true
 
 Instance: MedicationRequest7
 InstanceOf: MedicationRequest
@@ -34,7 +35,7 @@ InstanceOf: Observation
 Usage: #example
 * status = #final
 * code = http://example.org/CodeSystem/CaseFeatureCodes#last-cbc-panel-report-date
-* subject = Reference(Patient4)
+* subject = Reference(Patient7)
 * performer = Reference(OrganizationShared)
 * valueDateTime = "2023-05-06T10:10:00+11:00"
 

@@ -19,7 +19,7 @@ InstanceOf: MedicationRequest
 * status = #active
 * intent = #order
 * subject = Reference(Patient8)
-* medicationCodeableConcept = $RXNORM#373988 "Sulfasalazine Enema"
+* medicationCodeableConcept = $ATC#A07EC01 "Sulfasalazine"
 
 Instance: DiagnosticReport8
 InstanceOf: DiagnosticReport

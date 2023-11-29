@@ -17,7 +17,7 @@ Usage: #inline
   * text = "Measurements and simple assertions"
   * type = #group
   * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeatureQuestionnaire2, Observation.valueString)
+    * insert QuestionnaireItem(ActiveSulfasalazineFeatureQuestionnaire2, Observation.valueBoolean)
     * text = "Actual result"
     * type = #boolean
     * initial.valueBoolean = true //create some test bundles that return true / false
@@ -46,7 +46,7 @@ Usage: #inline
   * text = "Measurements and simple assertions"
   * type = #group
   * item[+]
-    * insert QuestionnaireItem(LastCbcPanelReportDateFeatureQuestionnaire2, Observation.valueString)
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeatureQuestionnaire2, Observation.valueDateTime)
     * text = "Actual result"
     * type = #dateTime
     * initial.valueDateTime = "2021-01-04T11:45:33+11:00" //create some test bundles that return various dates
