@@ -20,7 +20,7 @@ Usage: #inline
     * insert QuestionnaireItem(ActiveSulfasalazineFeatureQuestionnaire2, Observation.valueBoolean)
     * text = "Actual result"
     * type = #boolean
-    * initial.valueBoolean = true //create some test bundles that return true / false
+    * initial.valueBoolean = true
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeatureQuestionnaire2, Observation.status)
     * text = "registered | preliminary | final | amended +"

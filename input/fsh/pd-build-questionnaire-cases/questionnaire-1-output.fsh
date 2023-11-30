@@ -49,7 +49,7 @@ Usage: #inline
     * insert QuestionnaireItem(LastCbcPanelReportDateFeatureQuestionnaire1, Observation.valueDateTime)
     * text = "Actual result"
     * type = #dateTime
-    * initial.valueDateTime = "2023-05-06T10:10:00+11:00" //create some test bundles that return various dates
+    * initial.valueDateTime = "2023-05-06T10:10:00+11:00"
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeatureQuestionnaire1, Observation.status)
     * text = "registered | preliminary | final | amended +"
