@@ -16,15 +16,6 @@ context Patient
 define "Active Sulfasalazine Orders":
   [MedicationRequest: "Sulfasalazine Medications"] SulfasalazineMedication
     where SulfasalazineMedication.status in { 'active' }
-  // [MedicationRequest] Medications
-  //   where Medications.medication in "Sulfasalazine Medications" and Medications.status in { 'active'}
-  // No resulst are returned using this test case when evaluating "Active Sulfasalazine Orders"
-    // Instance: MedicationRequest8
-    // InstanceOf: MedicationRequest
-    // * status = #active
-    // * intent = #order
-    // * subject = Reference(Patient8)
-    // * medicationCodeableConcept = $ATC#A07EC01 "Sulfasalazine"
 
 /**
  * @description

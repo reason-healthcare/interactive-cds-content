@@ -15,3 +15,7 @@ RuleSet: QuestionnaireBundleEntry(id)
 * entry[+]
   * fullUrl = "http://questionnaire-processor/Questionnaire/{id}"
   * resource = {id}
+
+RuleSet: QuestionnaireResponseMetaData(questionnaireId)
+* questionnaire = Canonical({questionnaireId})
+* status = #completed

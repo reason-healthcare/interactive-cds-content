@@ -68,6 +68,7 @@ Instance: BundleCase8
 InstanceOf: Bundle
 Description: "Test case for inferred case features"
 Usage: #example
+* meta.tag = #test
 * type = #collection
 * insert DataBundleEntry(Patient, Patient8)
 * insert DataBundleEntry(Practitioner, PractitionerShared)

@@ -1,15 +1,7 @@
-Instance: QuestionnaireBundle2
-InstanceOf: Bundle
-Usage: #example
-Description: "Test results for inferred case features"
-* type = #collection
-* insert QuestionnaireBundleEntry(ActiveSulfasalazineFeatureQuestionnaire2)
-* insert QuestionnaireBundleEntry(LastCbcPanelReportDateFeatureQuestionnaire2)
-
-Instance: ActiveSulfasalazineFeatureQuestionnaire2
+Instance: QuestionnaireAssembled2
 InstanceOf: Questionnaire
-Usage: #inline
-* insert QuestionnaireMetaData(ActiveSulfasalazineFeatureQuestionnaire2)
+Usage: #example
+* insert QuestionnaireMetaData(QuestionnaireAssembled2)
 * item[+]
   * insert QuestionnaireItem(ActiveSulfasalazineFeatureQuestionnaire2, Observation)
   * text = "Measurements and simple assertions"
@@ -34,11 +26,6 @@ Usage: #inline
     * required = true
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#on-medication-sulfasalazine
-
-Instance: LastCbcPanelReportDateFeatureQuestionnaire2
-InstanceOf: Questionnaire
-Usage: #inline
-* insert QuestionnaireMetaData(LastCbcPanelReportDateFeatureQuestionnaire2)
 * item[+]
   * insert QuestionnaireItem(LastCbcPanelReportDateFeatureQuestionnaire2, Observation)
   * text = "Measurements and simple assertions"

@@ -25,10 +25,10 @@ Usage: #example
 
 Instance: MedicationRequest7
 InstanceOf: MedicationRequest
-* status = #ended
+* status = #active
 * intent = #order
 * subject = Reference(Patient7)
-* medicationCodeableConcept = $RXNORM#373988 "Sulfasalazine Enema"
+* medicationCodeableConcept = $ATC#A07EC01 "Sulfasalazine"
 
 Instance: CBCObservation7
 InstanceOf: Observation
@@ -87,6 +87,7 @@ InstanceOf: Bundle
 Description: "Test case for asserted case features"
 Usage: #example
 * type = #collection
+* meta.tag = #test
 * insert DataBundleEntry(Patient, Patient7)
 * insert DataBundleEntry(Practitioner, PractitionerShared)
 * insert DataBundleEntry(Organization, OrganizationShared)
@@ -95,3 +96,4 @@ Usage: #example
 * insert DataBundleEntry(Observation, CBCObservation7)
 * insert DataBundleEntry(Observation, r7-1)
 * insert DataBundleEntry(Observation, r7-2)
+* insert DataBundleEntry(MedicationRequest, MedicationRequest7)
