@@ -3,50 +3,79 @@ InstanceOf: Questionnaire
 Usage: #example
 * insert QuestionnaireMetaData(QuestionnaireAssembled1)
 * item[+]
-  * insert QuestionnaireItem(ActiveSulfasalazineFeatureQuestionnaire1, Observation)
+  * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation)
   * text = "Measurements and simple assertions"
   * type = #group
   * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeatureQuestionnaire1, Observation.valueBoolean)
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
     * text = "Actual result"
     * type = #boolean
     * initial.valueBoolean = true
   * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeatureQuestionnaire1, Observation.status)
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.status)
+    * insert HiddenExtension
     * text = "registered | preliminary | final | amended +"
     * required = true
     * type = #choice
     * answerValueSet = Canonical(observation-status)
   * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeatureQuestionnaire1, Observation.code)
-      * extension
-        * url = Canonical(questionnaire-hidden)
-        * valueBoolean = true
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.code)
+    * insert HiddenExtension
     * text = "Type of observation (code / type)"
     * required = true
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#on-medication-sulfasalazine
+  * item[+]
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.subject)
+    * insert HiddenExtension
+    * text = "Who and/or what the observation is about"
+    * type = #reference
+    * initial.valueReference = Reference(Patient/Patient7)
+  * item[+]
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.performer)
+    * text = "Who is responsible for the observation"
+    * insert HiddenExtension
+    * repeats = true
+    * type = #reference
+    * initial.valueReference = Reference(Organization/OrganizationShared)
 * item[+]
-  * insert QuestionnaireItem(LastCbcPanelReportDateFeatureQuestionnaire1, Observation)
+  * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
   * text = "Measurements and simple assertions"
   * type = #group
   * item[+]
-    * insert QuestionnaireItem(LastCbcPanelReportDateFeatureQuestionnaire1, Observation.valueDateTime)
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
     * type = #dateTime
     * initial.valueDateTime = "2023-05-06T10:10:00+11:00"
   * item[+]
-    * insert QuestionnaireItem(LastCbcPanelReportDateFeatureQuestionnaire1, Observation.status)
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.status)
+    * insert HiddenExtension
     * text = "registered | preliminary | final | amended +"
     * required = true
     * type = #choice
     * answerValueSet = Canonical(observation-status)
   * item[+]
-    * insert QuestionnaireItem(LastCbcPanelReportDateFeatureQuestionnaire1, Observation.code)
-      * extension
-        * url = Canonical(questionnaire-hidden)
-        * valueBoolean = true
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.code)
+    * insert HiddenExtension
     * text = "Type of observation (code / type)"
     * required = true
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#last-cbc-panel-report-date
+  * item
+  * linkId = "ed3020dd-7716-4775-ba06-d38da5ddb9ea"
+  * definition = "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation"
+  * text = "Measurements and simple assertions"
+  * type = #group
+  * item[+]
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.subject)
+    * insert HiddenExtension
+    * text = "Who and/or what the observation is about"
+    * type = #reference
+    * initial.valueReference = Reference(Patient/Patient7)
+  * item[+]
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.performer)
+    * insert HiddenExtension
+    * text = "Who is responsible for the observation"
+    * repeats = true
+    * type = #reference
+    * initial.valueReference = Reference(Organization/OrganizationShared)

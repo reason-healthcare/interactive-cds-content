@@ -19,3 +19,8 @@ RuleSet: QuestionnaireBundleEntry(id)
 RuleSet: QuestionnaireResponseMetaData(questionnaireId)
 * questionnaire = Canonical({questionnaireId})
 * status = #completed
+
+RuleSet: HiddenExtension
+* extension[+]
+  * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
+  * valueBoolean = true
