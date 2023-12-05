@@ -27,7 +27,7 @@ Usage: #example
 * code = CaseFeatureCodes#on-medication-sulfasalazine
 * subject = Reference(Patient7)
 * performer = Reference(OrganizationShared)
-* valueBoolean = true
+* valueBoolean = false
 * effectiveDateTime = "2023-05-06T08:05:00+11:00"
 
 Instance: MedicationRequest7

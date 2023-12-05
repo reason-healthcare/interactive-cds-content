@@ -1,59 +1,45 @@
-Instance: Patient7
+Instance: Patient8
 InstanceOf: Patient
 Usage: #example
-* name.family = "patient7"
+* name.family = "patient8"
 
-Instance: Encounter7
+Instance: Encounter8
 InstanceOf: Encounter
 Usage: #example
 * status = #in-progress
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
-* subject = Reference(Patient7)
+* subject = Reference(Patient8)
 * participant
   * type = $ParticipationType#PPRF "primary performer"
   * individual = Reference(PractitionerShared)
 * serviceProvider = Reference(OrganizationShared)
 
-Instance: MedObservation7
+Instance: ActiveSulfasalazineFeatureObservation2
 InstanceOf: ActiveSulfasalazineFeature
 Usage: #example
-* extension[+]
-  * url = $cpg-instantiatesCaseFeature
-  * valueCanonical = Canonical(ActiveSulfasalazineFeature)
-* extension[+]
-  * url = $cpg-caseFeatureType
-  * valueCode : #asserted
+* derivedFrom = Reference(Questionnaire/QuestionnaireResponse2)
 * status = #final
 * code = CaseFeatureCodes#on-medication-sulfasalazine
-* subject = Reference(Patient7)
-* performer = Reference(OrganizationShared)
-* valueBoolean = true
-* effectiveDateTime = "2023-05-06T08:05:00+11:00"
+* subject = Reference(Patient/Patient8)
+* effectiveDateTime = "2023-12-01T16:03:47.218-05:00"
 
-Instance: MedicationRequest7
+Instance: LastCbcPanelReportDateFeatureObservation2
+InstanceOf: LastCbcPanelReportDateFeature
+Usage: #example
+* derivedFrom = Reference(Questionnaire/QuestionnaireResponse2)
+* status = #final
+* code = CaseFeatureCodes#last-cbc-panel-report-date
+* subject = Reference(Patient/Patient8)
+* effectiveDateTime = "2023-12-01T16:03:47.218-05:00"
+
+Instance: MedicationRequest8
 InstanceOf: MedicationRequest
 * status = #active
 * intent = #order
-* subject = Reference(Patient7)
+* subject = Reference(Patient8)
 * medicationCodeableConcept = $ATC#A07EC01 "Sulfasalazine"
 
-Instance: CBCObservation7
-InstanceOf: LastCbcPanelReportDateFeature
-Usage: #example
-* extension[+]
-  * url = $cpg-instantiatesCaseFeature
-  * valueCanonical = Canonical(LastCbcPanelReportDateFeature)
-* extension[+]
-  * url = $cpg-caseFeatureType
-  * valueCode : #asserted
-* status = #final
-* code = CaseFeatureCodes#last-cbc-panel-report-date
-* subject = Reference(Patient7)
-* performer = Reference(OrganizationShared)
-* valueDateTime = "2023-05-06T10:10:00+11:00"
-* effectiveDateTime = "2023-05-06T10:10:00+11:00"
-
-Instance: DiagnosticReport7
+Instance: DiagnosticReport8
 InstanceOf: DiagnosticReport
 Usage: #example
 * meta.tag = http://example.org/fhir/CodeSystem/workflow-codes#01 "Needs Review"
@@ -64,50 +50,51 @@ Usage: #example
 * code.coding[+] = http://loinc.org#58410-2 "Complete blood count (hemogram) panel - Blood by Automated count"
 * code.coding[+] = #CBC "MASTER FULL BLOOD COUNT"
 * code.text = "Complete Blood Count"
-* subject = Reference(Patient7)
-* encounter = Reference(Encounter7)
+* subject = Reference(Patient8)
+* encounter = Reference(Encounter8)
 * effectiveDateTime = "2021-01-04T08:30:00+11:00"
 * issued = "2021-01-04T11:45:33+11:00"
 * performer = Reference(OrganizationShared)
-* result[+] = Reference(r7-1)
-* result[+] = Reference(r7-2)
+* result[+] = Reference(r8-1)
+* result[+] = Reference(r8-2)
 
-Instance: r7-1
+Instance: r8-1
 InstanceOf: Observation
 Usage: #example
 * status = #final
 * code = http://loinc.org#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Haemoglobin"
-* subject = Reference(Patient7)
+* subject = Reference(Patient8)
 * performer = Reference(OrganizationShared)
 * valueQuantity = 176 'g/L' "g/L"
 * referenceRange.low = 135 'g/L' "g/L"
 * referenceRange.high = 180 'g/L' "g/L"
 
-Instance: r7-2
+Instance: r8-2
 InstanceOf: Observation
 Usage: #example
 * status = #final
 * code = http://loinc.org#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 * code.text = "Red Cell Count"
-* subject = Reference(Patient7)
+* subject = Reference(Patient8)
 * performer = Reference(OrganizationShared)
 * valueQuantity = 5.9 '10*12/L' "x10*12/L"
 * referenceRange.low = 4.2 '10*12/L' "x10*12/L"
 * referenceRange.high = 6 '10*12/L' "x10*12/L"
 
-Instance: BundleCase7
+Instance: BundleCase8
 InstanceOf: Bundle
-Description: "Test case for asserted case features"
+Description: "Test case for inferred case features"
 Usage: #example
-* type = #collection
 * meta.tag = #test
-* insert DataBundleEntry(Patient, Patient7)
+* type = #collection
+* insert DataBundleEntry(Patient, Patient8)
 * insert DataBundleEntry(Practitioner, PractitionerShared)
 * insert DataBundleEntry(Organization, OrganizationShared)
-* insert DataBundleEntry(Encounter, Encounter7)
-* insert DataBundleEntry(Observation, MedObservation7)
-* insert DataBundleEntry(Observation, CBCObservation7)
-* insert DataBundleEntry(Observation, r7-1)
-* insert DataBundleEntry(Observation, r7-2)
-* insert DataBundleEntry(MedicationRequest, MedicationRequest7)
+* insert DataBundleEntry(Encounter, Encounter8)
+* insert DataBundleentry(Observation, ActiveSulfasalazineFeatureObservation2)
+* insert DataBundleentry(Observation, LastCbcPanelReportDateFeatureObservation2)
+* insert DataBundleEntry(MedictionRequest, MedicationRequest8)
+* insert DataBundleEntry(DiagnosticReport, DiagnosticReport8)
+* insert DataBundleEntry(Observation, r8-1)
+* insert DataBundleEntry(Observation, r8-2)

@@ -33,19 +33,19 @@ Usage: #inline
     * required = true
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#on-medication-sulfasalazine
-  * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.subject)
-    * insert HiddenExtension
-    * text = "Who and/or what the observation is about"
-    * type = #reference
-    * initial.valueReference = Reference(Patient/Patient7)
-  * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.performer)
-    * text = "Who is responsible for the observation"
-    * insert HiddenExtension
-    * repeats = true
-    * type = #reference
-    * initial.valueReference = Reference(Organization/OrganizationShared)
+  // * item[+]
+  //   * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.subject)
+  //   * insert HiddenExtension
+  //   * text = "Who and/or what the observation is about"
+  //   * type = #reference
+  //   * initial.valueReference = Reference(Patient/Patient7)
+  // * item[+]
+  //   * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.performer)
+  //   * text = "Who is responsible for the observation"
+  //   * insert HiddenExtension
+  //   * repeats = true
+  //   * type = #reference
+  //   * initial.valueReference = Reference(Organization/OrganizationShared)
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.effectiveDateTime)
     * insert HiddenExtension
@@ -85,19 +85,19 @@ Usage: #inline
   * definition = "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation"
   * text = "Measurements and simple assertions"
   * type = #group
-  * item[+]
-    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.subject)
-    * insert HiddenExtension
-    * text = "Who and/or what the observation is about"
-    * type = #reference
-    * initial.valueReference = Reference(Patient/Patient7)
-  * item[+]
-    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.performer)
-    * insert HiddenExtension
-    * text = "Who is responsible for the observation"
-    * repeats = true
-    * type = #reference
-    * initial.valueReference = Reference(Organization/OrganizationShared)
+  // * item[+]
+  //   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.subject)
+  //   * insert HiddenExtension
+  //   * text = "Who and/or what the observation is about"
+  //   * type = #reference
+  //   * initial.valueReference = Reference(Patient/Patient7)
+  // * item[+]
+  //   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.performer)
+  //   * insert HiddenExtension
+  //   * text = "Who is responsible for the observation"
+  //   * repeats = true
+  //   * type = #reference
+  //   * initial.valueReference = Reference(Organization/OrganizationShared)
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.effectiveDateTime)
     * insert HiddenExtension

@@ -8,10 +8,10 @@ Alias: $RXNORM = http://www.nlm.nih.gov/research/umls/rxnorm
 
 Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
 Alias: $ParticipationType =  http://terminology.hl7.org/CodeSystem/v3-ParticipationType
-Alias: $ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode 
+Alias: $ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $evidence-quality = http://terminology.hl7.org/CodeSystem/evidence-quality
-Alias: $recommendation-strength = http://terminology.hl7.org/CodeSystem/recommendation-strength 
+Alias: $recommendation-strength = http://terminology.hl7.org/CodeSystem/recommendation-strength
 
 // Related core extensions
 Alias: $cqf-qualityOfEvidence = http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence
@@ -26,6 +26,8 @@ Alias: $cpg-featureExpression = http://hl7.org/fhir/uv/cpg/StructureDefinition/c
 Alias: $cpg-knowledgeCapability = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability
 Alias: $cpg-knowledgeRepresentationLevel = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel
 Alias: $cpg-directionOfRecommendation = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-directionOfRecommendation
+Alias: $cpg-instantiatesCaseFeature = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-instantiatesCaseFeature
+Alias: $cpg-caseFeatureType = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-caseFeatureType
 
 // CPG Profiles
 Alias: $cpg-shareableactivitydefinition = http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareableactivitydefinition

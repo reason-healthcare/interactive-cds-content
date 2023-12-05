@@ -4,6 +4,9 @@ Usage: #example
 * insert QuestionnaireMetaData(QuestionnaireAssembled2)
 * item[+]
   * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation)
+  * extension[sdc-questionnaire-observationExtract]
+    * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+    * valueBoolean = true
   * text = "Measurements and simple assertions"
   * type = #group
   * item[+]
@@ -33,6 +36,9 @@ Usage: #example
     * initial.valueDateTime = "2023-12-01T16:03:47.218-05:00" // Should reflect current date
 * item[+]
   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
+  * extension[sdc-questionnaire-observationExtract]
+    * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+    * valueBoolean = true
   * text = "Measurements and simple assertions"
   * type = #group
   * item[+]
