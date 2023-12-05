@@ -36,23 +36,23 @@ define "Timing of Service":
  */
 define "Missing last CBC result":
   if exists((LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value as dateTime).value) then
-    LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value as dateTime before (Today() - 6 months)
+    LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value as dateTime after (Today() - 6 months)
   else
     true
 
-define "DEBUG 1 (value)": 
+define "DEBUG 1 (value)":
   (LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value)
 
-define "DEBUG 2 (value.value)": 
+define "DEBUG 2 (value.value)":
   (LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value).value
 
-define "DEBUG 3 (exists)": 
+define "DEBUG 3 (exists)":
   exists(LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date")
 
-define "DEBUG 4 (exists value as dateTime)": 
+define "DEBUG 4 (exists value as dateTime)":
   exists(LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value as dateTime)
 
-define "DEBUG 5 (exists value as dateTime).value": 
+define "DEBUG 5 (exists value as dateTime).value":
   exists((LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value as dateTime).value)
 
 /**

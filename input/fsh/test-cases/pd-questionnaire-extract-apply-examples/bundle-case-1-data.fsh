@@ -22,7 +22,7 @@ Usage: #example
   * valueCanonical = Canonical(ActiveSulfasalazineFeature)
 * extension[+]
   * url = $cpg-caseFeatureType
-  * valueCode : #asserted
+  * valueCode = #asserted
 * status = #final
 * code = CaseFeatureCodes#on-medication-sulfasalazine
 * subject = Reference(Patient7)
@@ -45,7 +45,7 @@ Usage: #example
   * valueCanonical = Canonical(LastCbcPanelReportDateFeature)
 * extension[+]
   * url = $cpg-caseFeatureType
-  * valueCode : #asserted
+  * valueCode = #asserted
 * status = #final
 * code = CaseFeatureCodes#last-cbc-panel-report-date
 * subject = Reference(Patient7)

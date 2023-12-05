@@ -1,102 +1,15 @@
-Instance: Patient7
-InstanceOf: Patient
-Usage: #example
-* name.family = "patient7"
-
-Instance: Encounter7
-InstanceOf: Encounter
-Usage: #example
-* status = #in-progress
-* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
-* subject = Reference(Patient7)
-* participant
-  * type = $ParticipationType#PPRF "primary performer"
-  * individual = Reference(PractitionerShared)
-* serviceProvider = Reference(OrganizationShared)
-
-Instance: MedObservation7
+Instance: ActiveSulfasalazineFeatureObservation1
 InstanceOf: ActiveSulfasalazineFeature
 Usage: #example
-* extension[+]
-  * url = $cpg-instantiatesCaseFeature
-  * valueCanonical = Canonical(ActiveSulfasalazineFeature)
-* extension[+]
-  * url = $cpg-caseFeatureType
-  * valueCode : #asserted
+* derivedFrom = Reference(Questionnaire/QuestionnaireResponse1)
 * status = #final
-* code = CaseFeatureCodes#on-medication-sulfasalazine
+* code = http://example.org/CodeSystem/CaseFeatureCodes#on-medication-sulfasalazine
 * subject = Reference(Patient7)
 * performer = Reference(OrganizationShared)
-* valueBoolean = false
-* effectiveDateTime = "2023-05-06T08:05:00+11:00"
+* valueBoolean = false // For example use, the author has updated the value of the asserted observation on questionnaire response
+* effectiveDateTime = "2023-12-06T11:45:33+11:00" // Based on questionnaireResponse.authored considering this was modified
 
-Instance: MedicationRequest7
-InstanceOf: MedicationRequest
-* status = #active
-* intent = #order
-* subject = Reference(Patient7)
-* medicationCodeableConcept = $ATC#A07EC01 "Sulfasalazine"
-
-Instance: CBCObservation7
-InstanceOf: LastCbcPanelReportDateFeature
-Usage: #example
-* extension[+]
-  * url = $cpg-instantiatesCaseFeature
-  * valueCanonical = Canonical(LastCbcPanelReportDateFeature)
-* extension[+]
-  * url = $cpg-caseFeatureType
-  * valueCode : #asserted
-* status = #final
-* code = CaseFeatureCodes#last-cbc-panel-report-date
-* subject = Reference(Patient7)
-* performer = Reference(OrganizationShared)
-* valueDateTime = "2023-05-06T10:10:00+11:00"
-* effectiveDateTime = "2023-05-06T10:10:00+11:00"
-
-Instance: DiagnosticReport7
-InstanceOf: DiagnosticReport
-Usage: #example
-* meta.tag = http://example.org/fhir/CodeSystem/workflow-codes#01 "Needs Review"
-* identifier.system = "http://acme.com/lab/reports"
-* identifier.value = "5234342"
-* status = #final
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#HM
-* code.coding[+] = http://loinc.org#58410-2 "Complete blood count (hemogram) panel - Blood by Automated count"
-* code.coding[+] = #CBC "MASTER FULL BLOOD COUNT"
-* code.text = "Complete Blood Count"
-* subject = Reference(Patient7)
-* encounter = Reference(Encounter7)
-* effectiveDateTime = "2021-01-04T08:30:00+11:00"
-* issued = "2021-01-04T11:45:33+11:00"
-* performer = Reference(OrganizationShared)
-* result[+] = Reference(r7-1)
-* result[+] = Reference(r7-2)
-
-Instance: r7-1
-InstanceOf: Observation
-Usage: #example
-* status = #final
-* code = http://loinc.org#718-7 "Hemoglobin [Mass/volume] in Blood"
-* code.text = "Haemoglobin"
-* subject = Reference(Patient7)
-* performer = Reference(OrganizationShared)
-* valueQuantity = 176 'g/L' "g/L"
-* referenceRange.low = 135 'g/L' "g/L"
-* referenceRange.high = 180 'g/L' "g/L"
-
-Instance: r7-2
-InstanceOf: Observation
-Usage: #example
-* status = #final
-* code = http://loinc.org#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
-* code.text = "Red Cell Count"
-* subject = Reference(Patient7)
-* performer = Reference(OrganizationShared)
-* valueQuantity = 5.9 '10*12/L' "x10*12/L"
-* referenceRange.low = 4.2 '10*12/L' "x10*12/L"
-* referenceRange.high = 6 '10*12/L' "x10*12/L"
-
-Instance: BundleCase7
+Instance: BundleCase7Modified
 InstanceOf: Bundle
 Description: "Test case for asserted case features"
 Usage: #example
@@ -106,7 +19,7 @@ Usage: #example
 * insert DataBundleEntry(Practitioner, PractitionerShared)
 * insert DataBundleEntry(Organization, OrganizationShared)
 * insert DataBundleEntry(Encounter, Encounter7)
-* insert DataBundleEntry(Observation, MedObservation7)
+* insert DataBundleEntry(Observation, ActiveSulfasalazineFeatureObservation1)
 * insert DataBundleEntry(Observation, CBCObservation7)
 * insert DataBundleEntry(Observation, r7-1)
 * insert DataBundleEntry(Observation, r7-2)
