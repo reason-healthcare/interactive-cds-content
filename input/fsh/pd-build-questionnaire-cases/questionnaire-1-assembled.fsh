@@ -79,3 +79,9 @@ Usage: #example
     * repeats = true
     * type = #reference
     * initial.valueReference = Reference(Organization/OrganizationShared)
+  * item[+]
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.effectiveDateTime)
+    * insert HiddenExtension
+    * text = "Clinically relevant time/time-period for observation"
+    * type = #dateTime
+    * initial.valueDateTime = "2023-05-06T10:10:00+11:00" // Should reflect current date

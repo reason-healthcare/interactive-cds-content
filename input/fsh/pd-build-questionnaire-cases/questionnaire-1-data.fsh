@@ -22,6 +22,7 @@ Usage: #example
 * subject = Reference(Patient7)
 * performer = Reference(OrganizationShared)
 * valueBoolean = true
+* effectiveDateTime = "2023-05-06T08:05:00+11:00"
 
 Instance: MedicationRequest7
 InstanceOf: MedicationRequest
@@ -38,6 +39,7 @@ Usage: #example
 * subject = Reference(Patient7)
 * performer = Reference(OrganizationShared)
 * valueDateTime = "2023-05-06T10:10:00+11:00"
+* effectiveDateTime = "2023-05-06T10:10:00+11:00"
 
 Instance: DiagnosticReport7
 InstanceOf: DiagnosticReport

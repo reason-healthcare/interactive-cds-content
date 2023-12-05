@@ -46,6 +46,12 @@ Usage: #inline
     * repeats = true
     * type = #reference
     * initial.valueReference = Reference(Organization/OrganizationShared)
+  * item[+]
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.effectiveDateTime)
+    * insert HiddenExtension
+    * text = "Clinically relevant time/time-period for observation"
+    * type = #dateTime
+    * initial.valueDateTime = "2023-05-06T08:05:00+11:00" // Should reflect current date
 
 Instance: LastCbcPanelReportDateFeatureQuestionnaire1
 InstanceOf: Questionnaire
@@ -92,3 +98,9 @@ Usage: #inline
     * repeats = true
     * type = #reference
     * initial.valueReference = Reference(Organization/OrganizationShared)
+  * item[+]
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.effectiveDateTime)
+    * insert HiddenExtension
+    * text = "Clinically relevant time/time-period for observation"
+    * type = #dateTime
+    * initial.valueDateTime = "2023-05-06T10:10:00+11:00" // Should reflect current date
