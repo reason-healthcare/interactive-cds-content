@@ -1,15 +1,15 @@
-Instance: QuestionnaireBundle2
+Instance: QuestionnaireOutput1
 InstanceOf: Bundle
 Usage: #example
-Description: "Test results for inferred case features"
+Description: "Test results for asserted case features"
 * type = #collection
-* insert QuestionnaireBundleEntry(ActiveSulfasalazineFeatureQuestionnaire2)
-* insert QuestionnaireBundleEntry(LastCbcPanelReportDateFeatureQuestionnaire2)
+* insert QuestionnaireBundleEntry(ActiveSulfasalazineFeatureQuestionnaire1)
+* insert QuestionnaireBundleEntry(LastCbcPanelReportDateFeatureQuestionnaire1)
 
-Instance: ActiveSulfasalazineFeatureQuestionnaire2
+Instance: ActiveSulfasalazineFeatureQuestionnaire1
 InstanceOf: Questionnaire
 Usage: #inline
-* insert QuestionnaireMetaData(ActiveSulfasalazineFeatureQuestionnaire2)
+* insert QuestionnaireMetaData(ActiveSulfasalazineFeatureQuestionnaire1)
 * item[+]
   * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation)
   * text = "Measurements and simple assertions"
@@ -18,7 +18,7 @@ Usage: #inline
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
     * text = "Actual result"
     * type = #boolean
-    * initial.valueBoolean = true  // Currently not returning true b/c of issue with CQL
+    * initial.valueBoolean = true
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.status)
     * insert HiddenExtension
@@ -34,16 +34,29 @@ Usage: #inline
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#on-medication-sulfasalazine
   * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeature, ObservationeffectiveDateTime)
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.subject)
+    * insert HiddenExtension
+    * text = "Who and/or what the observation is about"
+    * type = #reference
+    * initial.valueReference = Reference(Patient/Patient7)
+  * item[+]
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.performer)
+    * text = "Who is responsible for the observation"
+    * insert HiddenExtension
+    * repeats = true
+    * type = #reference
+    * initial.valueReference = Reference(Organization/OrganizationShared)
+  * item[+]
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.effectiveDateTime)
     * insert HiddenExtension
     * text = "Clinically relevant time/time-period for observation"
     * type = #dateTime
-    * initial.valueDateTime = "2023-12-01T16:03:47.218-05:00" // Should reflect current date
+    * initial.valueDateTime = "2023-05-06T08:05:00+11:00" // Should reflect current date
 
-Instance: LastCbcPanelReportDateFeatureQuestionnaire2
+Instance: LastCbcPanelReportDateFeatureQuestionnaire1
 InstanceOf: Questionnaire
 Usage: #inline
-* insert QuestionnaireMetaData(LastCbcPanelReportDateFeatureQuestionnaire2)
+* insert QuestionnaireMetaData(LastCbcPanelReportDateFeatureQuestionnaire1)
 * item[+]
   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
   * text = "Measurements and simple assertions"
@@ -52,7 +65,7 @@ Usage: #inline
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
     * type = #dateTime
-    * initial.valueDateTime = "2021-01-04T11:45:33+11:00"
+    * initial.valueDateTime = "2023-05-06T10:10:00+11:00"
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.status)
     * insert HiddenExtension
@@ -67,9 +80,27 @@ Usage: #inline
     * required = true
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#last-cbc-panel-report-date
+  * item
+  * linkId = "ed3020dd-7716-4775-ba06-d38da5ddb9ea"
+  * definition = "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation"
+  * text = "Measurements and simple assertions"
+  * type = #group
+  * item[+]
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.subject)
+    * insert HiddenExtension
+    * text = "Who and/or what the observation is about"
+    * type = #reference
+    * initial.valueReference = Reference(Patient/Patient7)
+  * item[+]
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.performer)
+    * insert HiddenExtension
+    * text = "Who is responsible for the observation"
+    * repeats = true
+    * type = #reference
+    * initial.valueReference = Reference(Organization/OrganizationShared)
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.effectiveDateTime)
     * insert HiddenExtension
     * text = "Clinically relevant time/time-period for observation"
     * type = #dateTime
-    * initial.valueDateTime = "2023-12-01T16:03:47.218-05:00" // Should reflect current date
+    * initial.valueDateTime = "2023-05-06T10:10:00+11:00" // Should reflect current date

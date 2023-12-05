@@ -1,4 +1,4 @@
-Instance: Parameters1
+Instance: QuestionnaireParameters2
 InstanceOf: Parameters
 Usage: #example
 * parameter[0]
@@ -9,4 +9,4 @@ Usage: #example
   * valueString = "0.1.0"
 * parameter[+]
   * name = "data"
-  * resource = BundleCase7
+  * resource = BundleCase8
