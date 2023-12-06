@@ -1,7 +1,7 @@
 Instance: QuestionnaireOutput1
 InstanceOf: Bundle
 Usage: #example
-Description: "Test results for asserted case features"
+Description: "Bundle of questionnaires from $questionnaire - Case1"
 * type = #collection
 * insert QuestionnaireBundleEntry(ActiveSulfasalazineFeatureQuestionnaire1)
 * insert QuestionnaireBundleEntry(LastCbcPanelReportDateFeatureQuestionnaire1)

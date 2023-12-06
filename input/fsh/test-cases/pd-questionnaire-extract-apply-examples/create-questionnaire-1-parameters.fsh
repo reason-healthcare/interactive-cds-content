@@ -7,6 +7,6 @@ Usage: #example
 * parameter[+]
   * name = "version"
   * valueString = "0.1.0"
-// * parameter[+]
-//   * name = "data"
-//   * resource = BundleCase7
+* parameter[+]
+  * name = "data"
+  * resource = BundleCase7

@@ -96,18 +96,18 @@ Usage: #example
 * referenceRange.low = 4.2 '10*12/L' "x10*12/L"
 * referenceRange.high = 6 '10*12/L' "x10*12/L"
 
-// Instance: BundleCase7
-// InstanceOf: Bundle
-// Description: "Test case for asserted case features"
-// Usage: #example
-// * type = #collection
-// * meta.tag = #test
-// * insert BundleEntry(Patient, Patient7)
-// * insert BundleEntry(Practitioner, PractitionerShared)
-// * insert BundleEntry(Organization, OrganizationShared)
-// * insert BundleEntry(Encounter, Encounter7)
-// * insert BundleEntry(Observation, MedObservation7)
-// * insert BundleEntry(Observation, CBCObservation7)
-// * insert BundleEntry(Observation, r7-1)
-// * insert BundleEntry(Observation, r7-2)
-// * insert BundleEntry(MedicationRequest, MedicationRequest7)
+Instance: BundleCase7
+InstanceOf: Bundle
+Description: "Test case for asserted case features - Case1"
+Usage: #example
+* type = #collection
+* meta.tag = #test
+* insert BundleEntry(Patient, Patient7)
+* insert BundleEntry(Practitioner, PractitionerShared)
+* insert BundleEntry(Organization, OrganizationShared)
+* insert BundleEntry(Encounter, Encounter7)
+* insert BundleEntry(Observation, MedObservation7)
+* insert BundleEntry(Observation, CBCObservation7)
+* insert BundleEntry(Observation, r7-1)
+* insert BundleEntry(Observation, r7-2)
+* insert BundleEntry(MedicationRequest, MedicationRequest7)

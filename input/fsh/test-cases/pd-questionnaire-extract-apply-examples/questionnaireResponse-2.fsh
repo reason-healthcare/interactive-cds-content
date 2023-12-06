@@ -1,6 +1,7 @@
 Instance: QuestionnaireResponse2
 InstanceOf: QuestionnaireResponse
 Usage: #example
+Description: "Questionnaire response - Case2"
 * insert QuestionnaireResponseMetaData(QuestionnaireAssembled1)
 * subject = Reference(Patient/Patient8)
 * authored = "2023-12-05T11:45:33+11:00"

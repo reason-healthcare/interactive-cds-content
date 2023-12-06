@@ -1,6 +1,7 @@
 Instance: QuestionnaireAssembled1
 InstanceOf: Questionnaire
 Usage: #example
+Description: "Assembeled Questionnaire - Case1"
 * insert QuestionnaireMetaData(QuestionnaireAssembled1)
 * item[+]
   * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation)

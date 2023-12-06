@@ -1,7 +1,7 @@
 Instance: ExtractOutput2
 InstanceOf: Bundle
 Usage: #example
-Description: "Bundle of observations created by extract case 2"
+Description: "Bundle of observations from $extract - Case2"
 * type = #transaction
 * entry[+]
   * insert BundleEntryPut(InlineActiveSulfasalazineFeature/ActiveSulfasalazineFeatureObservation2)

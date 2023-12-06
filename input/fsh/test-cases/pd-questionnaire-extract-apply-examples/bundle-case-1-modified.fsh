@@ -11,7 +11,7 @@ Usage: #example
 
 Instance: BundleCase7Modified
 InstanceOf: Bundle
-Description: "Test case for asserted case features"
+Description: "Test case for asserted case features updated to reflect extracted observations - Case1"
 Usage: #example
 * type = #collection
 * meta.tag = #test

@@ -20,7 +20,7 @@ Usage: #example
 
 Instance: BundleCase8Modified
 InstanceOf: Bundle
-Description: "Test case for inferred case features"
+Description: "Test case for inferred case features updated to reflect extracted observations - Case2"
 Usage: #example
 * meta.tag = #test
 * type = #collection

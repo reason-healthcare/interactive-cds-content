@@ -1,6 +1,7 @@
 Instance: QuestionnaireResponse1
 InstanceOf: QuestionnaireResponse
 Usage: #example
+Description: "Questionnaire response with modified Observation.valueBoolean - Case1"
 * insert QuestionnaireResponseMetaData(QuestionnaireAssembled1)
 * subject = Reference(Patient/Patient7)
 * authored  = "2023-12-06T11:45:33+11:00"
