@@ -52,7 +52,7 @@ Usage: #example
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
     * type = #dateTime
-    * initial.valueDateTime = "2023-05-06T10:10:00+11:00"
+    * initial.valueDateTime = 2023-12-04T16:03:47.218-05:00
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.status)
     * insert HiddenExtension
@@ -90,4 +90,4 @@ Usage: #example
     * insert HiddenExtension
     * text = "Clinically relevant time/time-period for observation"
     * type = #dateTime
-    * initial.valueDateTime = "2023-05-06T10:10:00+11:00" // Should reflect current date
+    * initial.valueDateTime = 2023-12-04T16:03:47.218-05:00 // Should reflect current date

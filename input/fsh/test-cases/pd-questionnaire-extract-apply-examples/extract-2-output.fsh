@@ -17,7 +17,8 @@ Usage: #inline
 * status = #final
 * code = CaseFeatureCodes#on-medication-sulfasalazine
 * subject = Reference(Patient/Patient8)
-* effectiveDateTime = "2023-12-01T16:03:47.218-05:00"
+* valueBoolean = true
+* effectiveDateTime = "2023-04-01T16:03:47.218-05:00"
 
 Instance: InlineLastCbcPanelReportDateFeatureObservation2
 InstanceOf: LastCbcPanelReportDateFeature
@@ -26,4 +27,5 @@ Usage: #inline
 * status = #final
 * code = CaseFeatureCodes#last-cbc-panel-report-date
 * subject = Reference(Patient/Patient8)
-* effectiveDateTime = "2023-12-01T16:03:47.218-05:00"
+* valueDateTime = "2023-04-01T16:03:47.218-05:00"
+* effectiveDateTime = "2023-04-01T16:03:47.218-05:00"

@@ -50,8 +50,8 @@ Usage: #example
 * code = CaseFeatureCodes#last-cbc-panel-report-date
 * subject = Reference(Patient7)
 * performer = Reference(OrganizationShared)
-* valueDateTime = "2023-05-06T10:10:00+11:00"
-* effectiveDateTime = "2023-05-06T10:10:00+11:00"
+* valueDateTime = 2023-12-04T16:03:47.218-05:00
+* effectiveDateTime = 2023-12-04T16:03:47.218-05:00
 
 Instance: DiagnosticReport7
 InstanceOf: DiagnosticReport
@@ -96,18 +96,18 @@ Usage: #example
 * referenceRange.low = 4.2 '10*12/L' "x10*12/L"
 * referenceRange.high = 6 '10*12/L' "x10*12/L"
 
-Instance: BundleCase7
-InstanceOf: Bundle
-Description: "Test case for asserted case features"
-Usage: #example
-* type = #collection
-* meta.tag = #test
-* insert DataBundleEntry(Patient, Patient7)
-* insert DataBundleEntry(Practitioner, PractitionerShared)
-* insert DataBundleEntry(Organization, OrganizationShared)
-* insert DataBundleEntry(Encounter, Encounter7)
-* insert DataBundleEntry(Observation, MedObservation7)
-* insert DataBundleEntry(Observation, CBCObservation7)
-* insert DataBundleEntry(Observation, r7-1)
-* insert DataBundleEntry(Observation, r7-2)
-* insert DataBundleEntry(MedicationRequest, MedicationRequest7)
+// Instance: BundleCase7
+// InstanceOf: Bundle
+// Description: "Test case for asserted case features"
+// Usage: #example
+// * type = #collection
+// * meta.tag = #test
+// * insert BundleEntry(Patient, Patient7)
+// * insert BundleEntry(Practitioner, PractitionerShared)
+// * insert BundleEntry(Organization, OrganizationShared)
+// * insert BundleEntry(Encounter, Encounter7)
+// * insert BundleEntry(Observation, MedObservation7)
+// * insert BundleEntry(Observation, CBCObservation7)
+// * insert BundleEntry(Observation, r7-1)
+// * insert BundleEntry(Observation, r7-2)
+// * insert BundleEntry(MedicationRequest, MedicationRequest7)

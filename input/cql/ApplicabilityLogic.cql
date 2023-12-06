@@ -36,7 +36,7 @@ define "Timing of Service":
  */
 define "Missing last CBC result":
   if exists((LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value as dateTime).value) then
-    LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value as dateTime after (Today() - 6 months)
+    LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value as dateTime before (Today() - 6 months)
   else
     true
 

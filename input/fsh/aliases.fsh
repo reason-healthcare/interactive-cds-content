@@ -60,3 +60,4 @@ Alias: $cpg-reportflagactivity = http://hl7.org/fhir/uv/cpg/StructureDefinition/
 // CPG Codesystems
 Alias: $cpg-common-process = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process
 Alias: $cpg-recommendation-direction = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-recommendation-direction
+Alias: $action-type = http://terminology.hl7.org/CodeSystem/action-type

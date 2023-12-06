@@ -18,5 +18,5 @@ Usage: #example
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
-    * answer[+].valueDateTime = "2023-05-06T10:10:00+11:00" // For example purposes, the author does not change the date
+    * answer[+].valueDateTime = 2023-12-04T16:03:47.218-05:00 // For example purposes, the author does not change the date
 

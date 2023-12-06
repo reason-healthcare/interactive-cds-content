@@ -15,12 +15,12 @@ Description: "Test case for asserted case features"
 Usage: #example
 * type = #collection
 * meta.tag = #test
-* insert DataBundleEntry(Patient, Patient7)
-* insert DataBundleEntry(Practitioner, PractitionerShared)
-* insert DataBundleEntry(Organization, OrganizationShared)
-* insert DataBundleEntry(Encounter, Encounter7)
-* insert DataBundleEntry(Observation, ActiveSulfasalazineFeatureObservation1)
-* insert DataBundleEntry(Observation, CBCObservation7)
-* insert DataBundleEntry(Observation, r7-1)
-* insert DataBundleEntry(Observation, r7-2)
-* insert DataBundleEntry(MedicationRequest, MedicationRequest7)
+* insert BundleEntry(Patient, Patient7)
+* insert BundleEntry(Practitioner, PractitionerShared)
+* insert BundleEntry(Organization, OrganizationShared)
+* insert BundleEntry(Encounter, Encounter7)
+* insert BundleEntry(Observation, ActiveSulfasalazineFeatureObservation1)
+* insert BundleEntry(Observation, CBCObservation7)
+* insert BundleEntry(Observation, r7-1)
+* insert BundleEntry(Observation, r7-2)
+* insert BundleEntry(MedicationRequest, MedicationRequest7)

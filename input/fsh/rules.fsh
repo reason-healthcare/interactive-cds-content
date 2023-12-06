@@ -41,7 +41,7 @@ RuleSet: QuestionnaireItem(id, path)
 * linkId = "{path}"
 * definition = "http://example.org/StructureDefinition/{id}#{path}"
 
-RuleSet: DataBundleEntry(resourceType, id)
+RuleSet: BundleEntry(resourceType, id)
 * entry[+]
   * fullUrl = "http://example.org/{resourceType}/{id}"
   * resource = {id}
