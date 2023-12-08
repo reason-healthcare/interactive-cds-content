@@ -16,6 +16,7 @@ Usage: #example
 
 Instance: MedicationRequest8
 InstanceOf: MedicationRequest
+Usage: #example
 * status = #active
 * intent = #order
 * subject = Reference(Patient8)

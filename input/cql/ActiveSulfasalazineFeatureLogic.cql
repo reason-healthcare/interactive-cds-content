@@ -10,7 +10,6 @@ code "On Sulfasalazine Feature": 'on-medication-sulfasalazine' from "CaseFeature
 
 valueset "Sulfasalazine Medications": 'http://example.org/ValueSet/sulfasalazine-vs'
 
-
 context Patient
 
 define "Active Sulfasalazine Orders":

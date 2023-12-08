@@ -32,6 +32,7 @@ Usage: #example
 
 Instance: MedicationRequest7
 InstanceOf: MedicationRequest
+Usage: #example
 * status = #active
 * intent = #order
 * subject = Reference(Patient7)
@@ -50,8 +51,8 @@ Usage: #example
 * code = CaseFeatureCodes#last-cbc-panel-report-date
 * subject = Reference(Patient7)
 * performer = Reference(OrganizationShared)
-* valueDateTime = 2023-12-04T16:03:47.218-05:00
-* effectiveDateTime = 2023-12-04T16:03:47.218-05:00
+* valueDateTime = "2023-12-04T16:03:47.218-05:00"
+* effectiveDateTime = "2023-12-04T16:03:47.218-05:00"
 
 Instance: DiagnosticReport7
 InstanceOf: DiagnosticReport

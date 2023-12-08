@@ -21,7 +21,7 @@ define "Last CBC report":
   First("CBC Reports" C sort by effective descending)
 
 /**
- * @description 
+ * @description
  * Inference if the patient is taking drug with a Methotrexate code
  */
 define "Last CBC Panel Report Date Inferred":
@@ -29,13 +29,13 @@ define "Last CBC Panel Report Date Inferred":
     return Observation {
       meta: Meta {
         profile: {
-          canonical { value: 'http://example.org/StructureDefinition/LastCbcPanelReportFeature' }
+          canonical { value: 'http://example.org/StructureDefinition/LastCbcPanelReportDateFeature' }
         }
       },
       extension: {
         Extension {
           url: url { value: 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-instantiatesCaseFeature' },
-          value: canonical { value: 'hhttp://example.org/StructureDefinition/LastCbcPanelReportFeature' }
+          value: canonical { value: 'http://example.org/StructureDefinition/LastCbcPanelReportDateFeature' }
         },
         Extension {
           url: url { value: 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-caseFeatureType' },
