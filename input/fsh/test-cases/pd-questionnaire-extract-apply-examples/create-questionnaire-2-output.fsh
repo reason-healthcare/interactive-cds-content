@@ -14,6 +14,8 @@ Usage: #inline
   * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation)
   * text = "Measurements and simple assertions"
   * type = #group
+  * extension[sdc-questionnaire-itemExtractionContext]
+    * valueCode = #Observation
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
     * text = "Actual result"
@@ -48,6 +50,8 @@ Usage: #inline
   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
   * text = "Measurements and simple assertions"
   * type = #group
+  * extension[sdc-questionnaire-itemExtractionContext]
+    * valueCode = #Observation
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
