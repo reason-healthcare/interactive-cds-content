@@ -24,6 +24,7 @@ Description: "Assembeled Questionnaire - Case1"
     * required = true
     * type = #choice
     * answerValueSet = Canonical(observation-status)
+    * initial.valueCoding = $codesystem-observation-status#final
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.code)
     * insert HiddenExtension
@@ -36,14 +37,14 @@ Description: "Assembeled Questionnaire - Case1"
     * insert HiddenExtension
     * text = "Who and/or what the observation is about"
     * type = #reference
-  //   * initial.valueReference = Reference(Patient/Patient7)
+    // * initial.valueReference = Reference(Patient/Patient7)
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.performer)
     * text = "Who is responsible for the observation"
     * insert HiddenExtension
     * repeats = true
     * type = #reference
-  //   * initial.valueReference = Reference(Organization/OrganizationShared)
+    // * initial.valueReference = Reference(Organization/OrganizationShared)
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.effectiveDateTime)
     * insert HiddenExtension
@@ -71,6 +72,7 @@ Description: "Assembeled Questionnaire - Case1"
     * required = true
     * type = #choice
     * answerValueSet = Canonical(observation-status)
+    * initial.valueCoding = $codesystem-observation-status#final
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.code)
     * insert HiddenExtension
@@ -88,17 +90,22 @@ Description: "Assembeled Questionnaire - Case1"
     * insert HiddenExtension
     * text = "Who and/or what the observation is about"
     * type = #reference
-  //   * initial.valueReference = Reference(Patient/Patient7)
+    // * initial.valueReference = Reference(Patient/Patient7)
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.performer)
     * insert HiddenExtension
     * text = "Who is responsible for the observation"
     * repeats = true
     * type = #reference
-  //   * initial.valueReference = Reference(Organization/OrganizationShared)
+    // * initial.valueReference = Reference(Organization/OrganizationShared)
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.effectiveDateTime)
     * insert HiddenExtension
     * text = "Clinically relevant time/time-period for observation"
     * type = #dateTime
-    * initial.valueDateTime = 2023-12-04T16:03:47.218-05:00 // Should reflect current date
+    * initial.valueDateTime = "2021-12-04T16:03:47.218-05:00"
+  * item[+]
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
+    * text = "Actual result"
+    * type = #dateTime
+    * initial.valueDateTime = "2021-12-04T16:03:47.218-05:00"

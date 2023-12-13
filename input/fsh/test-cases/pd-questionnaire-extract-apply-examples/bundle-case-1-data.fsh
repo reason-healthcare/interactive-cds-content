@@ -51,8 +51,8 @@ Usage: #example
 * code = CaseFeatureCodes#last-cbc-panel-report-date
 * subject = Reference(Patient7)
 * performer = Reference(OrganizationShared)
-* valueDateTime = "2023-12-04T16:03:47.218-05:00"
-* effectiveDateTime = "2023-12-04T16:03:47.218-05:00"
+* valueDateTime = "2021-12-04T16:03:47.218-05:00"
+* effectiveDateTime = "2021-12-04T16:03:47.218-05:00"
 
 Instance: DiagnosticReport7
 InstanceOf: DiagnosticReport
@@ -68,7 +68,7 @@ Usage: #example
 * subject = Reference(Patient7)
 * encounter = Reference(Encounter7)
 * effectiveDateTime = "2021-01-04T08:30:00+11:00"
-* issued = "2021-01-04T11:45:33+11:00"
+* issued = "2023-01-04T11:45:33+11:00"
 * performer = Reference(OrganizationShared)
 * result[+] = Reference(r7-1)
 * result[+] = Reference(r7-2)

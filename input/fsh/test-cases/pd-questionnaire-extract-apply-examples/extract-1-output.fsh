@@ -4,21 +4,33 @@ Usage: #example
 Description: "Bundle of observations from $extract Case1"
 * type = #transaction
 * entry[+]
-  * insert BundleEntryPut(ActiveSulfasalazineFeature/InlineActiveSulfasalazineFeatureObservation1)
+  * insert BundleEntryPut(ActiveSulfasalazineFeature/ActiveSulfasalazineFeatureObservation1)
   * resource = ActiveSulfasalazineFeatureObservation1
-  // Should this actually be Patch to Observation/MedObservation7 with status = #amended?
-// Entry for "Last CBC" not included since this the questionnaire is based on an asserted case feature that was not modified - see http://hl7.org/fhir/uv/sdc/extraction.html#obs-extract
+* entry[+]
+  * insert BundleEntryPut(LastCbcPanelReportDateFeature/ActiveSulfasalazineFeatureObservation1)
+  * resource = LastCbcPanelReportDateFeatureObservation1
 
-Instance: InlineActiveSulfasalazineFeatureObservation1
+Instance: ActiveSulfasalazineFeatureObservation1
 InstanceOf: ActiveSulfasalazineFeature
-Usage: #inline
+Usage: #example
 * derivedFrom = Reference(Questionnaire/QuestionnaireResponse1)
 * status = #final
-* code = http://example.org/CodeSystem/CaseFeatureCodes#on-medication-sulfasalazine
+* code = CaseFeatureCodes#on-medication-sulfasalazine
 * subject = Reference(Patient7)
 * performer = Reference(OrganizationShared)
-* valueBoolean = false // For example use, the author has updated the value of the asserted observation on questionnaire response
-* effectiveDateTime = "2023-12-06T11:45:33+11:00" // Based on questionnaireResponse.authored considering this was modified
+* valueBoolean = true
+* effectiveDateTime = "2023-12-06T11:45:33+11:00"
+
+Instance: LastCbcPanelReportDateFeatureObservation1
+InstanceOf: LastCbcPanelReportDateFeature
+Usage: #example
+* derivedFrom = Reference(Questionnaire/QuestionnaireResponse1)
+* status = #final
+* code = CaseFeatureCodes#last-cbc-panel-report-date
+* subject = Reference(Patient7)
+* performer = Reference(OrganizationShared)
+* valueDateTime = "2021-12-04T16:03:47.218-05:00"
+* effectiveDateTime = "2021-12-04T16:03:47.218-05:00"
 
 
 

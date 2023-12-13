@@ -35,7 +35,7 @@ Usage: #example
 * subject = Reference(Patient4)
 * encounter = Reference(Encounter4)
 * effectiveDateTime = "2021-01-04T08:30:00+11:00"
-* issued = "2021-01-04T11:45:33+11:00"
+* issued = "2023-01-04T11:45:33+11:00"
 * performer = Reference(OrganizationShared)
 * result[+] = Reference(r4-1)
 * result[+] = Reference(r4-2)

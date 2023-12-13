@@ -12,12 +12,12 @@ Description: "Questionnaire response with modified Observation.valueBoolean - Ca
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
     * text = "Actual result"
-    * answer[+].valueBoolean = false // For example purposes, the author changes the response from true to false here
+    * answer[+].valueBoolean = true
 * item[+]
   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
   * text = "Measurements and simple assertions"
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
-    * answer[+].valueDateTime = 2023-12-04T16:03:47.218-05:00 // For example purposes, the author does not change the date
+    * answer[+].valueDateTime = "2021-12-04T16:03:47.218-05:00"
 

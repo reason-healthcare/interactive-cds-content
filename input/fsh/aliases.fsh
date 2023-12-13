@@ -13,6 +13,8 @@ Alias: $RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $evidence-quality = http://terminology.hl7.org/CodeSystem/evidence-quality
 Alias: $recommendation-strength = http://terminology.hl7.org/CodeSystem/recommendation-strength
 
+Alias: $codesystem-observation-status = http://hl7.org/fhir/CodeSystem/observation-status
+
 // Related core extensions
 Alias: $cqf-qualityOfEvidence = http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence
 Alias: $cqf-strengthOfRecommendation = http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation

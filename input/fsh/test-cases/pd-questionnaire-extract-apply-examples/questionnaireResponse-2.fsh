@@ -12,19 +12,11 @@ Description: "Questionnaire response - Case2"
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
     * text = "Actual result"
-    * answer[+].valueBoolean = true
-  * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.status)
-    * text = "registered | preliminary | final | amended +"
-    * answer[+].valueCoding = http://hl7.org/fhir/observation-status#preliminary
+    * answer[+].valueBoolean = false
 * item[+]
   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
   * text = "Measurements and simple assertions"
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
-    * answer[+].valueDateTime = "2021-01-04T11:45:33+11:00"
-  * item[+]
-    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.status)
-    * text = "registered | preliminary | final | amended +"
-    * answer[+].valueCoding = http://hl7.org/fhir/observation-status#preliminary
+    * answer[+].valueDateTime = "2023-12-13T16:03:47.218-05:00"

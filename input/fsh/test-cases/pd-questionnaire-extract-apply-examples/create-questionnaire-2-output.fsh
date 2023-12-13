@@ -28,6 +28,7 @@ Usage: #inline
     * required = true
     * type = #choice
     * answerValueSet = Canonical(observation-status)
+    * initial.valueCoding = $codesystem-observation-status#final
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.code)
     * insert HiddenExtension
@@ -56,7 +57,7 @@ Usage: #inline
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
     * type = #dateTime
-    * initial.valueDateTime = "2021-01-04T11:45:33+11:00"
+    * initial.valueDateTime = "2023-01-04T11:45:33+11:00"
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.status)
     * insert HiddenExtension
@@ -64,6 +65,7 @@ Usage: #inline
     * required = true
     * type = #choice
     * answerValueSet = Canonical(observation-status)
+    * initial.valueCoding = $codesystem-observation-status#final
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.code)
     * insert HiddenExtension
@@ -76,4 +78,9 @@ Usage: #inline
     * insert HiddenExtension
     * text = "Clinically relevant time/time-period for observation"
     * type = #dateTime
-    * initial.valueDateTime = "2023-04-01T16:03:47.218-05:00" // Should reflect current date
+    * initial.valueDateTime = "2023-12-13T16:03:47.218-05:00" // Should reflect current date
+  * item[+]
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
+    * text = "Actual Result"
+    * type = #dateTime
+    * initial.valueDateTime = "2023-12-13T16:03:47.218-05:00" // Should reflect current date
