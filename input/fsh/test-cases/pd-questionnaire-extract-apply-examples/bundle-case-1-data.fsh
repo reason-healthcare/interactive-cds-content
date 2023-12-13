@@ -63,7 +63,7 @@ Usage: #example
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#HM
 * code.coding[+] = http://loinc.org#58410-2 "Complete blood count (hemogram) panel - Blood by Automated count"
-* code.coding[+] = #CBC "MASTER FULL BLOOD COUNT"
+* code.coding[+] = $LOINC#58410-2 "CBC panel - Blood by Automated count"
 * code.text = "Complete Blood Count"
 * subject = Reference(Patient7)
 * encounter = Reference(Encounter7)

@@ -17,7 +17,7 @@ Usage: #inline
   * extension[sdc-questionnaire-itemExtractionContext]
     * valueExpression
       * language = #text/cql-identifier
-      * expression = "On Sulfasalazine" // "On Sulfasalazine Asserted"?
+      * expression = "On Sulfasalazine"
       * reference = Canonical(ActiveSulfasalazineFeatureLogic)
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
