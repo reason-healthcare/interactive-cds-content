@@ -57,7 +57,7 @@ Usage: #inline
     * insert HiddenExtension
     * text = "Clinically relevant time/time-period for observation"
     * type = #dateTime
-    * initial.valueDateTime = "2023-05-06T08:05:00+11:00" // Should reflect current date
+    * insert InitialDate1
 
 Instance: LastCbcPanelReportDateFeatureQuestionnaire1
 InstanceOf: Questionnaire
@@ -72,11 +72,6 @@ Usage: #inline
       * language = #text/cql-identifier
       * expression = "Last CBC Panel Report Date"
       * reference = Canonical(LastCbcPanelReportDateFeatureLogic)
-  * item[+]
-    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
-    * text = "Actual result"
-    * type = #dateTime
-    * initial.valueDateTime = 2023-12-04T16:03:47.218-05:00
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.status)
     * insert HiddenExtension
@@ -115,9 +110,9 @@ Usage: #inline
     * insert HiddenExtension
     * text = "Clinically relevant time/time-period for observation"
     * type = #dateTime
-    * initial.valueDateTime = "2021-12-04T16:03:47.218-05:00"
+    * insert InitialDate1
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
     * type = #dateTime
-    * initial.valueDateTime = "2021-12-04T16:03:47.218-05:00"
+    * insert InitialDate1

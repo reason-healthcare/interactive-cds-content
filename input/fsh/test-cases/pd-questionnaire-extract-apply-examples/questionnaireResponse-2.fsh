@@ -19,4 +19,4 @@ Description: "Questionnaire response - Case2"
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
-    * answer[+].valueDateTime = "2023-12-13T16:03:47.218-05:00"
+    * insert AnswerDate2

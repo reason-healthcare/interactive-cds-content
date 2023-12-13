@@ -1,7 +1,7 @@
 Instance: ApplyOutput1
 InstanceOf: Bundle
 Usage: #example
-Description: "Output with action.condition that does not apply - Case1"
+Description: "Output with action.condition that does apply - Case1"
 * type = #collection
 * insert BundleEntry(RequestGroup, RequestGroup1)
 * insert BundleEntry(ServiceRequest, ServiceRequest1)
@@ -23,7 +23,6 @@ Usage: #inline
 Instance: ServiceRequest1
 InstanceOf: ServiceRequest
 Usage: #inline
-* meta.profile = Canonical(cpg-servicerequest)
 * status = #draft
 * intent = #option
 * instantiatesCanonical = Canonical(OrderCBCActivity|0.1.0)

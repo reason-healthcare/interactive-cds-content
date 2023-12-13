@@ -35,8 +35,8 @@ Usage: #example
 * code.text = "Complete Blood Count"
 * subject = Reference(Patient8)
 * encounter = Reference(Encounter8)
-* effectiveDateTime = "2021-01-04T08:30:00+11:00"
-* issued = "2023-01-04T11:45:33+11:00"
+* insert EffectiveDateTime2
+* issued = "2023-06-21T11:45:33+11:00"
 * performer = Reference(OrganizationShared)
 * result[+] = Reference(r8-1)
 * result[+] = Reference(r8-2)

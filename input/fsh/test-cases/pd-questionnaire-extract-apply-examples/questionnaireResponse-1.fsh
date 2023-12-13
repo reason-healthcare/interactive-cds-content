@@ -19,5 +19,4 @@ Description: "Questionnaire response with modified Observation.valueBoolean - Ca
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
-    * answer[+].valueDateTime = "2021-12-04T16:03:47.218-05:00"
-
+    * insert AnswerDate1

@@ -19,7 +19,7 @@ Usage: #example
 * subject = Reference(Patient7)
 * performer = Reference(OrganizationShared)
 * valueBoolean = true
-* effectiveDateTime = "2023-12-06T11:45:33+11:00"
+* insert EffectiveDateTime1
 
 Instance: LastCbcPanelReportDateFeatureObservation1
 InstanceOf: LastCbcPanelReportDateFeature
@@ -29,8 +29,8 @@ Usage: #example
 * code = CaseFeatureCodes#last-cbc-panel-report-date
 * subject = Reference(Patient7)
 * performer = Reference(OrganizationShared)
-* valueDateTime = "2021-12-04T16:03:47.218-05:00"
-* effectiveDateTime = "2021-12-04T16:03:47.218-05:00"
+* insert ValueDateTime1
+* insert EffectiveDateTime1
 
 
 

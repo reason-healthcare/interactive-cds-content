@@ -41,7 +41,7 @@ Usage: #inline
     * insert HiddenExtension
     * text = "Clinically relevant time/time-period for observation"
     * type = #dateTime
-    * initial.valueDateTime = "2023-04-01T16:03:47.218-05:00" // Should reflect current date
+    * initial.valueDateTime = "2023-12-13T16:03:47.218-05:00" // Should reflect current date
 
 Instance: LastCbcPanelReportDateFeatureQuestionnaire2
 InstanceOf: Questionnaire
@@ -57,7 +57,7 @@ Usage: #inline
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
     * type = #dateTime
-    * initial.valueDateTime = "2023-01-04T11:45:33+11:00"
+    * insert InitialDateCurrent
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.status)
     * insert HiddenExtension
@@ -78,9 +78,9 @@ Usage: #inline
     * insert HiddenExtension
     * text = "Clinically relevant time/time-period for observation"
     * type = #dateTime
-    * initial.valueDateTime = "2023-12-13T16:03:47.218-05:00" // Should reflect current date
+    * insert InitialDateCurrent // Should reflect current date
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual Result"
     * type = #dateTime
-    * initial.valueDateTime = "2023-12-13T16:03:47.218-05:00" // Should reflect current date
+    * insert InitialDate2

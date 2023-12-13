@@ -59,3 +59,29 @@ RuleSet: HiddenExtension
 * extension[+]
   * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"
   * valueBoolean = true
+
+// Dates for test cases
+
+RuleSet: InitialDate1
+* initial[+].valueDateTime = "2021-01-01"
+RuleSet: InitialDate2
+* initial[+].valueDateTime = "2023-06-21"
+RuleSet: InitialDateCurrent // Use in place of current date from inferred observation
+* initial[+].valueDateTime = "2022-12-13"
+
+RuleSet: EffectiveDateTime1
+* effectiveDateTime = "2021-01-01"
+RuleSet: EffectiveDateTime2
+* effectiveDateTime = "2023-06-21"
+RuleSet: EffectiveDateCurrent // Use in place of current date from inferred observation
+* effectiveDateTime = "2023-12-13"
+
+RuleSet: ValueDateTime1
+* valueDateTime = "2021-01-01"
+RuleSet: ValueDateTime2
+* valueDateTime = "2023-06-21"
+
+RuleSet: AnswerDate1
+* answer[+].valueDateTime = "2021-01-01"
+RuleSet: AnswerDate2
+* answer[+].valueDateTime = "2023-06-21"
