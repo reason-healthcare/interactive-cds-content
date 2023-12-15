@@ -13,6 +13,7 @@ Description: "Questionnaire response with modified Observation.valueBoolean - Ca
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
     * text = "Actual result"
     * answer[+].valueBoolean = true
+/*
 * item[+]
   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
   * text = "Measurements and simple assertions"
@@ -20,3 +21,4 @@ Description: "Questionnaire response with modified Observation.valueBoolean - Ca
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
     * insert AnswerDate1
+*/

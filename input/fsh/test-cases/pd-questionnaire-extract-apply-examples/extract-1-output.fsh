@@ -6,9 +6,11 @@ Description: "Bundle of observations from $extract Case1"
 * entry[+]
   * insert BundleEntryPut(ActiveSulfasalazineFeature/ActiveSulfasalazineFeatureObservation1)
   * resource = ActiveSulfasalazineFeatureObservation1
+/*
 * entry[+]
   * insert BundleEntryPut(LastCbcPanelReportDateFeature/ActiveSulfasalazineFeatureObservation1)
   * resource = LastCbcPanelReportDateFeatureObservation1
+*/
 
 Instance: ActiveSulfasalazineFeatureObservation1
 InstanceOf: ActiveSulfasalazineFeature

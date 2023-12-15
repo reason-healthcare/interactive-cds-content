@@ -63,7 +63,7 @@ RuleSet: HiddenExtension
 // Dates for test cases
 
 RuleSet: InitialDate1
-* initial[+].valueDateTime = "2021-01-01"
+* initial[+].valueDateTime = "2023-12-04"
 RuleSet: InitialDate2
 * initial[+].valueDateTime = "2023-06-21"
 RuleSet: InitialDateCurrent // Use in place of current date from inferred observation
@@ -77,11 +77,11 @@ RuleSet: EffectiveDateCurrent // Use in place of current date from inferred obse
 * effectiveDateTime = "2023-12-13"
 
 RuleSet: ValueDateTime1
-* valueDateTime = "2021-01-01"
+* valueDateTime = "2023-12-04"
 RuleSet: ValueDateTime2
 * valueDateTime = "2023-06-21"
 
 RuleSet: AnswerDate1
-* answer[+].valueDateTime = "2021-01-01"
+* answer[+].valueDateTime = "2023-12-04"
 RuleSet: AnswerDate2
 * answer[+].valueDateTime = "2023-06-21"

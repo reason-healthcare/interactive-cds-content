@@ -12,11 +12,11 @@ Description: "Questionnaire response - Case2"
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
     * text = "Actual result"
-    * answer[+].valueBoolean = false
+    * answer[+].valueBoolean = true
 * item[+]
   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
   * text = "Measurements and simple assertions"
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
-    * insert AnswerDate2
+    * insert AnswerDate1
