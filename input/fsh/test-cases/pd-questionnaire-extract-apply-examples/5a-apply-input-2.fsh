@@ -6,7 +6,7 @@ Usage: #example
   * valueString = "http://example.org/PlanDefinition/SulfasalazineMonitoringRecommendation"
 * parameter[+]
   * name = "data"
-  * resource = BundleCase8Modified
+  * resource = BundleCase2Modified
 * parameter[+]
   * name = "subject"
-  * valueString = "Patient/Patient8"
+  * valueString = "Patient/Patient1"

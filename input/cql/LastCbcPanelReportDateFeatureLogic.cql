@@ -25,35 +25,36 @@ define "Last CBC report":
  * Inference if the patient is taking drug with a Methotrexate code
  */
 define "Last CBC Panel Report Date Inferred":
-    "Last CBC report" CBCReport
-    return Observation {
-      meta: Meta {
-        profile: {
-          canonical { value: 'http://example.org/StructureDefinition/LastCbcPanelReportDateFeature' }
-        }
-      },
-      extension: {
-        Extension {
-          url: url { value: 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-instantiatesCaseFeature' },
-          value: canonical { value: 'http://example.org/StructureDefinition/LastCbcPanelReportDateFeature' }
-        },
-        Extension {
-          url: url { value: 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-caseFeatureType' },
-          value: code { value: 'inferred' }
-        }
-      },
-      status: ObservationStatus { value: 'final' },
-      effective: dateTime { value: Now() },
-      code: CodeableConcept {
-        coding: {
-          Coding {
-            system: uri { value: 'http://example.org/CodeSystem/CaseFeatureCodes' },
-            code: code { value: 'last-cbc-panel-report-date' }
+    if exists("Last CBC report") then
+      Observation {
+        meta: Meta {
+          profile: {
+            canonical { value: 'http://example.org/StructureDefinition/LastCbcPanelReportDateFeature' }
           }
-        }
-      },
-      value: dateTime { value: CBCReport.effective }
-    }
+        },
+        extension: {
+          Extension {
+            url: url { value: 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-instantiatesCaseFeature' },
+            value: canonical { value: 'http://example.org/StructureDefinition/LastCbcPanelReportDateFeature' }
+          },
+          Extension {
+            url: url { value: 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-caseFeatureType' },
+            value: code { value: 'inferred' }
+          }
+        },
+        status: ObservationStatus { value: 'final' },
+        effective: dateTime { value: Now() },
+        code: CodeableConcept {
+          coding: {
+            Coding {
+              system: uri { value: 'http://example.org/CodeSystem/CaseFeatureCodes' },
+              code: code { value: 'last-cbc-panel-report-date' }
+            }
+          }
+        },
+        value: dateTime { value: "Last CBC report".effective }
+      }
+    else null
 
 /**
  * @description

@@ -16,7 +16,7 @@ Usage: #example
 * derivedFrom = Reference(Questionnaire/QuestionnaireResponse2)
 * status = #final
 * code = CaseFeatureCodes#on-medication-sulfasalazine
-* subject = Reference(Patient/Patient8)
+* subject = Reference(Patient/Patient1)
 * valueBoolean = true
 * insert EffectiveDateCurrent
 
@@ -26,6 +26,6 @@ Usage: #example
 * derivedFrom = Reference(Questionnaire/QuestionnaireResponse2)
 * status = #final
 * code = CaseFeatureCodes#last-cbc-panel-report-date
-* subject = Reference(Patient/Patient8)
-* insert ValueDateTime2
+* subject = Reference(Patient/Patient1)
+* insert ValueDateTime1
 * insert EffectiveDateCurrent

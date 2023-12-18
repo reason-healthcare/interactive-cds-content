@@ -1,16 +1,12 @@
-Instance: BundleCase7Modified
+Instance: BundleCase1Modified
 InstanceOf: Bundle
-Description: "Test case for asserted case features updated to reflect extracted observations - Case1"
+Description: "Test case inferred Sulfasalazine and no CBC - with newly asserted Sulfasalazine observation - Case1"
 Usage: #example
 * type = #collection
 * meta.tag = #test
-* insert BundleEntry(Patient, Patient7)
+* insert BundleEntry(Patient, Patient1)
 * insert BundleEntry(Practitioner, PractitionerShared)
 * insert BundleEntry(Organization, OrganizationShared)
-* insert BundleEntry(Encounter, Encounter7)
+* insert BundleEntry(Encounter, Encounter1)
+* insert BundleEntry(MedicationRequest, MedicationRequest1)
 * insert BundleEntry(Observation, ActiveSulfasalazineFeatureObservation1)
-* insert BundleEntry(Observation, LastCbcPanelReportDateFeatureObservation1)
-* insert BundleEntry(Observation, CBCObservation7)
-* insert BundleEntry(Observation, r7-1)
-* insert BundleEntry(Observation, r7-2)
-* insert BundleEntry(MedicationRequest, MedicationRequest7)

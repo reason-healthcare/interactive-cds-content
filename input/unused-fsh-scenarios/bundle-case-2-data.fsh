@@ -1,14 +1,14 @@
-Instance: Patient8
+Instance: Patient1
 InstanceOf: Patient
 Usage: #example
-* name.family = "patient8"
+* name.family = "Patient1"
 
 Instance: Encounter8
 InstanceOf: Encounter
 Usage: #example
 * status = #in-progress
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "ambulatory"
-* subject = Reference(Patient8)
+* subject = Reference(Patient1)
 * participant
   * type = $ParticipationType#PPRF "primary performer"
   * individual = Reference(PractitionerShared)
@@ -19,7 +19,7 @@ InstanceOf: MedicationRequest
 Usage: #example
 * status = #active
 * intent = #order
-* subject = Reference(Patient8)
+* subject = Reference(Patient1)
 * medicationCodeableConcept = $ATC#A07EC01 "Sulfasalazine"
 
 Instance: DiagnosticReport8
@@ -33,7 +33,7 @@ Usage: #example
 * code.coding[+] = http://loinc.org#58410-2 "Complete blood count (hemogram) panel - Blood by Automated count"
 * code.coding[+] = $LOINC#58410-2 "CBC panel - Blood by Automated count"
 * code.text = "Complete Blood Count"
-* subject = Reference(Patient8)
+* subject = Reference(Patient1)
 * encounter = Reference(Encounter8)
 * insert EffectiveDateTime2
 * issued = "2023-06-21T11:45:33+11:00"
@@ -47,7 +47,7 @@ Usage: #example
 * status = #final
 * code = http://loinc.org#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Haemoglobin"
-* subject = Reference(Patient8)
+* subject = Reference(Patient1)
 * performer = Reference(OrganizationShared)
 * valueQuantity = 176 'g/L' "g/L"
 * referenceRange.low = 135 'g/L' "g/L"
@@ -59,7 +59,7 @@ Usage: #example
 * status = #final
 * code = http://loinc.org#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 * code.text = "Red Cell Count"
-* subject = Reference(Patient8)
+* subject = Reference(Patient1)
 * performer = Reference(OrganizationShared)
 * valueQuantity = 5.9 '10*12/L' "x10*12/L"
 * referenceRange.low = 4.2 '10*12/L' "x10*12/L"
@@ -71,7 +71,7 @@ Description: "Test case for inferred case features - Case2"
 Usage: #example
 * meta.tag = #test
 * type = #collection
-* insert BundleEntry(Patient, Patient8)
+* insert BundleEntry(Patient, Patient1)
 * insert BundleEntry(Practitioner, PractitionerShared)
 * insert BundleEntry(Organization, OrganizationShared)
 * insert BundleEntry(Encounter, Encounter8)

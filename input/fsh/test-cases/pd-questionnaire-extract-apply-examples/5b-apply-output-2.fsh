@@ -10,5 +10,5 @@ InstanceOf: RequestGroup
 Usage: #inline
 * intent = #proposal
 * status = #draft
-* subject = Reference(Patient/Patient8)
+* subject = Reference(Patient/Patient1)
 * instantiatesCanonical = Canonical(SulfasalazineMonitoringRecommendation|0.1.0)
