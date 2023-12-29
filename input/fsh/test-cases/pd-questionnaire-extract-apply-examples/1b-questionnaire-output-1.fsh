@@ -26,7 +26,7 @@ Usage: #inline
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
     * text = "Actual result"
     * type = #boolean
-    * initial.valueBoolean = true // This should be true but currently returns null - issue with CQL execution
+    * initial.valueBoolean = true
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.status)
     * insert HiddenExtension
@@ -42,7 +42,7 @@ Usage: #inline
     * required = true
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#on-medication-sulfasalazine
-  * item[+] // This item would be returned if inferred expression resolved correctly
+  * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.effectiveDateTime)
     * insert HiddenExtension
     * text = "Clinically relevant time/time-period for observation"
@@ -78,4 +78,3 @@ Usage: #inline
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
     * type = #dateTime
-    // * insert InitialDate1
