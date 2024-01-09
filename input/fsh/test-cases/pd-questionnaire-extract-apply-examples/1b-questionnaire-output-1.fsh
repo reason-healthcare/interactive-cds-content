@@ -5,23 +5,25 @@ Description: "Bundle of questionnaires from $questionnaire - Case1"
 * type = #collection
 * insert QuestionnaireBundleEntry(ActiveSulfasalazineFeatureQuestionnaire1)
 * insert QuestionnaireBundleEntry(LastCbcPanelReportDateFeatureQuestionnaire1)
+* insert QuestionnaireBundleEntry(ModularQuestionnaire1)
 
 Instance: ActiveSulfasalazineFeatureQuestionnaire1
 InstanceOf: Questionnaire
-Usage: #inline
+Usage: #example
 * insert QuestionnaireMetaData(ActiveSulfasalazineFeatureQuestionnaire1)
 * item[+]
   * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation)
   * text = "Measurements and simple assertions"
   * type = #group
   * extension[sdc-questionnaire-itemExtractionContext]
-    // CASE ONE
+  // CASE ONE
     * valueCode = #Observation
-    // CASE TWO
+  // CASE TWO
     // * valueExpression
     //   * language = #text/cql-identifier
     //   * expression = "On Sulfasalazine" // "On Sulfasalazine Asserted"?
     //   * reference = Canonical(ActiveSulfasalazineFeatureLogic)
+  // * item representing id of resource to update
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
     * text = "Actual result"
@@ -51,7 +53,7 @@ Usage: #inline
 
 Instance: LastCbcPanelReportDateFeatureQuestionnaire1
 InstanceOf: Questionnaire
-Usage: #inline
+Usage: #example
 * insert QuestionnaireMetaData(LastCbcPanelReportDateFeatureQuestionnaire1)
 * item[+]
   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
@@ -78,3 +80,25 @@ Usage: #inline
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
     * type = #dateTime
+
+Instance: ModularQuestionnaire1
+InstanceOf: SDCModularQuestionnaire
+Usage: #example
+* insert QuestionnaireMetaData(ModularQuestionnaire1)
+* extension[+]
+  * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
+  * valueCode = #assemble-root
+* item[+]
+  * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation)
+  * extension[+]
+    * url =  "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+    * valueCanonical = Canonical(ActiveSulfasalazineFeatureQuestionnaire1)
+  * type = #display
+  * text = "ActiveSulfasalazineFeature sub-questionnaire"
+* item[+]
+  * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
+  * extension[+]
+    * url =  "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+    * valueCanonical = Canonical(LastCbcPanelReportDateFeatureQuestionnaire1)
+  * type = #display
+  * text = "LastCbcPanelReportDateFeature sub-questionnaire"

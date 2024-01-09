@@ -38,7 +38,7 @@ RuleSet: QuestionnaireMetaData(id)
 * status = #draft
 
 RuleSet: QuestionnaireItem(id, path)
-* linkId = "{path}"
+* linkId = "{id}#{path}"
 * definition = "http://example.org/StructureDefinition/{id}#{path}"
 
 RuleSet: BundleEntry(resourceType, id)
