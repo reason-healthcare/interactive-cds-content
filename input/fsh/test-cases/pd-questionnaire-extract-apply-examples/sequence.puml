@@ -13,50 +13,50 @@ Clinician -> CDS: Launch App with context (plandef, patient, etc)
 
 CDS -> CPG: POST /PlanDefinition/$questionnaire (url, version, data)
 CPG -> CDS: Bundle<Questionnaire> pre-populated
-note left
-  See Postman 
-  * "Generate Questionnaire from PlanDefinition $questionnaire"
-end note
+' note left
+'   See Postman
+'   * "Generate Questionnaire from PlanDefinition $questionnaire"
+' end note
 
 |||
 
 CDS -> SDCManager: POST /Questionnaire/$assemble (questionnaires from prior step)
 SDCManager -> CDS: Combined Questionnaire
 
-note left
-  See: [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/Questionnaire-QuestionnaireAssembled1.html Example Assembled]]
-end note
+' note left
+'   See: [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/Questionnaire-QuestionnaireAssembled1.html Example Assembled]]
+' end note
 
-== 2. Prompt ==
+== 2. Create response ==
 
 CDS -> Clinician: Render Questionnaire
-Clinician -> CDS: Submit (with or without changes) 
+Clinician -> CDS: Submit (with or without changes)
 CDS -> CDS: Build QuestionnaireResponse
 
-note left
-  * [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/QuestionnaireResponse-QuestionnaireResponse1.html No change]]
-  * [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/QuestionnaireResponse-QuestionnaireResponse2.html Specify CBC date]]
-end note
+' note left
+'   * [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/QuestionnaireResponse-QuestionnaireResponse1.html No change]]
+'   * [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/QuestionnaireResponse-QuestionnaireResponse2.html Specify CBC date]]
+' end note
 
 == 3. Extract ==
 
 CDS -> SDCManager: POST /QuestionnaireResponse/$extract
 SDCManager -> CDS: Bundle<Case Features>
 
-note left
-  * [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/Bundle-ExtractOutput1.html No change extract]]
-  * [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/Bundle-ExtractOutput2.html Specify CBC date extract]]
-end note
+' note left
+'   * [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/Bundle-ExtractOutput1.html No change extract]]
+'   * [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/Bundle-ExtractOutput2.html Specify CBC date extract]]
+' end note
 
 == 4. Apply ==
 
 CDS -> CPG: POST /PlanDefinition/$apply (url, version, data/case features)
 CPG -> CDS: Response / CDS guidance
 
-note left
-  See Postman: 
-  * "Call PlanDefinition $apply (without recent CBC date)"
-  * "Call PlanDefinition $apply (with recent CBC date)"
-end note
+' note left
+'   See Postman:
+'   * "Call PlanDefinition $apply (without recent CBC date)"
+'   * "Call PlanDefinition $apply (with recent CBC date)"
+' end note
 
 @enduml
