@@ -27,7 +27,7 @@ SDCManager -> CDS: Combined Questionnaire
 '   See: [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/Questionnaire-QuestionnaireAssembled1.html Example Assembled]]
 ' end note
 
-== 2. Create response ==
+== 2. Fill out Questionnaire ==
 
 CDS -> Clinician: Render Questionnaire
 Clinician -> CDS: Submit (with or without changes)
@@ -38,7 +38,7 @@ CDS -> CDS: Build QuestionnaireResponse
 '   * [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/QuestionnaireResponse-QuestionnaireResponse2.html Specify CBC date]]
 ' end note
 
-== 3. Extract ==
+== 3. Extract Answers ==
 
 CDS -> SDCManager: POST /QuestionnaireResponse/$extract
 SDCManager -> CDS: Bundle<Case Features>
@@ -48,7 +48,7 @@ SDCManager -> CDS: Bundle<Case Features>
 '   * [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/Bundle-ExtractOutput2.html Specify CBC date extract]]
 ' end note
 
-== 4. Apply ==
+== 4. Apply Guidance ==
 
 CDS -> CPG: POST /PlanDefinition/$apply (url, version, data/case features)
 CPG -> CDS: Response / CDS guidance
