@@ -4,13 +4,13 @@ Usage: #example
 Description: "Bundle of observations from $extract - Case2"
 * type = #transaction
 * entry[+]
-  * insert BundleEntryPut(ActiveSulfasalazineFeature/ActiveSulfasalazineFeatureObservation2)
+  * insert BundleEntryPut(ActiveSulfasalazineFeature/ActiveSulfasalazineFeatureObservation1)
   * resource = ActiveSulfasalazineFeatureObservation2
 * entry[+]
-  * insert BundleEntryPut(LastCbcPanelReportDate/LastCbcPanelReportDateFeatureObservation2)
+  * insert BundleEntryPut(LastCbcPanelReportDate/LastCbcPanelReportDateFeatureObservation1)
   * resource = LastCbcPanelReportDateFeatureObservation2
 
-Instance: ActiveSulfasalazineFeatureObservation2
+Instance: ActiveSulfasalazineFeatureObservation1
 InstanceOf: ActiveSulfasalazineFeature
 Usage: #example
 * derivedFrom = Reference(Questionnaire/QuestionnaireResponse2)
@@ -20,7 +20,7 @@ Usage: #example
 * valueBoolean = true
 * insert EffectiveDateCurrent
 
-Instance: LastCbcPanelReportDateFeatureObservation2
+Instance: LastCbcPanelReportDateFeatureObservation1
 InstanceOf: LastCbcPanelReportDateFeature
 Usage: #example
 * derivedFrom = Reference(Questionnaire/QuestionnaireResponse2)

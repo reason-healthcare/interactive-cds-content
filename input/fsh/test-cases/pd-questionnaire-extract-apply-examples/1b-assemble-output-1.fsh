@@ -66,4 +66,3 @@ Description: "Assembeled Questionnaire - Case1"
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
     * type = #dateTime
-    // * insert InitialDate1

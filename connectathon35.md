@@ -26,7 +26,7 @@ The postman collection can be imported to run these test cases with $questionnai
 | terminologyEndpointType | hl7-fhir-file | Type of endpoint for terminology |
 | terminologyEndpointAddress | {your local content path} | Local path to CPG Starter content which will also be used for teminology |
 
-The Reason Framework $questionnaire operation uses configurable endpoints. See [CRMI  Artifact Endpoint Configurable](https://build.fhir.org/ig/HL7/crmi-ig/StructureDefinition-crmi-artifact-endpoint-configurable-operation.html )for more information.
+The Reason Framework $questionnaire operation uses configurable endpoints. See [CRMI  Artifact Endpoint Configurable](https://build.fhir.org/ig/HL7/crmi-ig/StructureDefinition-crmi-artifact-endpoint-configurable-operation.html) for more information.
 
 ## Running the CPG Engine
 

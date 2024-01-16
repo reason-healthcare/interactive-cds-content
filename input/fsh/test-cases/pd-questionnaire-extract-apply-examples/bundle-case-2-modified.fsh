@@ -9,5 +9,5 @@ Usage: #example
 * insert BundleEntry(Organization, OrganizationShared)
 * insert BundleEntry(Encounter, Encounter1)
 * insert BundleEntry(MedictionRequest, MedicationRequest1)
-* insert BundleEntry(Observation, ActiveSulfasalazineFeatureObservation2)
-* insert BundleEntry(Observation, LastCbcPanelReportDateFeatureObservation2)
+* insert BundleEntry(Observation, ActiveSulfasalazineFeatureObservation)
+* insert BundleEntry(Observation, LastCbcPanelReportDateFeatureObservation)
