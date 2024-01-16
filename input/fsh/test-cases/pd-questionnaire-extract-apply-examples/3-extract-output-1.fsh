@@ -5,7 +5,7 @@ Description: "Bundle of observations from $extract - Case1"
 * type = #transaction
 * entry[+]
   * insert BundleEntryPut(ActiveSulfasalazineFeature/ActiveSulfasalazineFeatureObservation)
-  * resource = ActiveSulfasalazineFeatureObservation1
+  * resource = ActiveSulfasalazineFeatureObservation
 
 Instance: ActiveSulfasalazineFeatureObservation
 InstanceOf: ActiveSulfasalazineFeature
