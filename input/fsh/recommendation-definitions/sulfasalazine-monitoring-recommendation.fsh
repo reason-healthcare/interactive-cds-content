@@ -1,6 +1,7 @@
 Instance: SulfasalazineMonitoringRecommendation
 InstanceOf: $cpg-recommendationdefinition
 Usage: #definition
+Title: "Sulfasalazine Monitoring Recommendation"
 * insert DefinitionMetadata(SulfasalazineMonitoringRecommendation, PlanDefinition)
 * description = "Monitoring tests for antirheumatic drug therapy for Sulfasalazine."
 * library = Canonical(ApplicabilityLogic)

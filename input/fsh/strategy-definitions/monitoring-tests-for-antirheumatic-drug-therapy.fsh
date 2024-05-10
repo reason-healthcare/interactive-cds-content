@@ -1,6 +1,7 @@
 Instance: MonitoringTestsForAntirheumaticDrugTherapy
 InstanceOf: $cpg-strategydefinition
 Usage: #definition
+Title: "Monitoring Tests for Antirheumatic Drug Therapy"
 * insert DefinitionMetadata(MonitoringTestsForAntirheumaticDrugTherapy, PlanDefinition)
 * useContext[+]
   * code = #venue
@@ -20,7 +21,7 @@ Tests should also be performed 2-3 weeks after any increase in drug dose. ESR an
 | Methotrexate	                         ||
 | At 3 weeks, 6 weeks, 12 weeks, then every 3-6 months | Basic blood count with platelets + differential count, ALT |
 | Every 6 months  | Creatinine (in case of impaired renal function, dose reduction) |
-| Hydroxychloroquine                     ||	
+| Hydroxychloroquine                     ||
 | No laboratory monitoring needed. Checkup by an ophthalmologist after 5 years of use||
 
 ### One month after starting treatment
@@ -41,7 +42,7 @@ Tests should also be performed 2-3 weeks after any increase in drug dose. ESR an
 * If, due to disease activity, major changes have had to be made to the medication or a biological agent or JAK inhibitor has had to be started, follow-up should be started from the beginning again, scheduling visits at 3 and 6 months.
 """
 * action
-  * title = "Strategy"
+  * title = "Check for monitoring tests"
   * description = "Check for tests when viewing patient"
   * trigger
     * type = #named-event

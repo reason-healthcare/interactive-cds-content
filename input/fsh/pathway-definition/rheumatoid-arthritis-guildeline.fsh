@@ -1,6 +1,7 @@
 Instance: RheumatoidArthritisGuideline
 InstanceOf: $cpg-pathwaydefinition
 Usage: #definition
+Title: "Rheumatoid Arthritis Guideline"
 * insert DefinitionMetadata(RheumatoidArthritisGuideline, PlanDefinition)
 * description = """
 ### Essentials
