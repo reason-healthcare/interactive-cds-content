@@ -1,6 +1,7 @@
 Instance: MethotrexateMonitoringRecommendation
 InstanceOf: $cpg-recommendationdefinition
 Usage: #definition
+Title: "Methotrexate Monitoring Recommendation"
 * insert DefinitionMetadata(MethotrexateMonitoringRecommendation, PlanDefinition)
 * description = "Monitoring tests for antirheumatic drug therapy for Methotrexate."
 * library[+] = Canonical(ApplicabilityLogic)

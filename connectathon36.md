@@ -1,10 +1,10 @@
-# Connectathon 35 CPG Example
+# Connectathon 36 CPG Example
 
 ## Setup content development environment and IG build
 
 Follow README instructions for tooling and IG build instructions
 
-## Content for Connectathon 35
+## Content for Connectathon 36
 
 Content can be found at input/fsh
 
