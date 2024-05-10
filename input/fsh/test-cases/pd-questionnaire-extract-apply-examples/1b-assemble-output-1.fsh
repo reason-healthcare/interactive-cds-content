@@ -26,7 +26,6 @@ Description: "Assembeled Questionnaire - Case1"
     * text = "registered | preliminary | final | amended +"
     * required = true
     * type = #choice
-    * answerValueSet = Canonical(observation-status)
     * initial.valueCoding = $codesystem-observation-status#final
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.code)
@@ -53,7 +52,6 @@ Description: "Assembeled Questionnaire - Case1"
     * text = "registered | preliminary | final | amended +"
     * required = true
     * type = #choice
-    * answerValueSet = Canonical(observation-status)
     * initial.valueCoding = $codesystem-observation-status#final
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.code)
