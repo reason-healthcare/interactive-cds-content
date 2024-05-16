@@ -17,10 +17,12 @@ Title: "Monitoring Tests for Antirheumatic Drug Therapy"
 Tests should also be performed 2-3 weeks after any increase in drug dose. ESR and CRP should be checked on visits to the doctor and otherwise as needed.
 
 | Drug         | Safety monitoring tests  |
-| ------------ | ------------------------ |
+|  :--- |  :--- |
 | Methotrexate	                         ||
 | At 3 weeks, 6 weeks, 12 weeks, then every 3-6 months | Basic blood count with platelets + differential count, ALT |
 | Every 6 months  | Creatinine (in case of impaired renal function, dose reduction) |
+| Sulfasalazine                     ||
+| Every 6 months  | Basic blood count with platelets + differential count |
 | Hydroxychloroquine                     ||
 | No laboratory monitoring needed. Checkup by an ophthalmologist after 5 years of use||
 
