@@ -44,8 +44,8 @@ Tests should also be performed 2-3 weeks after any increase in drug dose. ESR an
 * If, due to disease activity, major changes have had to be made to the medication or a biological agent or JAK inhibitor has had to be started, follow-up should be started from the beginning again, scheduling visits at 3 and 6 months.
 """
 * action
-  * title = "Check for monitoring tests"
-  * description = "Check for tests when viewing patient"
+  * title = "Recommend monitoring tests for RA therapy"
+  * description = "Recommend monitoring tests for RA therapy"
   * trigger
     * type = #named-event
     * name = "patient-view"
