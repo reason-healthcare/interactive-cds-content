@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="0c870add-20d9-4f60-ad58-3f196a6dde7b"/>
+  <meta>
+    <lastUpdated value="2024-05-17T14:59:55.074-04:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/ValueSet/observation-status"/>
+    <resource>
+      <ValueSet>
+        <meta>
+          <lastUpdated value="2019-11-01T09:29:23.356+11:00"/>
+          <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+        </meta>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="http://hl7.org/fhir/R4/codesystem-observation-status.html">codesystem ObservationStatus v4.0.1 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 8 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td>
+                  <b>Level</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+                <td>
+                  <b>
+                    <a href="http://hl7.org/fhir/R4/valueset-resource-status.html">Canonical Mapping for &quot;ObservationStatus&quot;</a>
+                  </b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hl7.org-fhir-observation-status-registered"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-observation-status.html#observation-status-registered">registered</a>
+                </td>
+                <td>http://hl7.org/fhir/observation-status</td>
+                <td>Registered</td>
+                <td>
+                  <div>
+                    <p>The existence of the observation is registered, but there is no result yet available.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span title="EQUIVALENT">~</span>
+                  <a href="http://hl7.org/fhir/R4/codesystem-resource-status.html#resource-status-received">received</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hl7.org-fhir-observation-status-preliminary"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-observation-status.html#observation-status-preliminary">preliminary</a>
+                </td>
+                <td>http://hl7.org/fhir/observation-status</td>
+                <td>Preliminary</td>
+                <td>
+                  <div>
+                    <p>This is an initial or interim observation: data may be incomplete or unverified.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span title="EQUIVALENT">~</span>
+                  <a href="http://hl7.org/fhir/R4/codesystem-resource-status.html#resource-status-draft">draft</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hl7.org-fhir-observation-status-final"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-observation-status.html#observation-status-final">final</a>
+                </td>
+                <td>http://hl7.org/fhir/observation-status</td>
+                <td>Final</td>
+                <td>
+                  <div>
+                    <p>The observation is complete and there are no further actions needed. Additional information such &quot;released&quot;, &quot;signed&quot;, etc would be represented using 
+                      <a href="http://hl7.org/fhir/R4/provenance.html">Provenance</a> which provides not only the act but also the actors and dates and other related data. These act states would be associated with an observation status of 
+                      <code>preliminary</code> until they are all completed and then a status of 
+                      <code>final</code> would be applied.
+                    </p>
+
+                  </div>
+                </td>
+                <td>
+                  <span title="EQUIVALENT">~</span>
+                  <a href="http://hl7.org/fhir/R4/codesystem-resource-status.html#resource-status-complete">complete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hl7.org-fhir-observation-status-amended"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-observation-status.html#observation-status-amended">amended</a>
+                </td>
+                <td>http://hl7.org/fhir/observation-status</td>
+                <td>Amended</td>
+                <td>
+                  <div>
+                    <p>Subsequent to being Final, the observation has been modified subsequent.  This includes updates/new information and corrections.</p>
+
+                  </div>
+                </td>
+                <td/>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hl7.org-fhir-observation-status-corrected"> </a>2
+                </td>
+                <td style="white-space:nowrap">    
+                  <a href="http://hl7.org/fhir/R4/codesystem-observation-status.html#observation-status-corrected">corrected</a>
+                </td>
+                <td>http://hl7.org/fhir/observation-status</td>
+                <td>Corrected</td>
+                <td>
+                  <div>
+                    <p>Subsequent to being Final, the observation has been modified to correct an error in the test result.</p>
+
+                  </div>
+                </td>
+                <td/>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hl7.org-fhir-observation-status-cancelled"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-observation-status.html#observation-status-cancelled">cancelled</a>
+                </td>
+                <td>http://hl7.org/fhir/observation-status</td>
+                <td>Cancelled</td>
+                <td>
+                  <div>
+                    <p>The observation is unavailable because the measurement was not started or not completed (also sometimes called &quot;aborted&quot;).</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span title="EQUIVALENT">~</span>
+                  <a href="http://hl7.org/fhir/R4/codesystem-resource-status.html#resource-status-abandoned">abandoned</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hl7.org-fhir-observation-status-entered-in-error"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-observation-status.html#observation-status-entered-in-error">entered-in-error</a>
+                </td>
+                <td>http://hl7.org/fhir/observation-status</td>
+                <td>Entered in Error</td>
+                <td>
+                  <div>
+                    <p>The observation has been withdrawn following previous final release.  This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be &quot;cancelled&quot; rather than &quot;entered-in-error&quot;.).</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span title="EQUIVALENT">~</span>
+                  <a href="http://hl7.org/fhir/R4/codesystem-resource-status.html#resource-status-error">error</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="http---hl7.org-fhir-observation-status-unknown"> </a>1
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R4/codesystem-observation-status.html#observation-status-unknown">unknown</a>
+                </td>
+                <td>http://hl7.org/fhir/observation-status</td>
+                <td>Unknown</td>
+                <td>
+                  <div>
+                    <p>The authoring/source system does not know which of the status values currently applies for this observation. Note: This concept is not to be used for &quot;other&quot; - one of the listed statuses is presumed to apply, but the authoring/source system does not know which.</p>
+
+                  </div>
+                </td>
+                <td>
+                  <span title="EQUIVALENT">~</span>
+                  <a href="http://hl7.org/fhir/R4/codesystem-resource-status.html#resource-status-unknown">unknown</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/ValueSet/observation-status"/>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:oid:2.16.840.1.113883.4.642.3.400"/>
+        </identifier>
+        <version value="0.1.0"/>
+        <name value="ObservationStatus"/>
+        <title value="ObservationStatus"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2019-11-01T09:29:23+11:00"/>
+        <immutable value="true"/>
+        <expansion>
+          <identifier value="urn:uuid:9a71c685-bcdd-42dc-b438-edf8691c39c1"/>
+          <timestamp value="2024-05-17T15:00:32-04:00"/>
+          <total value="8"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/observation-status|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/observation-status"/>
+            <code value="registered"/>
+            <display value="Registered"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/observation-status"/>
+            <code value="preliminary"/>
+            <display value="Preliminary"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/observation-status"/>
+            <code value="final"/>
+            <display value="Final"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/observation-status"/>
+            <code value="amended"/>
+            <display value="Amended"/>
+            <contains>
+              <system value="http://hl7.org/fhir/observation-status"/>
+              <code value="corrected"/>
+              <display value="Corrected"/>
+            </contains>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/observation-status"/>
+            <code value="cancelled"/>
+            <display value="Cancelled"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/observation-status"/>
+            <code value="entered-in-error"/>
+            <display value="Entered in Error"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/observation-status"/>
+            <code value="unknown"/>
+            <display value="Unknown"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/ValueSet/sulfasalazine-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
+              <p>Expansion based on: </p>
+              <ul>
+                <li>codesystem RxNorm version ??rx1</li>
+                <li>codesystem http://www.whocc.no/atc version 2020-05</li>
+              </ul>
+            </div>
+            <p>This value set contains 3 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.whocc.no-atc-A07EC01"> </a>  A07EC01
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>sulfasalazine</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-373988"> </a>  373988
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>sulfasalazine Enema</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-376645"> </a>  376645
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>sulfasalazine Delayed Release Oral Tablet</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://example.org/ValueSet/sulfasalazine-vs"/>
+        <version value="0.1.0"/>
+        <name value="SulfasalazineVS"/>
+        <status value="draft"/>
+        <date value="2024-05-17T14:59:55-04:00"/>
+        <expansion>
+          <identifier value="urn:uuid:ef170513-ec4b-4697-a79f-47f9f71d9ed4"/>
+          <timestamp value="2024-05-17T15:00:32-04:00"/>
+          <total value="3"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://www.whocc.no/atc|2020-05"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://www.whocc.no/atc|2020-05"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="true"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://www.nlm.nih.gov/research/umls/rxnorm|??rx1"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://www.nlm.nih.gov/research/umls/rxnorm|??rx1"/>
+          </parameter>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A07EC01"/>
+            <display value="sulfasalazine"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="373988"/>
+            <display value="sulfasalazine Enema"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="376645"/>
+            <display value="sulfasalazine Delayed Release Oral Tablet"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1116.181"/>
+    <resource>
+      <ValueSet>
+        <meta>
+          <versionId value="20"/>
+          <lastUpdated value="2020-09-02T01:00:24.000-04:00"/>
+          <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+        </meta>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on codesystem RxNorm version ??rx1</p>
+            <p>This value set contains 36 concepts.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-105585"> </a>  105585
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>methotrexate 2.5 MG Oral Tablet</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-105586"> </a>  105586
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>methotrexate 10 MG Oral Tablet</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1441402"> </a>  1441402
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.4 ML methotrexate 25 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1441411"> </a>  1441411
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.4 ML methotrexate 37.5 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1441416"> </a>  1441416
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.4 ML methotrexate 50 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1441422"> </a>  1441422
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.4 ML methotrexate 62.5 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1544378"> </a>  1544378
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.2 ML methotrexate 50 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1544385"> </a>  1544385
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.25 ML methotrexate 50 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1544387"> </a>  1544387
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.3 ML methotrexate 50 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1544389"> </a>  1544389
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.35 ML methotrexate 50 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1544395"> </a>  1544395
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.45 ML methotrexate 50 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1544397"> </a>  1544397
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.5 ML methotrexate 50 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1544401"> </a>  1544401
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.6 ML methotrexate 50 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1544403"> </a>  1544403
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.15 ML methotrexate 50 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1655956"> </a>  1655956
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>40 ML methotrexate 25 MG/ML Injection</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1655959"> </a>  1655959
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>10 ML methotrexate 25 MG/ML Injection</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1655960"> </a>  1655960
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>2 ML methotrexate 25 MG/ML Injection</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1655967"> </a>  1655967
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>4 ML methotrexate 25 MG/ML Injection</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1655968"> </a>  1655968
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>8 ML methotrexate 25 MG/ML Injection</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1747179"> </a>  1747179
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.4 ML methotrexate 31.3 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1747185"> </a>  1747185
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.4 ML methotrexate 43.8 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1747192"> </a>  1747192
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.4 ML methotrexate 56.3 MG/ML Auto-Injector</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1921592"> </a>  1921592
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>methotrexate 2.5 MG/ML Oral Solution</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-1946772"> </a>  1946772
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>methotrexate 25 MG/ML Injectable Solution</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-2377333"> </a>  2377333
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.4 ML methotrexate 25 MG/ML Prefilled Syringe</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-2377341"> </a>  2377341
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.5 ML methotrexate 25 MG/ML Prefilled Syringe</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-2377343"> </a>  2377343
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.6 ML methotrexate 25 MG/ML Prefilled Syringe</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-2377345"> </a>  2377345
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.7 ML methotrexate 25 MG/ML Prefilled Syringe</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-2377347"> </a>  2377347
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.8 ML methotrexate 25 MG/ML Prefilled Syringe</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-2377349"> </a>  2377349
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.9 ML methotrexate 25 MG/ML Prefilled Syringe</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-2377351"> </a>  2377351
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>1 ML methotrexate 25 MG/ML Prefilled Syringe</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-2377353"> </a>  2377353
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>0.3 ML methotrexate 25 MG/ML Prefilled Syringe</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-283510"> </a>  283510
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>methotrexate 15 MG Oral Tablet</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-283511"> </a>  283511
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>methotrexate 5 MG Oral Tablet</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-283671"> </a>  283671
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>methotrexate 7.5 MG Oral Tablet</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-311625"> </a>  311625
+                </td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+                <td>methotrexate 1000 MG Injection</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1116.181"/>
+        <version value="0.1.0"/>
+        <name value="Methotrexate"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2020-09-02T01:00:24-04:00"/>
+        <jurisdiction>
+          <extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+            <valueCode value="unknown"/>
+          </extension>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:5b284617-adb7-4d31-baea-5b1f08d9daa3"/>
+          <timestamp value="2024-05-17T15:00:32-04:00"/>
+          <total value="36"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://www.nlm.nih.gov/research/umls/rxnorm|??rx1"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://www.nlm.nih.gov/research/umls/rxnorm|??rx1"/>
+          </parameter>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="105585"/>
+            <display value="methotrexate 2.5 MG Oral Tablet"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="105586"/>
+            <display value="methotrexate 10 MG Oral Tablet"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1441402"/>
+            <display value="0.4 ML methotrexate 25 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1441411"/>
+            <display value="0.4 ML methotrexate 37.5 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1441416"/>
+            <display value="0.4 ML methotrexate 50 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1441422"/>
+            <display value="0.4 ML methotrexate 62.5 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1544378"/>
+            <display value="0.2 ML methotrexate 50 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1544385"/>
+            <display value="0.25 ML methotrexate 50 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1544387"/>
+            <display value="0.3 ML methotrexate 50 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1544389"/>
+            <display value="0.35 ML methotrexate 50 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1544395"/>
+            <display value="0.45 ML methotrexate 50 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1544397"/>
+            <display value="0.5 ML methotrexate 50 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1544401"/>
+            <display value="0.6 ML methotrexate 50 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1544403"/>
+            <display value="0.15 ML methotrexate 50 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1655956"/>
+            <display value="40 ML methotrexate 25 MG/ML Injection"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1655959"/>
+            <display value="10 ML methotrexate 25 MG/ML Injection"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1655960"/>
+            <display value="2 ML methotrexate 25 MG/ML Injection"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1655967"/>
+            <display value="4 ML methotrexate 25 MG/ML Injection"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1655968"/>
+            <display value="8 ML methotrexate 25 MG/ML Injection"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1747179"/>
+            <display value="0.4 ML methotrexate 31.3 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1747185"/>
+            <display value="0.4 ML methotrexate 43.8 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1747192"/>
+            <display value="0.4 ML methotrexate 56.3 MG/ML Auto-Injector"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1921592"/>
+            <display value="methotrexate 2.5 MG/ML Oral Solution"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="1946772"/>
+            <display value="methotrexate 25 MG/ML Injectable Solution"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="2377333"/>
+            <display value="0.4 ML methotrexate 25 MG/ML Prefilled Syringe"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="2377341"/>
+            <display value="0.5 ML methotrexate 25 MG/ML Prefilled Syringe"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="2377343"/>
+            <display value="0.6 ML methotrexate 25 MG/ML Prefilled Syringe"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="2377345"/>
+            <display value="0.7 ML methotrexate 25 MG/ML Prefilled Syringe"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="2377347"/>
+            <display value="0.8 ML methotrexate 25 MG/ML Prefilled Syringe"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="2377349"/>
+            <display value="0.9 ML methotrexate 25 MG/ML Prefilled Syringe"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="2377351"/>
+            <display value="1 ML methotrexate 25 MG/ML Prefilled Syringe"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="2377353"/>
+            <display value="0.3 ML methotrexate 25 MG/ML Prefilled Syringe"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="283510"/>
+            <display value="methotrexate 15 MG Oral Tablet"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="283511"/>
+            <display value="methotrexate 5 MG Oral Tablet"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="283671"/>
+            <display value="methotrexate 7.5 MG Oral Tablet"/>
+          </contains>
+          <contains>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="311625"/>
+            <display value="methotrexate 1000 MG Injection"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

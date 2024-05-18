@@ -1,0 +1,187 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "QuestionnaireOutput1",
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://questionnaire-processor/Questionnaire/ModularQuestionnaire1",
+    "resource" : {
+      "resourceType" : "Questionnaire",
+      "id" : "ModularQuestionnaire1",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-modular"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Questionnaire_ModularQuestionnaire1\"> </a><p><b>Generated Narrative: Questionnaire</b><a name=\"ModularQuestionnaire1\"> </a><a name=\"hcModularQuestionnaire1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Questionnaire &quot;ModularQuestionnaire1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-modular.html\">SDC Modular Questionnaire</a></p></div><p><b>Assembly Expectations for Questionnaire</b>: assemble-root</p><p><b>url</b>: <code>http://questionnaire-processor/Questionnaire/ModularQuestionnaire1</code></p><p><b>status</b>: draft</p><blockquote><p><b>item</b></p><p><b>Sub-questionnaire</b>: <a href=\"Questionnaire-ActiveSulfasalazineFeatureQuestionnaire1.html\">Questionnaire[http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1|0.1.0]</a></p><p><b>linkId</b>: ActiveSulfasalazineFeature#Observation</p><p><b>definition</b>: <a href=\"StructureDefinition-ActiveSulfasalazineFeature.html\">Active Sulfasalazine Feature</a></p><p><b>text</b>: ActiveSulfasalazineFeature sub-questionnaire</p><p><b>type</b>: display</p></blockquote><blockquote><p><b>item</b></p><p><b>Sub-questionnaire</b>: <a href=\"Questionnaire-LastCbcPanelReportDateFeatureQuestionnaire1.html\">Questionnaire[http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1|0.1.0]</a></p><p><b>linkId</b>: LastCbcPanelReportDateFeature#Observation</p><p><b>definition</b>: <a href=\"StructureDefinition-LastCbcPanelReportDateFeature.html\">Last CBC Panel Report Date Feature</a></p><p><b>text</b>: LastCbcPanelReportDateFeature sub-questionnaire</p><p><b>type</b>: display</p></blockquote></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation",
+        "valueCode" : "assemble-root"
+      }],
+      "url" : "http://questionnaire-processor/Questionnaire/ModularQuestionnaire1",
+      "status" : "draft",
+      "item" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire",
+          "valueCanonical" : "http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1"
+        }],
+        "linkId" : "ActiveSulfasalazineFeature#Observation",
+        "definition" : "http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation",
+        "text" : "ActiveSulfasalazineFeature sub-questionnaire",
+        "type" : "display"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire",
+          "valueCanonical" : "http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1"
+        }],
+        "linkId" : "LastCbcPanelReportDateFeature#Observation",
+        "definition" : "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation",
+        "text" : "LastCbcPanelReportDateFeature sub-questionnaire",
+        "type" : "display"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1",
+    "resource" : {
+      "resourceType" : "Questionnaire",
+      "id" : "ActiveSulfasalazineFeatureQuestionnaire1",
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Questionnaire_ActiveSulfasalazineFeatureQuestionnaire1\"> </a><p><b>Generated Narrative: Questionnaire</b><a name=\"ActiveSulfasalazineFeatureQuestionnaire1\"> </a><a name=\"hcActiveSulfasalazineFeatureQuestionnaire1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Questionnaire &quot;ActiveSulfasalazineFeatureQuestionnaire1&quot; </p></div><p><b>url</b>: <code>http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1</code></p><p><b>status</b>: draft</p><blockquote><p><b>item</b></p><p><b>Item extraction context</b>: Observation</p><p><b>linkId</b>: ActiveSulfasalazineFeature#Observation</p><p><b>definition</b>: <a href=\"StructureDefinition-ActiveSulfasalazineFeature.html\">Active Sulfasalazine Feature</a></p><p><b>text</b>: Measurements and simple assertions</p><p><b>type</b>: group</p><blockquote><p><b>item</b></p><p><b>linkId</b>: ActiveSulfasalazineFeature#Observation.valueBoolean</p><p><b>definition</b>: <a href=\"StructureDefinition-ActiveSulfasalazineFeature.html\">Active Sulfasalazine Feature</a></p><p><b>text</b>: Actual result</p><p><b>type</b>: boolean</p><blockquote><p><b>initial</b></p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>Questionnaire Hidden</b>: true</p><p><b>linkId</b>: ActiveSulfasalazineFeature#Observation.status</p><p><b>definition</b>: <a href=\"StructureDefinition-ActiveSulfasalazineFeature.html\">Active Sulfasalazine Feature</a></p><p><b>text</b>: registered | preliminary | final | amended +</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><blockquote><p><b>initial</b></p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>Questionnaire Hidden</b>: true</p><p><b>linkId</b>: ActiveSulfasalazineFeature#Observation.code</p><p><b>definition</b>: <a href=\"StructureDefinition-ActiveSulfasalazineFeature.html\">Active Sulfasalazine Feature</a></p><p><b>text</b>: Type of observation (code / type)</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><blockquote><p><b>initial</b></p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>Questionnaire Hidden</b>: true</p><p><b>linkId</b>: ActiveSulfasalazineFeature#Observation.effectiveDateTime</p><p><b>definition</b>: <a href=\"StructureDefinition-ActiveSulfasalazineFeature.html\">Active Sulfasalazine Feature</a></p><p><b>text</b>: Clinically relevant time/time-period for observation</p><p><b>type</b>: dateTime</p><blockquote><p><b>initial</b></p></blockquote></blockquote></blockquote></div>"
+      },
+      "url" : "http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1",
+      "status" : "draft",
+      "item" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemExtractionContext",
+          "valueCode" : "Observation"
+        }],
+        "linkId" : "ActiveSulfasalazineFeature#Observation",
+        "definition" : "http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation",
+        "text" : "Measurements and simple assertions",
+        "type" : "group",
+        "item" : [{
+          "linkId" : "ActiveSulfasalazineFeature#Observation.valueBoolean",
+          "definition" : "http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation.valueBoolean",
+          "text" : "Actual result",
+          "type" : "boolean",
+          "initial" : [{
+            "valueBoolean" : true
+          }]
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+            "valueBoolean" : true
+          }],
+          "linkId" : "ActiveSulfasalazineFeature#Observation.status",
+          "definition" : "http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation.status",
+          "text" : "registered | preliminary | final | amended +",
+          "type" : "choice",
+          "required" : true,
+          "initial" : [{
+            "valueCoding" : {
+              "system" : "http://hl7.org/fhir/observation-status",
+              "code" : "final"
+            }
+          }]
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+            "valueBoolean" : true
+          }],
+          "linkId" : "ActiveSulfasalazineFeature#Observation.code",
+          "definition" : "http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation.code",
+          "text" : "Type of observation (code / type)",
+          "type" : "choice",
+          "required" : true,
+          "initial" : [{
+            "valueCoding" : {
+              "system" : "http://example.org/CodeSystem/CaseFeatureCodes",
+              "code" : "on-medication-sulfasalazine"
+            }
+          }]
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+            "valueBoolean" : true
+          }],
+          "linkId" : "ActiveSulfasalazineFeature#Observation.effectiveDateTime",
+          "definition" : "http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation.effectiveDateTime",
+          "text" : "Clinically relevant time/time-period for observation",
+          "type" : "dateTime",
+          "initial" : [{
+            "valueDateTime" : "2022-12-13"
+          }]
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1",
+    "resource" : {
+      "resourceType" : "Questionnaire",
+      "id" : "LastCbcPanelReportDateFeatureQuestionnaire1",
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Questionnaire_LastCbcPanelReportDateFeatureQuestionnaire1\"> </a><p><b>Generated Narrative: Questionnaire</b><a name=\"LastCbcPanelReportDateFeatureQuestionnaire1\"> </a><a name=\"hcLastCbcPanelReportDateFeatureQuestionnaire1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Questionnaire &quot;LastCbcPanelReportDateFeatureQuestionnaire1&quot; </p></div><p><b>url</b>: <code>http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1</code></p><p><b>status</b>: draft</p><blockquote><p><b>item</b></p><p><b>Item extraction context</b>: Observation</p><p><b>linkId</b>: LastCbcPanelReportDateFeature#Observation</p><p><b>definition</b>: <a href=\"StructureDefinition-LastCbcPanelReportDateFeature.html\">Last CBC Panel Report Date Feature</a></p><p><b>text</b>: Measurements and simple assertions</p><p><b>type</b>: group</p><blockquote><p><b>item</b></p><p><b>Questionnaire Hidden</b>: true</p><p><b>linkId</b>: LastCbcPanelReportDateFeature#Observation.status</p><p><b>definition</b>: <a href=\"StructureDefinition-LastCbcPanelReportDateFeature.html\">Last CBC Panel Report Date Feature</a></p><p><b>text</b>: registered | preliminary | final | amended +</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><blockquote><p><b>initial</b></p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>Questionnaire Hidden</b>: true</p><p><b>linkId</b>: LastCbcPanelReportDateFeature#Observation.code</p><p><b>definition</b>: <a href=\"StructureDefinition-LastCbcPanelReportDateFeature.html\">Last CBC Panel Report Date Feature</a></p><p><b>text</b>: Type of observation (code / type)</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><blockquote><p><b>initial</b></p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: LastCbcPanelReportDateFeature#Observation.valueDateTime</p><p><b>definition</b>: <a href=\"StructureDefinition-LastCbcPanelReportDateFeature.html\">Last CBC Panel Report Date Feature</a></p><p><b>text</b>: Actual result</p><p><b>type</b>: dateTime</p></blockquote></blockquote></div>"
+      },
+      "url" : "http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1",
+      "status" : "draft",
+      "item" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemExtractionContext",
+          "valueCode" : "Observation"
+        }],
+        "linkId" : "LastCbcPanelReportDateFeature#Observation",
+        "definition" : "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation",
+        "text" : "Measurements and simple assertions",
+        "type" : "group",
+        "item" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+            "valueBoolean" : true
+          }],
+          "linkId" : "LastCbcPanelReportDateFeature#Observation.status",
+          "definition" : "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation.status",
+          "text" : "registered | preliminary | final | amended +",
+          "type" : "choice",
+          "required" : true,
+          "initial" : [{
+            "valueCoding" : {
+              "system" : "http://hl7.org/fhir/observation-status",
+              "code" : "final"
+            }
+          }]
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+            "valueBoolean" : true
+          }],
+          "linkId" : "LastCbcPanelReportDateFeature#Observation.code",
+          "definition" : "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation.code",
+          "text" : "Type of observation (code / type)",
+          "type" : "choice",
+          "required" : true,
+          "initial" : [{
+            "valueCoding" : {
+              "system" : "http://example.org/CodeSystem/CaseFeatureCodes",
+              "code" : "last-cbc-panel-report-date"
+            }
+          }]
+        },
+        {
+          "linkId" : "LastCbcPanelReportDateFeature#Observation.valueDateTime",
+          "definition" : "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation.valueDateTime",
+          "text" : "Actual result",
+          "type" : "dateTime"
+        }]
+      }]
+    }
+  }]
+}

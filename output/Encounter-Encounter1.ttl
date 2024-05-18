@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/Encounter/Encounter1> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Encounter1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"Encounter1\"> </a><a name=\"hcEncounter1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter &quot;Encounter1&quot; </p></div><p><b>status</b>: in-progress</p><p><b>class</b>: ambulatory (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code AMB = 'ambulatory', stated as 'ambulatory')</p><p><b>subject</b>: <a href=\"Patient-Patient1.html\">Patient/Patient1</a> &quot; PATIENT1&quot;</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td>primary performer <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-v3-ParticipationType.html\">ParticipationType</a>#PPRF)</span></td><td><a href=\"Practitioner-PractitionerShared.html\">Practitioner/PractitionerShared</a> &quot; PRACTITIONERSHARED&quot;</td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-OrganizationShared.html\">Organization/OrganizationShared</a> &quot;organizationshared&quot;</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "in-progress"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://example.org/Patient/Patient1> ;
+     fhir:reference [ fhir:v "Patient/Patient1" ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPRF" ] ;
+         fhir:display [ fhir:v "primary performer" ]
+       ] )
+     ] ) ;
+     fhir:individual [
+       fhir:link <http://example.org/Practitioner/PractitionerShared> ;
+       fhir:reference [ fhir:v "Practitioner/PractitionerShared" ]
+     ]
+  ] ) ; # 
+  fhir:serviceProvider [
+     fhir:link <http://example.org/Organization/OrganizationShared> ;
+     fhir:reference [ fhir:v "Organization/OrganizationShared" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

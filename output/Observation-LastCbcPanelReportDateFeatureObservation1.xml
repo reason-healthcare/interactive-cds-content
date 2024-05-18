@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="LastCbcPanelReportDateFeatureObservation1"/>
+  <meta>
+    <profile value="http://example.org/StructureDefinition/LastCbcPanelReportDateFeature"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="LastCbcPanelReportDateFeatureObservation1"> </a><a name="hcLastCbcPanelReportDateFeatureObservation1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;LastCbcPanelReportDateFeatureObservation1&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-LastCbcPanelReportDateFeature.html">Last CBC Panel Report Date Feature</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Date of last CBC Panel <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-CaseFeatureCodes.html">CaseFeatureCodes</a>#last-cbc-panel-report-date)</span></p><p><b>subject</b>: <a href="Patient-Patient1.html">Patient/Patient1</a> &quot; PATIENT1&quot;</p><p><b>effective</b>: 2023-12-13</p><p><b>value</b>: 2023-12-04</p><p><b>derivedFrom</b>: <a href="Questionnaire/QuestionnaireResponse2">Questionnaire/QuestionnaireResponse2</a></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://example.org/CodeSystem/CaseFeatureCodes"/>
+      <code value="last-cbc-panel-report-date"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Patient1"/>
+  </subject>
+  <effectiveDateTime value="2023-12-13"/>
+  <valueDateTime value="2023-12-04"/>
+  <derivedFrom>
+    <reference value="Questionnaire/QuestionnaireResponse2"/>
+  </derivedFrom>
+</Observation>

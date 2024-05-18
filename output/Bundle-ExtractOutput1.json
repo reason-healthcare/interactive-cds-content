@@ -1,0 +1,41 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "ExtractOutput1",
+  "type" : "transaction",
+  "entry" : [{
+    "fullUrl" : "http://example.org/ActiveSulfasalazineFeature/ActiveSulfasalazineFeatureObservation",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ActiveSulfasalazineFeatureObservation",
+      "meta" : {
+        "profile" : ["http://example.org/StructureDefinition/ActiveSulfasalazineFeature"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ActiveSulfasalazineFeatureObservation\"> </a><p><b>Generated Narrative: Observation</b><a name=\"ActiveSulfasalazineFeatureObservation\"> </a><a name=\"hcActiveSulfasalazineFeatureObservation\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;ActiveSulfasalazineFeatureObservation&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ActiveSulfasalazineFeature.html\">Active Sulfasalazine Feature</a></p></div><p><b>status</b>: final</p><p><b>code</b>: On Sulfasalazine Feature <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-CaseFeatureCodes.html\">CaseFeatureCodes</a>#on-medication-sulfasalazine)</span></p><p><b>subject</b>: <a href=\"Patient-Patient1.html\">Patient/Patient1</a> &quot; PATIENT1&quot;</p><p><b>effective</b>: 2023-12-13</p><p><b>performer</b>: <a href=\"Organization-OrganizationShared.html\">Organization/OrganizationShared</a> &quot;organizationshared&quot;</p><p><b>value</b>: true</p><p><b>derivedFrom</b>: <a href=\"Questionnaire/QuestionnaireResponse1\">Questionnaire/QuestionnaireResponse1</a></p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://example.org/CodeSystem/CaseFeatureCodes",
+          "code" : "on-medication-sulfasalazine"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Patient1"
+      },
+      "effectiveDateTime" : "2023-12-13",
+      "performer" : [{
+        "reference" : "Organization/OrganizationShared"
+      }],
+      "valueBoolean" : true,
+      "derivedFrom" : [{
+        "reference" : "Questionnaire/QuestionnaireResponse1"
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "ActiveSulfasalazineFeature/ActiveSulfasalazineFeatureObservation"
+    }
+  }]
+}

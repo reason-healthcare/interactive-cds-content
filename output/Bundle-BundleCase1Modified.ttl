@@ -1,0 +1,155 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/Bundle/BundleCase1Modified> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BundleCase1Modified"] ; # 
+  fhir:meta [
+     fhir:tag ( [
+       fhir:code [ fhir:v "test" ]
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "http://example.org/Patient/Patient1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://example.org/Patient/Patient1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://example.org/Practitioner/PractitionerShared"^^xsd:anyURI ] ;
+     fhir:resource ( <http://example.org/Practitioner/PractitionerShared> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://example.org/Organization/OrganizationShared"^^xsd:anyURI ] ;
+     fhir:resource ( <http://example.org/Organization/OrganizationShared> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://example.org/Encounter/Encounter1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://example.org/Encounter/Encounter1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://example.org/MedicationRequest/MedicationRequest1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://example.org/MedicationRequest/MedicationRequest1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://example.org/Observation/ActiveSulfasalazineFeatureObservation"^^xsd:anyURI ] ;
+     fhir:resource ( <http://example.org/Observation/ActiveSulfasalazineFeatureObservation> )
+  ] ) . # 
+
+<http://example.org/Patient/Patient1> a fhir:Patient ;
+  fhir:id [ fhir:v "Patient1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Patient1\"> </a><p><b>Generated Narrative: Patient</b><a name=\"Patient1\"> </a><a name=\"hcPatient1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Patient1&quot; </p></div><p><b>name</b>: Patient1 </p></div>"
+  ] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Patient1" ]
+  ] ) . # 
+
+<http://example.org/Practitioner/PractitionerShared> a fhir:Practitioner ;
+  fhir:id [ fhir:v "PractitionerShared"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_PractitionerShared\"> </a><p><b>Generated Narrative: Practitioner</b><a name=\"PractitionerShared\"> </a><a name=\"hcPractitionerShared\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;PractitionerShared&quot; </p></div><p><b>name</b>: practitionershared </p></div>"
+  ] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "practitionershared" ]
+  ] ) . # 
+
+<http://example.org/Organization/OrganizationShared> a fhir:Organization ;
+  fhir:id [ fhir:v "OrganizationShared"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_OrganizationShared\"> </a><p><b>Generated Narrative: Organization</b><a name=\"OrganizationShared\"> </a><a name=\"hcOrganizationShared\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Organization &quot;OrganizationShared&quot; </p></div><p><b>name</b>: organizationshared</p></div>"
+  ] ; # 
+  fhir:name [ fhir:v "organizationshared"] . # 
+
+<http://example.org/Encounter/Encounter1> a fhir:Encounter ;
+  fhir:id [ fhir:v "Encounter1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_Encounter1\"> </a><p><b>Generated Narrative: Encounter</b><a name=\"Encounter1\"> </a><a name=\"hcEncounter1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter &quot;Encounter1&quot; </p></div><p><b>status</b>: in-progress</p><p><b>class</b>: ambulatory (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code AMB = 'ambulatory', stated as 'ambulatory')</p><p><b>subject</b>: See on this page: Patient/Patient1</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td>primary performer <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-v3-ParticipationType.html\">ParticipationType</a>#PPRF)</span></td><td>See on this page: Practitioner/PractitionerShared</td></tr></table><p><b>serviceProvider</b>: See on this page: Organization/OrganizationShared</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "in-progress"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://example.org/Patient/Patient1> ;
+     fhir:reference [ fhir:v "Patient/Patient1" ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPRF" ] ;
+         fhir:display [ fhir:v "primary performer" ]
+       ] )
+     ] ) ;
+     fhir:individual [
+       fhir:link <http://example.org/Practitioner/PractitionerShared> ;
+       fhir:reference [ fhir:v "Practitioner/PractitionerShared" ]
+     ]
+  ] ) ; # 
+  fhir:serviceProvider [
+     fhir:link <http://example.org/Organization/OrganizationShared> ;
+     fhir:reference [ fhir:v "Organization/OrganizationShared" ]
+  ] . # 
+
+<http://example.org/MedicationRequest/MedicationRequest1> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "MedicationRequest1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationRequest_MedicationRequest1\"> </a><p><b>Generated Narrative: MedicationRequest</b><a name=\"MedicationRequest1\"> </a><a name=\"hcMedicationRequest1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationRequest &quot;MedicationRequest1&quot; </p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: Sulfasalazine <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-v3-WC.html\">WHO ATC</a>#A07EC01)</span></p><p><b>subject</b>: See on this page: Patient/Patient1</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "A07EC01" ] ;
+       fhir:display [ fhir:v "Sulfasalazine" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://example.org/Patient/Patient1> ;
+     fhir:reference [ fhir:v "Patient/Patient1" ]
+  ] . # 
+
+<http://example.org/Observation/ActiveSulfasalazineFeatureObservation> a fhir:Observation ;
+  fhir:id [ fhir:v "ActiveSulfasalazineFeatureObservation"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://example.org/StructureDefinition/ActiveSulfasalazineFeature"^^xsd:anyURI ;
+       fhir:link <http://example.org/StructureDefinition/ActiveSulfasalazineFeature>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ActiveSulfasalazineFeatureObservation\"> </a><p><b>Generated Narrative: Observation</b><a name=\"ActiveSulfasalazineFeatureObservation\"> </a><a name=\"hcActiveSulfasalazineFeatureObservation\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;ActiveSulfasalazineFeatureObservation&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ActiveSulfasalazineFeature.html\">Active Sulfasalazine Feature</a></p></div><p><b>status</b>: final</p><p><b>code</b>: On Sulfasalazine Feature <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-CaseFeatureCodes.html\">CaseFeatureCodes</a>#on-medication-sulfasalazine)</span></p><p><b>subject</b>: See on this page: Patient/Patient1</p><p><b>effective</b>: 2023-12-13</p><p><b>performer</b>: See on this page: Organization/OrganizationShared</p><p><b>value</b>: true</p><p><b>derivedFrom</b>: <a href=\"Questionnaire/QuestionnaireResponse1\">Questionnaire/QuestionnaireResponse1</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://example.org/CodeSystem/CaseFeatureCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "on-medication-sulfasalazine" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://example.org/Patient/Patient1> ;
+     fhir:reference [ fhir:v "Patient/Patient1" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2023-12-13"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <http://example.org/Organization/OrganizationShared> ;
+     fhir:reference [ fhir:v "Organization/OrganizationShared" ]
+  ] ) ; # 
+  fhir:value [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:derivedFrom ( [
+     fhir:link <http://example.org/Questionnaire/QuestionnaireResponse1> ;
+     fhir:reference [ fhir:v "Questionnaire/QuestionnaireResponse1" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

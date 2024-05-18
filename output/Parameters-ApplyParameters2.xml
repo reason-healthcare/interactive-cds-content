@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="ApplyParameters2"/>
+  <parameter>
+    <name value="url"/>
+    <valueString value="http://example.org/PlanDefinition/SulfasalazineMonitoringRecommendation"/>
+  </parameter>
+  <parameter>
+    <name value="data"/>
+    <resource>
+      <Bundle>
+        <id value="BundleCase2Modified"/>
+        <meta>
+          <tag>
+            <code value="test"/>
+          </tag>
+        </meta>
+        <type value="collection"/>
+        <entry>
+          <fullUrl value="http://example.org/Patient/Patient1"/>
+          <resource>
+            <Patient>
+              <id value="Patient1"/>
+              <name>
+                <family value="Patient1"/>
+              </name>
+            </Patient>
+          </resource>
+        </entry>
+        <entry>
+          <fullUrl value="http://example.org/Practitioner/PractitionerShared"/>
+          <resource>
+            <Practitioner>
+              <id value="PractitionerShared"/>
+              <name>
+                <family value="practitionershared"/>
+              </name>
+            </Practitioner>
+          </resource>
+        </entry>
+        <entry>
+          <fullUrl value="http://example.org/Organization/OrganizationShared"/>
+          <resource>
+            <Organization>
+              <id value="OrganizationShared"/>
+              <name value="organizationshared"/>
+            </Organization>
+          </resource>
+        </entry>
+        <entry>
+          <fullUrl value="http://example.org/Encounter/Encounter1"/>
+          <resource>
+            <Encounter>
+              <id value="Encounter1"/>
+              <status value="in-progress"/>
+              <class>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+                <code value="AMB"/>
+                <display value="ambulatory"/>
+              </class>
+              <subject>
+                <reference value="Patient/Patient1"/>
+              </subject>
+              <participant>
+                <type>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+                    <code value="PPRF"/>
+                    <display value="primary performer"/>
+                  </coding>
+                </type>
+                <individual>
+                  <reference value="Practitioner/PractitionerShared"/>
+                </individual>
+              </participant>
+              <serviceProvider>
+                <reference value="Organization/OrganizationShared"/>
+              </serviceProvider>
+            </Encounter>
+          </resource>
+        </entry>
+        <entry>
+          <fullUrl value="http://example.org/MedictionRequest/MedicationRequest1"/>
+          <resource>
+            <MedicationRequest>
+              <id value="MedicationRequest1"/>
+              <status value="active"/>
+              <intent value="order"/>
+              <medicationCodeableConcept>
+                <coding>
+                  <system value="http://www.whocc.no/atc"/>
+                  <code value="A07EC01"/>
+                  <display value="Sulfasalazine"/>
+                </coding>
+              </medicationCodeableConcept>
+              <subject>
+                <reference value="Patient/Patient1"/>
+              </subject>
+            </MedicationRequest>
+          </resource>
+        </entry>
+        <entry>
+          <fullUrl value="http://example.org/Observation/ActiveSulfasalazineFeatureObservation1"/>
+          <resource>
+            <Observation>
+              <id value="ActiveSulfasalazineFeatureObservation1"/>
+              <meta>
+                <profile value="http://example.org/StructureDefinition/ActiveSulfasalazineFeature"/>
+              </meta>
+              <status value="final"/>
+              <code>
+                <coding>
+                  <system value="http://example.org/CodeSystem/CaseFeatureCodes"/>
+                  <code value="on-medication-sulfasalazine"/>
+                </coding>
+              </code>
+              <subject>
+                <reference value="Patient/Patient1"/>
+              </subject>
+              <effectiveDateTime value="2023-12-13"/>
+              <valueBoolean value="true"/>
+              <derivedFrom>
+                <reference value="Questionnaire/QuestionnaireResponse2"/>
+              </derivedFrom>
+            </Observation>
+          </resource>
+        </entry>
+        <entry>
+          <fullUrl value="http://example.org/Observation/LastCbcPanelReportDateFeatureObservation1"/>
+          <resource>
+            <Observation>
+              <id value="LastCbcPanelReportDateFeatureObservation1"/>
+              <meta>
+                <profile value="http://example.org/StructureDefinition/LastCbcPanelReportDateFeature"/>
+              </meta>
+              <status value="final"/>
+              <code>
+                <coding>
+                  <system value="http://example.org/CodeSystem/CaseFeatureCodes"/>
+                  <code value="last-cbc-panel-report-date"/>
+                </coding>
+              </code>
+              <subject>
+                <reference value="Patient/Patient1"/>
+              </subject>
+              <effectiveDateTime value="2023-12-13"/>
+              <valueDateTime value="2023-12-04"/>
+              <derivedFrom>
+                <reference value="Questionnaire/QuestionnaireResponse2"/>
+              </derivedFrom>
+            </Observation>
+          </resource>
+        </entry>
+      </Bundle>
+    </resource>
+  </parameter>
+  <parameter>
+    <name value="subject"/>
+    <valueString value="Patient/Patient1"/>
+  </parameter>
+</Parameters>

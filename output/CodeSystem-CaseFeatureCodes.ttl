@@ -1,0 +1,45 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/CodeSystem/CaseFeatureCodes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CaseFeatureCodes"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>http://example.org/CodeSystem/CaseFeatureCodes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">on-medication-methotrexate<a name=\"CaseFeatureCodes-on-medication-methotrexate\"> </a></td><td>On Methotrexate Feature</td><td>Currently taking Methotrexate</td></tr><tr><td style=\"white-space:nowrap\">on-medication-sulfasalazine<a name=\"CaseFeatureCodes-on-medication-sulfasalazine\"> </a></td><td>On Sulfasalazine Feature</td><td>Currently taking Sulfasalazine</td></tr><tr><td style=\"white-space:nowrap\">last-cbc-panel-report-date<a name=\"CaseFeatureCodes-last-cbc-panel-report-date\"> </a></td><td>Date of last CBC Panel</td><td>Effective date of last CBC Panel report</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://example.org/CodeSystem/CaseFeatureCodes"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CaseFeatureCodes"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-05-17T14:59:55-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Example Publisher"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Example Publisher" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://example.org/example-publisher" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "on-medication-methotrexate" ] ;
+     fhir:display [ fhir:v "On Methotrexate Feature" ] ;
+     fhir:definition [ fhir:v "Currently taking Methotrexate" ]
+  ] [
+     fhir:code [ fhir:v "on-medication-sulfasalazine" ] ;
+     fhir:display [ fhir:v "On Sulfasalazine Feature" ] ;
+     fhir:definition [ fhir:v "Currently taking Sulfasalazine" ]
+  ] [
+     fhir:code [ fhir:v "last-cbc-panel-report-date" ] ;
+     fhir:display [ fhir:v "Date of last CBC Panel" ] ;
+     fhir:definition [ fhir:v "Effective date of last CBC Panel report" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

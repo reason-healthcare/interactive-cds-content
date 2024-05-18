@@ -1,0 +1,123 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/PlanDefinition/MethotrexateMonitoringRecommendation> a fhir:PlanDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MethotrexateMonitoringRecommendation"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: PlanDefinition</b><a name=\"MethotrexateMonitoringRecommendation\"> </a><a name=\"hcMethotrexateMonitoringRecommendation\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource PlanDefinition &quot;MethotrexateMonitoringRecommendation&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-recommendationdefinition.html\">CPGRecommendationDefinition</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>url</b>: <code>http://example.org/PlanDefinition/MethotrexateMonitoringRecommendation</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: MethotrexateMonitoringRecommendation</p><p><b>title</b>: Methotrexate Monitoring Recommendation</p><p><b>type</b>: ECA Rule <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-plan-definition-type.html\">PlanDefinitionType</a>#eca-rule)</span></p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-05-17 14:59:55-0400</p><p><b>publisher</b>: Example Publisher</p><p><b>contact</b>: Example Publisher: <a href=\"http://example.org/example-publisher\">http://example.org/example-publisher</a></p><p><b>description</b>: Monitoring tests for antirheumatic drug therapy for Methotrexate.</p><blockquote><p><b>relatedArtifact</b></p><p><b>type</b>: citation</p><p><b>citation</b>: Criswell LA, Saag KG, Sems KM et al. Moderate-term, low-dose corticosteroids for rheumatoid arthritis. Cochrane Database Syst Rev 2000;(2):CD001158 PubMed.</p><p><b>url</b>: <a href=\"https://pubmed.ncbi.nlm.nih.gov/10796420\">https://pubmed.ncbi.nlm.nih.gov/10796420</a></p><blockquote><p><b>document</b></p></blockquote></blockquote><p><b>library</b>: <a href=\"Library-ApplicabilityLogic.html\">ApplicabilityLogic</a></p><blockquote><p><b>action</b></p><p><b>Quality of evidence</b>: High quality <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-evidence-quality.html\">QualityOfEvidenceRating</a>#high)</span></p><p><b>Strength of recommendation</b>: Strong <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-recommendation-strength.html\">StrengthOfRecommendationRating</a>#strong)</span></p><p><b>directionOfRecommendation</b>: For <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-recommendation-direction.html\">CPG Recommendation Direction</a>#for)</span></p><p><b>title</b>: Order monitoring tests for antirheumatic drug therapy (Methotrexate).</p><p><b>description</b>: Order monitoring tests for antirheumatic drug therapy (Methotrexate).</p><p><b>code</b>: Conduct Diagnostic Tests <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#diagnostic-testing)</span></p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Should order CBC if on Methotrexate therapy and missing test</td></tr></table></blockquote><h3>Inputs</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Profile</b></td></tr><tr><td style=\"display: none\">*</td><td>Observation</td><td><a href=\"StructureDefinition-ActiveMethotrexateFeature.html\">Active Methotrexate Feature</a></td></tr><tr><td style=\"display: none\">*</td><td>Observation</td><td><a href=\"StructureDefinition-LastCbcPanelReportDateFeature.html\">Last CBC Panel Report Date Feature</a></td></tr></table><p><b>definition</b>: <a href=\"ActivityDefinition-OrderCBCActivity.html\">Order CBC Activity</a></p></blockquote></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "computable" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://example.org/PlanDefinition/MethotrexateMonitoringRecommendation"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "MethotrexateMonitoringRecommendation"] ; # 
+  fhir:title [ fhir:v "Methotrexate Monitoring Recommendation"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/plan-definition-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "eca-rule" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-05-17T14:59:55-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Example Publisher"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Example Publisher" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://example.org/example-publisher" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Monitoring tests for antirheumatic drug therapy for Methotrexate."] ; # 
+  fhir:relatedArtifact ( [
+     fhir:type [ fhir:v "citation" ] ;
+     fhir:citation [ fhir:v "Criswell LA, Saag KG, Sems KM et al. Moderate-term, low-dose corticosteroids for rheumatoid arthritis. Cochrane Database Syst Rev 2000;(2):CD001158 PubMed." ] ;
+     fhir:url [ fhir:v "https://pubmed.ncbi.nlm.nih.gov/10796420"^^xsd:anyURI ] ;
+     fhir:document [
+       fhir:url [ fhir:v "https://pubmed.ncbi.nlm.nih.gov/10796420"^^xsd:anyURI ]
+     ]
+  ] ) ; # 
+  fhir:library ( [
+     fhir:v "http://example.org/Library/ApplicabilityLogic"^^xsd:anyURI ;
+     fhir:link <http://example.org/Library/ApplicabilityLogic>
+  ] ) ; # 
+  fhir:action ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/evidence-quality"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "high" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/recommendation-strength"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "strong" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-directionOfRecommendation"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-recommendation-direction"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "for" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:title [ fhir:v "Order monitoring tests for antirheumatic drug therapy (Methotrexate)." ] ;
+     fhir:description [ fhir:v "Order monitoring tests for antirheumatic drug therapy (Methotrexate)." ] ;
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "diagnostic-testing" ]
+       ] )
+     ] ) ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "Should order CBC if on Methotrexate therapy and missing test" ]
+       ]
+     ] ) ;
+     fhir:input ( [
+       fhir:type [ fhir:v "Observation" ] ;
+       fhir:profile ( [
+         fhir:v "http://example.org/StructureDefinition/ActiveMethotrexateFeature"^^xsd:anyURI ;
+         fhir:link <http://example.org/StructureDefinition/ActiveMethotrexateFeature>
+       ] )
+     ] [
+       fhir:type [ fhir:v "Observation" ] ;
+       fhir:profile ( [
+         fhir:v "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature"^^xsd:anyURI ;
+         fhir:link <http://example.org/StructureDefinition/LastCbcPanelReportDateFeature>
+       ] )
+     ] ) ;
+     fhir:definition [
+       fhir:v "http://example.org/ActivityDefinition/OrderCBCActivity"^^xsd:anyURI ;
+       fhir:link <http://example.org/ActivityDefinition/OrderCBCActivity>
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

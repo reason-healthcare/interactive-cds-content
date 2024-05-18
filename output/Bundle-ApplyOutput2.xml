@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="ApplyOutput2"/>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://example.org/RequestGroup/RequestGroup2"/>
+    <resource>
+      <RequestGroup>
+        <id value="RequestGroup2"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="RequestGroup_RequestGroup2"> </a><p><b>Generated Narrative: RequestGroup</b><a name="RequestGroup2"> </a><a name="hcRequestGroup2"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RequestGroup &quot;RequestGroup2&quot; </p></div><p><b>instantiatesCanonical</b>: <a href="PlanDefinition-SulfasalazineMonitoringRecommendation.html">Sulfasalazine Monitoring Recommendation</a></p><p><b>status</b>: draft</p><p><b>intent</b>: proposal</p><p><b>subject</b>: <a href="Patient-Patient1.html">Patient/Patient1</a> &quot; PATIENT1&quot;</p></div>
+        </text>
+        <instantiatesCanonical value="http://example.org/PlanDefinition/SulfasalazineMonitoringRecommendation|0.1.0"/>
+        <status value="draft"/>
+        <intent value="proposal"/>
+        <subject>
+          <reference value="Patient/Patient1"/>
+        </subject>
+      </RequestGroup>
+    </resource>
+  </entry>
+</Bundle>

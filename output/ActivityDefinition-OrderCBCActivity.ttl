@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/ActivityDefinition/OrderCBCActivity> a fhir:ActivityDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "OrderCBCActivity"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequestactivity"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequestactivity>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ActivityDefinition</b><a name=\"OrderCBCActivity\"> </a><a name=\"hcOrderCBCActivity\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ActivityDefinition &quot;OrderCBCActivity&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-servicerequestactivity.html\">CPGServiceRequestActivity</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>url</b>: <code>http://example.org/ActivityDefinition/OrderCBCActivity</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: OrderCBCActivity</p><p><b>title</b>: Order CBC Activity</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-05-17 14:59:55-0400</p><p><b>publisher</b>: Example Publisher</p><p><b>contact</b>: Example Publisher: <a href=\"http://example.org/example-publisher\">http://example.org/example-publisher</a></p><p><b>description</b>: Order hemogram plus platelet count labratory panel</p><p><b>kind</b>: ServiceRequest</p><p><b>profile</b>: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-servicerequest.html\">CPGServiceRequest</a></p><p><b>intent</b>: proposal</p><p><b>doNotPerform</b>: false</p><p><b>product</b>: CBC panel - Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#58410-2)</span></p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "computable" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://example.org/ActivityDefinition/OrderCBCActivity"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "OrderCBCActivity"] ; # 
+  fhir:title [ fhir:v "Order CBC Activity"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-05-17T14:59:55-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Example Publisher"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Example Publisher" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://example.org/example-publisher" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Order hemogram plus platelet count labratory panel"] ; # 
+  fhir:kind [ fhir:v "ServiceRequest"] ; # 
+  fhir:profile [
+     fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequest"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequest>
+  ] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:doNotPerform [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:product [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a loinc:58410-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "58410-2" ] ;
+       fhir:display [ fhir:v "CBC panel - Blood by Automated count" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="MonitoringTestsForAntirheumaticDrugTherapy"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-strategydefinition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: PlanDefinition</b><a name="MonitoringTestsForAntirheumaticDrugTherapy"> </a><a name="hcMonitoringTestsForAntirheumaticDrugTherapy"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource PlanDefinition &quot;MonitoringTestsForAntirheumaticDrugTherapy&quot; </p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-strategydefinition.html">CPGStrategyDefinition</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>url</b>: <code>http://example.org/PlanDefinition/MonitoringTestsForAntirheumaticDrugTherapy</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: MonitoringTestsForAntirheumaticDrugTherapy</p><p><b>title</b>: Monitoring Tests for Antirheumatic Drug Therapy</p><p><b>type</b>: Workflow Definition <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.5.0/CodeSystem-plan-definition-type.html">PlanDefinitionType</a>#workflow-definition)</span></p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-05-17 14:59:55-0400</p><p><b>publisher</b>: Example Publisher</p><p><b>contact</b>: Example Publisher: <a href="http://example.org/example-publisher">http://example.org/example-publisher</a></p><p><b>description</b>: * As the individual efficacy and tolerability of drug therapy cannot be predicted, patients should be closely monitored by laboratory tests (see safety monitoring tables 1 and 2) and clinically.
+* Recommendations concerning safety monitoring of antirheumatic medication vary to some extent in different areas. Consult local recommendations.
+
+*Table 1. Monitoring tests for antirheumatic drug therapy.*
+Tests should also be performed 2-3 weeks after any increase in drug dose. ESR and CRP should be checked on visits to the doctor and otherwise as needed.
+
+| Drug         | Safety monitoring tests  |
+|  :--- |  :--- |
+| Methotrexate	                         ||
+| At 3 weeks, 6 weeks, 12 weeks, then every 3-6 months | Basic blood count with platelets + differential count, ALT |
+| Every 6 months  | Creatinine (in case of impaired renal function, dose reduction) |
+| Sulfasalazine                     ||
+| Every 6 months  | Basic blood count with platelets + differential count |
+| Hydroxychloroquine                     ||
+| No laboratory monitoring needed. Checkup by an ophthalmologist after 5 years of use||
+
+### One month after starting treatment
+* Visit to a rheumatology nurse or, if necessary, a physician
+
+### Tree-month visit
+* If remission has not been achieved, medication should be intensified.
+* If methotrexate has been given orally, use of an injectable dosage form should now be started, and if the dose has been below 25 mg, it should be raised to this level now, unless there are contraindications to this.
+* Poor response to treatment, several swollen joints and a high CRP level predict treatment failure. In such cases, a biological agent or a JAK inhibitor should be added to the regimen.
+
+### Six-month visit
+* If remission has been achieved, glucocorticoid medication should be gradually reduced.
+* If the patient still has objective signs of arthritis, a biological agent or JAK inhibitor should be started. The EULAR recommendation for management updated in 2016 prefers biological agents because the available safety data covers a longer period of use.
+
+### After six months
+* The frequency of monitoring depends on disease activity.
+* If remission has been achieved, follow-up visits should be scheduled for one and two years after the beginning of treatment.
+* If, due to disease activity, major changes have had to be made to the medication or a biological agent or JAK inhibitor has had to be started, follow-up should be started from the beginning again, scheduling visits at 3 and 6 months.</p><h3>UseContexts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td>venue (Details: [not stated] code venue = 'venue', stated as 'null')</td><td>Primary care clinic <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.5.0/CodeSystem-v3-RoleCode.html">RoleCode</a>#PC)</span></td></tr><tr><td style="display: none">*</td><td>venue (Details: [not stated] code venue = 'venue', stated as 'null')</td><td>Outpatient Facility <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.5.0/CodeSystem-v3-RoleCode.html">RoleCode</a>#OF)</span></td></tr></table><blockquote><p><b>action</b></p><p><b>title</b>: Recommend monitoring tests for RA therapy</p><p><b>description</b>: Recommend monitoring tests for RA therapy</p><p><b>code</b>: Guideline-based Care <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html">CPG Common Process</a>#guideline-based-care)</span></p><h3>Triggers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Name</b></td></tr><tr><td style="display: none">*</td><td>named-event</td><td>patient-view</td></tr></table><h3>Actions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Title</b></td><td><b>Description</b></td><td><b>Code</b></td><td><b>Definition[x]</b></td></tr><tr><td style="display: none">*</td><td>Recommend testing due to Methotrexate</td><td>Recommend testing due to Methotrexate</td><td>Guideline-based Care <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html">CPG Common Process</a>#guideline-based-care)</span></td><td><a href="PlanDefinition-MethotrexateMonitoringRecommendation.html">Methotrexate Monitoring Recommendation</a></td></tr><tr><td style="display: none">*</td><td>Recommend testing due to Sulfasalazine</td><td>Recommend testing due to Sulfasalazine</td><td>Guideline-based Care <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html">CPG Common Process</a>#guideline-based-care)</span></td><td><a href="PlanDefinition-SulfasalazineMonitoringRecommendation.html">Sulfasalazine Monitoring Recommendation</a></td></tr></table></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <url value="http://example.org/PlanDefinition/MonitoringTestsForAntirheumaticDrugTherapy"/>
+  <version value="0.1.0"/>
+  <name value="MonitoringTestsForAntirheumaticDrugTherapy"/>
+  <title value="Monitoring Tests for Antirheumatic Drug Therapy"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="workflow-definition"/>
+    </coding>
+  </type>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-05-17T14:59:55-04:00"/>
+  <publisher value="Example Publisher"/>
+  <contact>
+    <name value="Example Publisher"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/example-publisher"/>
+    </telecom>
+  </contact>
+  <description value="* As the individual efficacy and tolerability of drug therapy cannot be predicted, patients should be closely monitored by laboratory tests (see safety monitoring tables 1 and 2) and clinically.&#xA;* Recommendations concerning safety monitoring of antirheumatic medication vary to some extent in different areas. Consult local recommendations.&#xA;&#xA;*Table 1. Monitoring tests for antirheumatic drug therapy.*&#xA;Tests should also be performed 2-3 weeks after any increase in drug dose. ESR and CRP should be checked on visits to the doctor and otherwise as needed.&#xA;&#xA;| Drug         | Safety monitoring tests  |&#xA;|  :--- |  :--- |&#xA;| Methotrexate&#x9;                         ||&#xA;| At 3 weeks, 6 weeks, 12 weeks, then every 3-6 months | Basic blood count with platelets + differential count, ALT |&#xA;| Every 6 months  | Creatinine (in case of impaired renal function, dose reduction) |&#xA;| Sulfasalazine                     ||&#xA;| Every 6 months  | Basic blood count with platelets + differential count |&#xA;| Hydroxychloroquine                     ||&#xA;| No laboratory monitoring needed. Checkup by an ophthalmologist after 5 years of use||&#xA;&#xA;### One month after starting treatment&#xA;* Visit to a rheumatology nurse or, if necessary, a physician&#xA;&#xA;### Tree-month visit&#xA;* If remission has not been achieved, medication should be intensified.&#xA;* If methotrexate has been given orally, use of an injectable dosage form should now be started, and if the dose has been below 25 mg, it should be raised to this level now, unless there are contraindications to this.&#xA;* Poor response to treatment, several swollen joints and a high CRP level predict treatment failure. In such cases, a biological agent or a JAK inhibitor should be added to the regimen.&#xA;&#xA;### Six-month visit&#xA;* If remission has been achieved, glucocorticoid medication should be gradually reduced.&#xA;* If the patient still has objective signs of arthritis, a biological agent or JAK inhibitor should be started. The EULAR recommendation for management updated in 2016 prefers biological agents because the available safety data covers a longer period of use.&#xA;&#xA;### After six months&#xA;* The frequency of monitoring depends on disease activity.&#xA;* If remission has been achieved, follow-up visits should be scheduled for one and two years after the beginning of treatment.&#xA;* If, due to disease activity, major changes have had to be made to the medication or a biological agent or JAK inhibitor has had to be started, follow-up should be started from the beginning again, scheduling visits at 3 and 6 months."/>
+  <useContext>
+    <code>
+      <code value="venue"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+        <code value="PC"/>
+        <display value="Primary care clinic"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <useContext>
+    <code>
+      <code value="venue"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+        <code value="OF"/>
+        <display value="Outpatient Facility"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <action>
+    <title value="Recommend monitoring tests for RA therapy"/>
+    <description value="Recommend monitoring tests for RA therapy"/>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"/>
+        <code value="guideline-based-care"/>
+      </coding>
+    </code>
+    <trigger>
+      <type value="named-event"/>
+      <name value="patient-view"/>
+    </trigger>
+    <action>
+      <title value="Recommend testing due to Methotrexate"/>
+      <description value="Recommend testing due to Methotrexate"/>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"/>
+          <code value="guideline-based-care"/>
+        </coding>
+      </code>
+      <definitionCanonical value="http://example.org/PlanDefinition/MethotrexateMonitoringRecommendation"/>
+    </action>
+    <action>
+      <title value="Recommend testing due to Sulfasalazine"/>
+      <description value="Recommend testing due to Sulfasalazine"/>
+      <code>
+        <coding>
+          <system value="http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"/>
+          <code value="guideline-based-care"/>
+        </coding>
+      </code>
+      <definitionCanonical value="http://example.org/PlanDefinition/SulfasalazineMonitoringRecommendation"/>
+    </action>
+  </action>
+</PlanDefinition>

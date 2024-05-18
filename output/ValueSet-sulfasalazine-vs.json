@@ -1,0 +1,41 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "sulfasalazine-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://www.whocc.no/atc\"><code>http://www.whocc.no/atc</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>A07EC01</td><td>Sulfasalazine</td></tr></table></li><li>Include these codes as defined in <a href=\"http://www.nlm.nih.gov/research/umls/rxnorm\"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>373988</td><td>Sulfasalazine Enema</td></tr><tr><td>376645</td><td>Sulfasalazine Delayed Release Oral Tablet</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://example.org/ValueSet/sulfasalazine-vs",
+  "version" : "0.1.0",
+  "name" : "SulfasalazineVS",
+  "status" : "draft",
+  "date" : "2024-05-17T14:59:55-04:00",
+  "publisher" : "Example Publisher",
+  "contact" : [{
+    "name" : "Example Publisher",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://example.org/example-publisher"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.whocc.no/atc",
+      "concept" : [{
+        "code" : "A07EC01",
+        "display" : "Sulfasalazine"
+      }]
+    },
+    {
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "concept" : [{
+        "code" : "373988",
+        "display" : "Sulfasalazine Enema"
+      },
+      {
+        "code" : "376645",
+        "display" : "Sulfasalazine Delayed Release Oral Tablet"
+      }]
+    }]
+  }
+}

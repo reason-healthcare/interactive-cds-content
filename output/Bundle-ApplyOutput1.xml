@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="ApplyOutput1"/>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://example.org/RequestGroup/RequestGroup1"/>
+    <resource>
+      <RequestGroup>
+        <id value="RequestGroup1"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="RequestGroup_RequestGroup1"> </a><p><b>Generated Narrative: RequestGroup</b><a name="RequestGroup1"> </a><a name="hcRequestGroup1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource RequestGroup &quot;RequestGroup1&quot; </p></div><p><b>instantiatesCanonical</b>: <a href="PlanDefinition-SulfasalazineMonitoringRecommendation.html">Sulfasalazine Monitoring Recommendation</a></p><p><b>status</b>: draft</p><p><b>intent</b>: proposal</p><p><b>subject</b>: <a href="Patient-Patient1.html">Patient/Patient1</a> &quot; PATIENT1&quot;</p><blockquote><p><b>action</b></p><p><b>title</b>: Order monitoring tests for antirheumatic drug therapy (Sulfasalazine).</p><p><b>description</b>: Order monitoring tests for antirheumatic drug therapy (Sulfasalazine).</p><p><b>code</b>: Conduct Diagnostic Tests <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html">CPG Common Process</a>#diagnostic-testing)</span></p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style="display: none">*</td><td>text/cql-identifier</td><td>Should order CBC if on Sulfasalazine therapy and missing test</td></tr></table></blockquote><p><b>type</b>: Create <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.5.0/CodeSystem-action-type.html">ActionType</a>#create)</span></p><p><b>resource</b>: See on this page: ServiceRequest/ServiceRequest1</p></blockquote></div>
+        </text>
+        <instantiatesCanonical value="http://example.org/PlanDefinition/SulfasalazineMonitoringRecommendation|0.1.0"/>
+        <status value="draft"/>
+        <intent value="proposal"/>
+        <subject>
+          <reference value="Patient/Patient1"/>
+        </subject>
+        <action>
+          <title value="Order monitoring tests for antirheumatic drug therapy (Sulfasalazine)."/>
+          <description value="Order monitoring tests for antirheumatic drug therapy (Sulfasalazine)."/>
+          <code>
+            <coding>
+              <system value="http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"/>
+              <code value="diagnostic-testing"/>
+            </coding>
+          </code>
+          <condition>
+            <kind value="applicability"/>
+            <expression>
+              <language value="text/cql-identifier"/>
+              <expression value="Should order CBC if on Sulfasalazine therapy and missing test"/>
+            </expression>
+          </condition>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/action-type"/>
+              <code value="create"/>
+            </coding>
+          </type>
+          <resource>
+            <reference value="ServiceRequest/ServiceRequest1"/>
+          </resource>
+        </action>
+      </RequestGroup>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/ServiceRequest/ServiceRequest1"/>
+    <resource>
+      <ServiceRequest>
+        <id value="ServiceRequest1"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="ServiceRequest_ServiceRequest1"> </a><p><b>Generated Narrative: ServiceRequest</b><a name="ServiceRequest1"> </a><a name="hcServiceRequest1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ServiceRequest &quot;ServiceRequest1&quot; </p></div><p><b>instantiatesCanonical</b>: <a href="http://example.org/ActivityDefinition/OrderCBCActivity">http://example.org/ActivityDefinition/OrderCBCActivity|0.1.0</a></p><p><b>status</b>: draft</p><p><b>intent</b>: option</p><p><b>doNotPerform</b>: false</p><p><b>code</b>: CBC panel - Blood by Automated count <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#58410-2)</span></p><p><b>subject</b>: <a href="Patient-Patient1.html">Patient/Patient1</a> &quot; PATIENT1&quot;</p></div>
+        </text>
+        <instantiatesCanonical value="http://example.org/ActivityDefinition/OrderCBCActivity|0.1.0"/>
+        <status value="draft"/>
+        <intent value="option"/>
+        <doNotPerform value="false"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="58410-2"/>
+            <display value="CBC panel - Blood by Automated count"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/Patient1"/>
+        </subject>
+      </ServiceRequest>
+    </resource>
+  </entry>
+</Bundle>

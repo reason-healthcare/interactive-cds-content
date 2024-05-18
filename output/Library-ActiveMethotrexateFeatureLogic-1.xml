@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators" signatureLevel="None" xsi:type="a:CqlToElmInfo"/>
+   <annotation message="The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation message="The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation message="The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="58">
+         <a:s>library ActiveMethotrexateFeatureLogic version '0.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="ActiveMethotrexateFeatureLogic" system="http://example.org" version="0.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="5:1-5:35" localIdentifier="FHIRHelpers" path="http://example.org/FHIRHelpers" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '0.1.0'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="6:1-6:30" localIdentifier="Common" path="http://example.org/Common" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>Common</a:s>
+               </a:s>
+               <a:s> version '0.1.0'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <codeSystems>
+      <def localId="4" locator="8:1-8:79" name="CaseFeatureCodes" id="http://example.org/CodeSystem/CaseFeatureCodes" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>codesystem &quot;CaseFeatureCodes&quot;: 'http://example.org/CodeSystem/CaseFeatureCodes'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </codeSystems>
+   <valueSets>
+      <def localId="7" locator="11:1-11:106" name="Methotrexate Medications" id="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1116.181" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="7">
+               <a:s>valueset &quot;Methotrexate Medications&quot;: 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1116.181'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </valueSets>
+   <codes>
+      <def localId="6" locator="9:1-9:84" name="On Methotrexate Feature" id="on-medication-methotrexate" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>code &quot;On Methotrexate Feature&quot;: 'on-medication-methotrexate' from </a:s>
+               <a:s r="5">
+                  <a:s>&quot;CaseFeatureCodes&quot;</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="5" locator="9:67-9:84" name="CaseFeatureCodes"/>
+      </def>
+   </codes>
+   <contexts>
+      <def locator="13:1-13:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="13:1-13:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="13:1-13:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="16" locator="15:1-17:55" name="Active Methotrexate Orders" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="16">
+               <a:s>define &quot;Active Methotrexate Orders&quot;:
+  </a:s>
+               <a:s r="15">
+                  <a:s>
+                     <a:s r="9">
+                        <a:s r="8">
+                           <a:s r="8">
+                              <a:s>[MedicationRequest: </a:s>
+                              <a:s>
+                                 <a:s>&quot;Methotrexate Medications&quot;</a:s>
+                              </a:s>
+                              <a:s>]</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> MethotrexateMedication</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="14">
+                     <a:s>where </a:s>
+                     <a:s r="14">
+                        <a:s r="11">
+                           <a:s r="10">
+                              <a:s>MethotrexateMedication</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="11">
+                              <a:s>status</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> in </a:s>
+                        <a:s r="13">
+                           <a:s>{ </a:s>
+                           <a:s r="12">
+                              <a:s>'active'</a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="15" locator="16:3-17:55" xsi:type="Query">
+            <source localId="9" locator="16:3-16:72" alias="MethotrexateMedication">
+               <expression localId="8" locator="16:3-16:49" xsi:type="Union">
+                  <operand dataType="fhir:MedicationRequest" templateId="http://hl7.org/fhir/StructureDefinition/MedicationRequest" codeProperty="medication" codeComparator="in" xsi:type="Retrieve">
+                     <codes locator="16:23-16:48" name="Methotrexate Medications" preserve="true" xsi:type="ValueSetRef"/>
+                  </operand>
+                  <operand locator="16:3-16:49" xsi:type="Query">
+                     <source locator="16:3-16:49" alias="MR">
+                        <expression dataType="fhir:MedicationRequest" templateId="http://hl7.org/fhir/StructureDefinition/MedicationRequest" xsi:type="Retrieve"/>
+                     </source>
+                     <relationship locator="16:3-16:49" alias="M" xsi:type="With">
+                        <expression dataType="fhir:Medication" templateId="http://hl7.org/fhir/StructureDefinition/Medication" xsi:type="Retrieve"/>
+                        <suchThat xsi:type="And">
+                           <operand xsi:type="Equal">
+                              <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                 <operand path="id" scope="M" xsi:type="Property"/>
+                              </operand>
+                              <operand xsi:type="Last">
+                                 <source xsi:type="Split">
+                                    <stringToSplit name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                       <operand path="medication.reference" scope="MR" xsi:type="Property"/>
+                                    </stringToSplit>
+                                    <separator valueType="t:String" value="/" xsi:type="Literal"/>
+                                 </source>
+                              </operand>
+                           </operand>
+                           <operand xsi:type="InValueSet">
+                              <code name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                 <operand path="code" xsi:type="Property"/>
+                              </code>
+                              <valueset locator="16:23-16:48" name="Methotrexate Medications" preserve="true"/>
+                           </operand>
+                        </suchThat>
+                     </relationship>
+                  </operand>
+               </expression>
+            </source>
+            <where localId="14" locator="17:5-17:55" xsi:type="In">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="11" locator="17:11-17:39" path="status" scope="MethotrexateMedication" xsi:type="Property"/>
+               </operand>
+               <operand localId="13" locator="17:44-17:55" xsi:type="List">
+                  <element localId="12" locator="17:46-17:53" valueType="t:String" value="active" xsi:type="Literal"/>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def localId="50" locator="23:1-53:11" name="On Methotrexate Inferred" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="50">
+               <a:s>/**
+ * @description 
+ * Inference if the patient is taking drug with a Methotrexate code
+ */
+define &quot;On Methotrexate Inferred&quot;:
+  </a:s>
+               <a:s r="49">
+                  <a:s>if </a:s>
+                  <a:s r="18">
+                     <a:s>exists</a:s>
+                     <a:s r="17">
+                        <a:s>(</a:s>
+                        <a:s r="17">
+                           <a:s>&quot;Active Methotrexate Orders&quot;</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> then
+    </a:s>
+                  <a:s r="47">
+                     <a:s>Observation {
+      </a:s>
+                     <a:s>
+                        <a:s>meta: </a:s>
+                        <a:s r="22">
+                           <a:s>Meta {
+        </a:s>
+                           <a:s>
+                              <a:s>profile: </a:s>
+                              <a:s r="21">
+                                 <a:s>{
+          </a:s>
+                                 <a:s r="20">
+                                    <a:s>canonical { </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="19">
+                                          <a:s>'http://example.org/StructureDefinition/ActiveMethotrexateFeature'</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> }</a:s>
+                                 </a:s>
+                                 <a:s>
+        }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+      }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+      </a:s>
+                     <a:s>
+                        <a:s>extension: </a:s>
+                        <a:s r="33">
+                           <a:s>{
+        </a:s>
+                           <a:s r="27">
+                              <a:s>Extension {
+          </a:s>
+                              <a:s>
+                                 <a:s>url: </a:s>
+                                 <a:s r="24">
+                                    <a:s>url { </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="23">
+                                          <a:s>'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-instantiatesCaseFeature'</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> }</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>,
+          </a:s>
+                              <a:s>
+                                 <a:s>value: </a:s>
+                                 <a:s r="26">
+                                    <a:s>canonical { </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="25">
+                                          <a:s>'http://example.org/StructureDefinition/ActiveMethotrexateFeature'</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> }</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+        }</a:s>
+                           </a:s>
+                           <a:s>,
+        </a:s>
+                           <a:s r="32">
+                              <a:s>Extension {
+          </a:s>
+                              <a:s>
+                                 <a:s>url: </a:s>
+                                 <a:s r="29">
+                                    <a:s>url { </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="28">
+                                          <a:s>'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-caseFeatureType'</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> }</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>,
+          </a:s>
+                              <a:s>
+                                 <a:s>value: </a:s>
+                                 <a:s r="31">
+                                    <a:s>code { </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="30">
+                                          <a:s>'inferred'</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> }</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+        }</a:s>
+                           </a:s>
+                           <a:s>
+      }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+      </a:s>
+                     <a:s>
+                        <a:s>status: </a:s>
+                        <a:s r="35">
+                           <a:s>ObservationStatus { </a:s>
+                           <a:s>
+                              <a:s>value: </a:s>
+                              <a:s r="34">
+                                 <a:s>'final'</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+      </a:s>
+                     <a:s>
+                        <a:s>effective: </a:s>
+                        <a:s r="37">
+                           <a:s>dateTime { </a:s>
+                           <a:s>
+                              <a:s>value: </a:s>
+                              <a:s r="36">
+                                 <a:s>Now()</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+      </a:s>
+                     <a:s>
+                        <a:s>code: </a:s>
+                        <a:s r="44">
+                           <a:s>CodeableConcept {
+        </a:s>
+                           <a:s>
+                              <a:s>coding: </a:s>
+                              <a:s r="43">
+                                 <a:s>{
+          </a:s>
+                                 <a:s r="42">
+                                    <a:s>Coding {
+            </a:s>
+                                    <a:s>
+                                       <a:s>system: </a:s>
+                                       <a:s r="39">
+                                          <a:s>uri { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="38">
+                                                <a:s>'http://example.org/CodeSystem/CaseFeatureCodes'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+            </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="41">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="40">
+                                                <a:s>'on-medication-methotrexate'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+          }</a:s>
+                                 </a:s>
+                                 <a:s>
+        }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+      }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+      </a:s>
+                     <a:s>
+                        <a:s>value: </a:s>
+                        <a:s r="46">
+                           <a:s>boolean { </a:s>
+                           <a:s>
+                              <a:s r="45">value: true</a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    }</a:s>
+                  </a:s>
+                  <a:s r="48">
+  else null</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="49" locator="24:3-53:11" xsi:type="If">
+            <condition localId="18" locator="24:6-24:41" xsi:type="Exists">
+               <operand localId="17" locator="24:12-24:41" name="Active Methotrexate Orders" xsi:type="ExpressionRef"/>
+            </condition>
+            <then localId="47" locator="25:5-52:5" classType="fhir:Observation" xsi:type="Instance">
+               <element name="meta">
+                  <value localId="22" locator="26:13-30:7" classType="fhir:Meta" xsi:type="Instance">
+                     <element name="profile">
+                        <value localId="21" locator="27:18-29:9" xsi:type="List">
+                           <element localId="20" locator="28:11-28:97" classType="fhir:canonical" xsi:type="Instance">
+                              <element name="value">
+                                 <value localId="19" locator="28:30-28:95" valueType="t:String" value="http://example.org/StructureDefinition/ActiveMethotrexateFeature" xsi:type="Literal"/>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </value>
+               </element>
+               <element name="extension">
+                  <value localId="33" locator="31:18-40:7" xsi:type="List">
+                     <element localId="27" locator="32:9-35:9" classType="fhir:Extension" xsi:type="Instance">
+                        <element name="url">
+                           <value localId="24" locator="33:16-33:106" classType="fhir:url" xsi:type="Instance">
+                              <element name="value">
+                                 <value localId="23" locator="33:29-33:104" valueType="t:String" value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-instantiatesCaseFeature" xsi:type="Literal"/>
+                              </element>
+                           </value>
+                        </element>
+                        <element name="value">
+                           <value xsi:type="As">
+                              <operand localId="26" locator="34:18-34:104" classType="fhir:canonical" xsi:type="Instance">
+                                 <element name="value">
+                                    <value localId="25" locator="34:37-34:102" valueType="t:String" value="http://example.org/StructureDefinition/ActiveMethotrexateFeature" xsi:type="Literal"/>
+                                 </element>
+                              </operand>
+                              <asTypeSpecifier xsi:type="ChoiceTypeSpecifier">
+                                 <choice name="fhir:base64Binary" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:canonical" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:date" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:id" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:instant" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:markdown" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:oid" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:positiveInt" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:time" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:unsignedInt" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:uri" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:url" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:uuid" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Address" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Age" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Annotation" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Attachment" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:ContactPoint" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Count" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Distance" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Duration" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:HumanName" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Identifier" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Money" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Quantity" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Range" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Ratio" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:SampledData" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Signature" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Timing" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:ContactDetail" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Contributor" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:DataRequirement" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Expression" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:ParameterDefinition" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:RelatedArtifact" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:TriggerDefinition" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:UsageContext" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Dosage" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Meta" xsi:type="NamedTypeSpecifier"/>
+                              </asTypeSpecifier>
+                           </value>
+                        </element>
+                     </element>
+                     <element localId="32" locator="36:9-39:9" classType="fhir:Extension" xsi:type="Instance">
+                        <element name="url">
+                           <value localId="29" locator="37:16-37:98" classType="fhir:url" xsi:type="Instance">
+                              <element name="value">
+                                 <value localId="28" locator="37:29-37:96" valueType="t:String" value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-caseFeatureType" xsi:type="Literal"/>
+                              </element>
+                           </value>
+                        </element>
+                        <element name="value">
+                           <value xsi:type="As">
+                              <operand localId="31" locator="38:18-38:43" classType="fhir:code" xsi:type="Instance">
+                                 <element name="value">
+                                    <value localId="30" locator="38:32-38:41" valueType="t:String" value="inferred" xsi:type="Literal"/>
+                                 </element>
+                              </operand>
+                              <asTypeSpecifier xsi:type="ChoiceTypeSpecifier">
+                                 <choice name="fhir:base64Binary" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:canonical" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:date" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:id" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:instant" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:markdown" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:oid" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:positiveInt" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:time" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:unsignedInt" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:uri" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:url" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:uuid" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Address" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Age" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Annotation" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Attachment" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:ContactPoint" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Count" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Distance" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Duration" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:HumanName" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Identifier" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Money" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Quantity" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Range" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Ratio" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:SampledData" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Signature" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Timing" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:ContactDetail" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Contributor" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:DataRequirement" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Expression" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:ParameterDefinition" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:RelatedArtifact" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:TriggerDefinition" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:UsageContext" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Dosage" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Meta" xsi:type="NamedTypeSpecifier"/>
+                              </asTypeSpecifier>
+                           </value>
+                        </element>
+                     </element>
+                  </value>
+               </element>
+               <element name="status">
+                  <value localId="35" locator="41:15-41:50" classType="fhir:ObservationStatus" xsi:type="Instance">
+                     <element name="value">
+                        <value localId="34" locator="41:42-41:48" valueType="t:String" value="final" xsi:type="Literal"/>
+                     </element>
+                  </value>
+               </element>
+               <element name="effective">
+                  <value xsi:type="As">
+                     <operand localId="37" locator="42:18-42:42" classType="fhir:dateTime" xsi:type="Instance">
+                        <element name="value">
+                           <value localId="36" locator="42:36-42:40" xsi:type="Now"/>
+                        </element>
+                     </operand>
+                     <asTypeSpecifier xsi:type="ChoiceTypeSpecifier">
+                        <choice name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:Timing" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:instant" xsi:type="NamedTypeSpecifier"/>
+                     </asTypeSpecifier>
+                  </value>
+               </element>
+               <element name="code">
+                  <value localId="44" locator="43:13-50:7" classType="fhir:CodeableConcept" xsi:type="Instance">
+                     <element name="coding">
+                        <value localId="43" locator="44:17-49:9" xsi:type="List">
+                           <element localId="42" locator="45:11-48:11" classType="fhir:Coding" xsi:type="Instance">
+                              <element name="system">
+                                 <value localId="39" locator="46:21-46:83" classType="fhir:uri" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="38" locator="46:34-46:81" valueType="t:String" value="http://example.org/CodeSystem/CaseFeatureCodes" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="code">
+                                 <value localId="41" locator="47:19-47:62" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="40" locator="47:33-47:60" valueType="t:String" value="on-medication-methotrexate" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </value>
+               </element>
+               <element name="value">
+                  <value xsi:type="As">
+                     <operand localId="46" locator="51:14-51:36" classType="fhir:boolean" xsi:type="Instance">
+                        <element name="value">
+                           <value localId="45" locator="51:31-51:34" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+                        </element>
+                     </operand>
+                     <asTypeSpecifier xsi:type="ChoiceTypeSpecifier">
+                        <choice name="fhir:Quantity" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:Range" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:Ratio" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:SampledData" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:time" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                     </asTypeSpecifier>
+                  </value>
+               </element>
+            </then>
+            <else asType="fhir:Observation" xsi:type="As">
+               <operand localId="48" locator="53:8-53:11" xsi:type="Null"/>
+            </else>
+         </expression>
+      </def>
+      <def localId="54" locator="59:1-60:61" name="On Methotrexate Asserted" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="54">
+               <a:s>/**
+ * @description
+ * Assertion is if there is a case feature directly documented
+ */
+define &quot;On Methotrexate Asserted&quot;:
+  </a:s>
+               <a:s r="53">
+                  <a:s r="51">
+                     <a:s>Common</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="53">
+                     <a:s>MostRecent(</a:s>
+                     <a:s r="52">
+                        <a:s>[Observation: </a:s>
+                        <a:s>
+                           <a:s>&quot;On Methotrexate Feature&quot;</a:s>
+                        </a:s>
+                        <a:s>]</a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="53" locator="60:3-60:61" name="MostRecent" libraryName="Common" xsi:type="FunctionRef">
+            <operand localId="52" locator="60:21-60:60" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="~" xsi:type="Retrieve">
+               <codes xsi:type="ToList">
+                  <operand locator="60:35-60:59" name="On Methotrexate Feature" xsi:type="CodeRef"/>
+               </codes>
+            </operand>
+         </expression>
+      </def>
+      <def localId="58" locator="66:1-70:3" name="On Methotrexate" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="58">
+               <a:s>/**
+ * @description
+ * Feature is asserted followed by inferred
+ */
+define &quot;On Methotrexate&quot;:
+  </a:s>
+               <a:s r="57">
+                  <a:s>Coalesce(
+    </a:s>
+                  <a:s r="55">
+                     <a:s>&quot;On Methotrexate Asserted&quot;</a:s>
+                  </a:s>
+                  <a:s>,
+    </a:s>
+                  <a:s r="56">
+                     <a:s>&quot;On Methotrexate Inferred&quot;</a:s>
+                  </a:s>
+                  <a:s>
+  )</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="57" locator="67:3-70:3" xsi:type="Coalesce">
+            <operand localId="55" locator="68:5-68:30" name="On Methotrexate Asserted" xsi:type="ExpressionRef"/>
+            <operand localId="56" locator="69:5-69:30" name="On Methotrexate Inferred" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+   </statements>
+</library>

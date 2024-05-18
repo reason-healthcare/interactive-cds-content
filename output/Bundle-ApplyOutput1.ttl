@@ -1,0 +1,92 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/Bundle/ApplyOutput1> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ApplyOutput1"] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "http://example.org/RequestGroup/RequestGroup1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://example.org/RequestGroup/RequestGroup1> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://example.org/ServiceRequest/ServiceRequest1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://example.org/ServiceRequest/ServiceRequest1> )
+  ] ) . # 
+
+<http://example.org/RequestGroup/RequestGroup1> a fhir:RequestGroup ;
+  fhir:id [ fhir:v "RequestGroup1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RequestGroup_RequestGroup1\"> </a><p><b>Generated Narrative: RequestGroup</b><a name=\"RequestGroup1\"> </a><a name=\"hcRequestGroup1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RequestGroup &quot;RequestGroup1&quot; </p></div><p><b>instantiatesCanonical</b>: <a href=\"PlanDefinition-SulfasalazineMonitoringRecommendation.html\">Sulfasalazine Monitoring Recommendation</a></p><p><b>status</b>: draft</p><p><b>intent</b>: proposal</p><p><b>subject</b>: <a href=\"Patient-Patient1.html\">Patient/Patient1</a> &quot; PATIENT1&quot;</p><blockquote><p><b>action</b></p><p><b>title</b>: Order monitoring tests for antirheumatic drug therapy (Sulfasalazine).</p><p><b>description</b>: Order monitoring tests for antirheumatic drug therapy (Sulfasalazine).</p><p><b>code</b>: Conduct Diagnostic Tests <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#diagnostic-testing)</span></p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Should order CBC if on Sulfasalazine therapy and missing test</td></tr></table></blockquote><p><b>type</b>: Create <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-action-type.html\">ActionType</a>#create)</span></p><p><b>resource</b>: See on this page: ServiceRequest/ServiceRequest1</p></blockquote></div>"
+  ] ; # 
+  fhir:instantiatesCanonical ( [
+     fhir:v "http://example.org/PlanDefinition/SulfasalazineMonitoringRecommendation|0.1.0"^^xsd:anyURI ;
+     fhir:link <http://example.org/PlanDefinition/SulfasalazineMonitoringRecommendation|0.1.0>
+  ] ) ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:subject [
+     fhir:link <http://example.org/Patient/Patient1> ;
+     fhir:reference [ fhir:v "Patient/Patient1" ]
+  ] ; # 
+  fhir:action ( [
+     fhir:title [ fhir:v "Order monitoring tests for antirheumatic drug therapy (Sulfasalazine)." ] ;
+     fhir:description [ fhir:v "Order monitoring tests for antirheumatic drug therapy (Sulfasalazine)." ] ;
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "diagnostic-testing" ]
+       ] )
+     ] ) ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "Should order CBC if on Sulfasalazine therapy and missing test" ]
+       ]
+     ] ) ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/action-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "create" ]
+       ] )
+     ] ;
+     fhir:resource [
+       fhir:link <http://example.org/ServiceRequest/ServiceRequest1> ;
+       fhir:reference [ fhir:v "ServiceRequest/ServiceRequest1" ]
+     ]
+  ] ) . # 
+
+<http://example.org/ServiceRequest/ServiceRequest1> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "ServiceRequest1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_ServiceRequest1\"> </a><p><b>Generated Narrative: ServiceRequest</b><a name=\"ServiceRequest1\"> </a><a name=\"hcServiceRequest1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;ServiceRequest1&quot; </p></div><p><b>instantiatesCanonical</b>: <a href=\"http://example.org/ActivityDefinition/OrderCBCActivity\">http://example.org/ActivityDefinition/OrderCBCActivity|0.1.0</a></p><p><b>status</b>: draft</p><p><b>intent</b>: option</p><p><b>doNotPerform</b>: false</p><p><b>code</b>: CBC panel - Blood by Automated count <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#58410-2)</span></p><p><b>subject</b>: <a href=\"Patient-Patient1.html\">Patient/Patient1</a> &quot; PATIENT1&quot;</p></div>"
+  ] ; # 
+  fhir:instantiatesCanonical ( [
+     fhir:v "http://example.org/ActivityDefinition/OrderCBCActivity|0.1.0"^^xsd:anyURI ;
+     fhir:link <http://example.org/ActivityDefinition/OrderCBCActivity|0.1.0>
+  ] ) ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:intent [ fhir:v "option"] ; # 
+  fhir:doNotPerform [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:58410-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "58410-2" ] ;
+       fhir:display [ fhir:v "CBC panel - Blood by Automated count" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://example.org/Patient/Patient1> ;
+     fhir:reference [ fhir:v "Patient/Patient1" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

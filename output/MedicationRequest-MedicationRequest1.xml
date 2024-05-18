@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="MedicationRequest1"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationRequest</b><a name="MedicationRequest1"> </a><a name="hcMedicationRequest1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationRequest &quot;MedicationRequest1&quot; </p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: Sulfasalazine <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.5.0/CodeSystem-v3-WC.html">WHO ATC</a>#A07EC01)</span></p><p><b>subject</b>: <a href="Patient-Patient1.html">Patient/Patient1</a> &quot; PATIENT1&quot;</p></div>
+  </text>
+  <status value="active"/>
+  <intent value="order"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://www.whocc.no/atc"/>
+      <code value="A07EC01"/>
+      <display value="Sulfasalazine"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/Patient1"/>
+  </subject>
+</MedicationRequest>

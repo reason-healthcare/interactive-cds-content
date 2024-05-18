@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="QuestionnaireOutput1"/>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://questionnaire-processor/Questionnaire/ModularQuestionnaire1"/>
+    <resource>
+      <Questionnaire>
+        <id value="ModularQuestionnaire1"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-modular"/>
+        </meta>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Questionnaire_ModularQuestionnaire1"> </a><p><b>Generated Narrative: Questionnaire</b><a name="ModularQuestionnaire1"> </a><a name="hcModularQuestionnaire1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Questionnaire &quot;ModularQuestionnaire1&quot; </p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-modular.html">SDC Modular Questionnaire</a></p></div><p><b>Assembly Expectations for Questionnaire</b>: assemble-root</p><p><b>url</b>: <code>http://questionnaire-processor/Questionnaire/ModularQuestionnaire1</code></p><p><b>status</b>: draft</p><blockquote><p><b>item</b></p><p><b>Sub-questionnaire</b>: <a href="Questionnaire-ActiveSulfasalazineFeatureQuestionnaire1.html">Questionnaire[http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1|0.1.0]</a></p><p><b>linkId</b>: ActiveSulfasalazineFeature#Observation</p><p><b>definition</b>: <a href="StructureDefinition-ActiveSulfasalazineFeature.html">Active Sulfasalazine Feature</a></p><p><b>text</b>: ActiveSulfasalazineFeature sub-questionnaire</p><p><b>type</b>: display</p></blockquote><blockquote><p><b>item</b></p><p><b>Sub-questionnaire</b>: <a href="Questionnaire-LastCbcPanelReportDateFeatureQuestionnaire1.html">Questionnaire[http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1|0.1.0]</a></p><p><b>linkId</b>: LastCbcPanelReportDateFeature#Observation</p><p><b>definition</b>: <a href="StructureDefinition-LastCbcPanelReportDateFeature.html">Last CBC Panel Report Date Feature</a></p><p><b>text</b>: LastCbcPanelReportDateFeature sub-questionnaire</p><p><b>type</b>: display</p></blockquote></div>
+        </text>
+        <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation">
+          <valueCode value="assemble-root"/>
+        </extension>
+        <url value="http://questionnaire-processor/Questionnaire/ModularQuestionnaire1"/>
+        <status value="draft"/>
+        <item>
+          <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire">
+            <valueCanonical value="http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1"/>
+          </extension>
+          <linkId value="ActiveSulfasalazineFeature#Observation"/>
+          <definition value="http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation"/>
+          <text value="ActiveSulfasalazineFeature sub-questionnaire"/>
+          <type value="display"/>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire">
+            <valueCanonical value="http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1"/>
+          </extension>
+          <linkId value="LastCbcPanelReportDateFeature#Observation"/>
+          <definition value="http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation"/>
+          <text value="LastCbcPanelReportDateFeature sub-questionnaire"/>
+          <type value="display"/>
+        </item>
+      </Questionnaire>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1"/>
+    <resource>
+      <Questionnaire>
+        <id value="ActiveSulfasalazineFeatureQuestionnaire1"/>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Questionnaire_ActiveSulfasalazineFeatureQuestionnaire1"> </a><p><b>Generated Narrative: Questionnaire</b><a name="ActiveSulfasalazineFeatureQuestionnaire1"> </a><a name="hcActiveSulfasalazineFeatureQuestionnaire1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Questionnaire &quot;ActiveSulfasalazineFeatureQuestionnaire1&quot; </p></div><p><b>url</b>: <code>http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1</code></p><p><b>status</b>: draft</p><blockquote><p><b>item</b></p><p><b>Item extraction context</b>: Observation</p><p><b>linkId</b>: ActiveSulfasalazineFeature#Observation</p><p><b>definition</b>: <a href="StructureDefinition-ActiveSulfasalazineFeature.html">Active Sulfasalazine Feature</a></p><p><b>text</b>: Measurements and simple assertions</p><p><b>type</b>: group</p><blockquote><p><b>item</b></p><p><b>linkId</b>: ActiveSulfasalazineFeature#Observation.valueBoolean</p><p><b>definition</b>: <a href="StructureDefinition-ActiveSulfasalazineFeature.html">Active Sulfasalazine Feature</a></p><p><b>text</b>: Actual result</p><p><b>type</b>: boolean</p><blockquote><p><b>initial</b></p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>Questionnaire Hidden</b>: true</p><p><b>linkId</b>: ActiveSulfasalazineFeature#Observation.status</p><p><b>definition</b>: <a href="StructureDefinition-ActiveSulfasalazineFeature.html">Active Sulfasalazine Feature</a></p><p><b>text</b>: registered | preliminary | final | amended +</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><blockquote><p><b>initial</b></p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>Questionnaire Hidden</b>: true</p><p><b>linkId</b>: ActiveSulfasalazineFeature#Observation.code</p><p><b>definition</b>: <a href="StructureDefinition-ActiveSulfasalazineFeature.html">Active Sulfasalazine Feature</a></p><p><b>text</b>: Type of observation (code / type)</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><blockquote><p><b>initial</b></p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>Questionnaire Hidden</b>: true</p><p><b>linkId</b>: ActiveSulfasalazineFeature#Observation.effectiveDateTime</p><p><b>definition</b>: <a href="StructureDefinition-ActiveSulfasalazineFeature.html">Active Sulfasalazine Feature</a></p><p><b>text</b>: Clinically relevant time/time-period for observation</p><p><b>type</b>: dateTime</p><blockquote><p><b>initial</b></p></blockquote></blockquote></blockquote></div>
+        </text>
+        <url value="http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1"/>
+        <status value="draft"/>
+        <item>
+          <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemExtractionContext">
+            <valueCode value="Observation"/>
+          </extension>
+          <linkId value="ActiveSulfasalazineFeature#Observation"/>
+          <definition value="http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation"/>
+          <text value="Measurements and simple assertions"/>
+          <type value="group"/>
+          <item>
+            <linkId value="ActiveSulfasalazineFeature#Observation.valueBoolean"/>
+            <definition value="http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation.valueBoolean"/>
+            <text value="Actual result"/>
+            <type value="boolean"/>
+            <initial>
+              <valueBoolean value="true"/>
+            </initial>
+          </item>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+              <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ActiveSulfasalazineFeature#Observation.status"/>
+            <definition value="http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation.status"/>
+            <text value="registered | preliminary | final | amended +"/>
+            <type value="choice"/>
+            <required value="true"/>
+            <initial>
+              <valueCoding>
+                <system value="http://hl7.org/fhir/observation-status"/>
+                <code value="final"/>
+              </valueCoding>
+            </initial>
+          </item>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+              <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ActiveSulfasalazineFeature#Observation.code"/>
+            <definition value="http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation.code"/>
+            <text value="Type of observation (code / type)"/>
+            <type value="choice"/>
+            <required value="true"/>
+            <initial>
+              <valueCoding>
+                <system value="http://example.org/CodeSystem/CaseFeatureCodes"/>
+                <code value="on-medication-sulfasalazine"/>
+              </valueCoding>
+            </initial>
+          </item>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+              <valueBoolean value="true"/>
+            </extension>
+            <linkId value="ActiveSulfasalazineFeature#Observation.effectiveDateTime"/>
+            <definition value="http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation.effectiveDateTime"/>
+            <text value="Clinically relevant time/time-period for observation"/>
+            <type value="dateTime"/>
+            <initial>
+              <valueDateTime value="2022-12-13"/>
+            </initial>
+          </item>
+        </item>
+      </Questionnaire>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1"/>
+    <resource>
+      <Questionnaire>
+        <id value="LastCbcPanelReportDateFeatureQuestionnaire1"/>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Questionnaire_LastCbcPanelReportDateFeatureQuestionnaire1"> </a><p><b>Generated Narrative: Questionnaire</b><a name="LastCbcPanelReportDateFeatureQuestionnaire1"> </a><a name="hcLastCbcPanelReportDateFeatureQuestionnaire1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Questionnaire &quot;LastCbcPanelReportDateFeatureQuestionnaire1&quot; </p></div><p><b>url</b>: <code>http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1</code></p><p><b>status</b>: draft</p><blockquote><p><b>item</b></p><p><b>Item extraction context</b>: Observation</p><p><b>linkId</b>: LastCbcPanelReportDateFeature#Observation</p><p><b>definition</b>: <a href="StructureDefinition-LastCbcPanelReportDateFeature.html">Last CBC Panel Report Date Feature</a></p><p><b>text</b>: Measurements and simple assertions</p><p><b>type</b>: group</p><blockquote><p><b>item</b></p><p><b>Questionnaire Hidden</b>: true</p><p><b>linkId</b>: LastCbcPanelReportDateFeature#Observation.status</p><p><b>definition</b>: <a href="StructureDefinition-LastCbcPanelReportDateFeature.html">Last CBC Panel Report Date Feature</a></p><p><b>text</b>: registered | preliminary | final | amended +</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><blockquote><p><b>initial</b></p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>Questionnaire Hidden</b>: true</p><p><b>linkId</b>: LastCbcPanelReportDateFeature#Observation.code</p><p><b>definition</b>: <a href="StructureDefinition-LastCbcPanelReportDateFeature.html">Last CBC Panel Report Date Feature</a></p><p><b>text</b>: Type of observation (code / type)</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><blockquote><p><b>initial</b></p></blockquote></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: LastCbcPanelReportDateFeature#Observation.valueDateTime</p><p><b>definition</b>: <a href="StructureDefinition-LastCbcPanelReportDateFeature.html">Last CBC Panel Report Date Feature</a></p><p><b>text</b>: Actual result</p><p><b>type</b>: dateTime</p></blockquote></blockquote></div>
+        </text>
+        <url value="http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1"/>
+        <status value="draft"/>
+        <item>
+          <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemExtractionContext">
+            <valueCode value="Observation"/>
+          </extension>
+          <linkId value="LastCbcPanelReportDateFeature#Observation"/>
+          <definition value="http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation"/>
+          <text value="Measurements and simple assertions"/>
+          <type value="group"/>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+              <valueBoolean value="true"/>
+            </extension>
+            <linkId value="LastCbcPanelReportDateFeature#Observation.status"/>
+            <definition value="http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation.status"/>
+            <text value="registered | preliminary | final | amended +"/>
+            <type value="choice"/>
+            <required value="true"/>
+            <initial>
+              <valueCoding>
+                <system value="http://hl7.org/fhir/observation-status"/>
+                <code value="final"/>
+              </valueCoding>
+            </initial>
+          </item>
+          <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+              <valueBoolean value="true"/>
+            </extension>
+            <linkId value="LastCbcPanelReportDateFeature#Observation.code"/>
+            <definition value="http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation.code"/>
+            <text value="Type of observation (code / type)"/>
+            <type value="choice"/>
+            <required value="true"/>
+            <initial>
+              <valueCoding>
+                <system value="http://example.org/CodeSystem/CaseFeatureCodes"/>
+                <code value="last-cbc-panel-report-date"/>
+              </valueCoding>
+            </initial>
+          </item>
+          <item>
+            <linkId value="LastCbcPanelReportDateFeature#Observation.valueDateTime"/>
+            <definition value="http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation.valueDateTime"/>
+            <text value="Actual result"/>
+            <type value="dateTime"/>
+          </item>
+        </item>
+      </Questionnaire>
+    </resource>
+  </entry>
+</Bundle>

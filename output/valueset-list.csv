@@ -1,0 +1,4 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1116.181,0.1.0,active,,Methotrexate,null,"This value set contains concepts that represent the medication Methotrexate",,"RxNorm"
+http://example.org/ValueSet/sulfasalazine-vs,0.1.0,draft,,SulfasalazineVS,null,"",,"hl7.terminology.r4,RxNorm"
+http://hl7.org/fhir/ValueSet/observation-status,0.1.0,active,"2.16.840.1.113883.4.642.3.400",ObservationStatus,ObservationStatus,"Codes providing the status of an observation.",,"hl7.fhir.r4.core"

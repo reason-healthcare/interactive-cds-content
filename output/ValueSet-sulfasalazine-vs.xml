@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="sulfasalazine-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://www.whocc.no/atc"><code>http://www.whocc.no/atc</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>A07EC01</td><td>Sulfasalazine</td></tr></table></li><li>Include these codes as defined in <a href="http://www.nlm.nih.gov/research/umls/rxnorm"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>373988</td><td>Sulfasalazine Enema</td></tr><tr><td>376645</td><td>Sulfasalazine Delayed Release Oral Tablet</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://example.org/ValueSet/sulfasalazine-vs"/>
+  <version value="0.1.0"/>
+  <name value="SulfasalazineVS"/>
+  <status value="draft"/>
+  <date value="2024-05-17T14:59:55-04:00"/>
+  <publisher value="Example Publisher"/>
+  <contact>
+    <name value="Example Publisher"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/example-publisher"/>
+    </telecom>
+  </contact>
+  <compose>
+    <include>
+      <system value="http://www.whocc.no/atc"/>
+      <concept>
+        <code value="A07EC01"/>
+        <display value="Sulfasalazine"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <concept>
+        <code value="373988"/>
+        <display value="Sulfasalazine Enema"/>
+      </concept>
+      <concept>
+        <code value="376645"/>
+        <display value="Sulfasalazine Delayed Release Oral Tablet"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

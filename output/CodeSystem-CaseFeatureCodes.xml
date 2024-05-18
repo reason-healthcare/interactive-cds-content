@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="CaseFeatureCodes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This  code system <code>http://example.org/CodeSystem/CaseFeatureCodes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">on-medication-methotrexate<a name="CaseFeatureCodes-on-medication-methotrexate"> </a></td><td>On Methotrexate Feature</td><td>Currently taking Methotrexate</td></tr><tr><td style="white-space:nowrap">on-medication-sulfasalazine<a name="CaseFeatureCodes-on-medication-sulfasalazine"> </a></td><td>On Sulfasalazine Feature</td><td>Currently taking Sulfasalazine</td></tr><tr><td style="white-space:nowrap">last-cbc-panel-report-date<a name="CaseFeatureCodes-last-cbc-panel-report-date"> </a></td><td>Date of last CBC Panel</td><td>Effective date of last CBC Panel report</td></tr></table></div>
+  </text>
+  <url value="http://example.org/CodeSystem/CaseFeatureCodes"/>
+  <version value="0.1.0"/>
+  <name value="CaseFeatureCodes"/>
+  <status value="draft"/>
+  <date value="2024-05-17T14:59:55-04:00"/>
+  <publisher value="Example Publisher"/>
+  <contact>
+    <name value="Example Publisher"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/example-publisher"/>
+    </telecom>
+  </contact>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="on-medication-methotrexate"/>
+    <display value="On Methotrexate Feature"/>
+    <definition value="Currently taking Methotrexate"/>
+  </concept>
+  <concept>
+    <code value="on-medication-sulfasalazine"/>
+    <display value="On Sulfasalazine Feature"/>
+    <definition value="Currently taking Sulfasalazine"/>
+  </concept>
+  <concept>
+    <code value="last-cbc-panel-report-date"/>
+    <display value="Date of last CBC Panel"/>
+    <definition value="Effective date of last CBC Panel report"/>
+  </concept>
+</CodeSystem>

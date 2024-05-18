@@ -1,0 +1,197 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "2.16.840.1.113762.1.4.1116.181-20200902",
+  "meta" : {
+    "versionId" : "20",
+    "lastUpdated" : "2020-09-02T01:00:24.000-04:00",
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://www.nlm.nih.gov/research/umls/rxnorm\"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a> version <code>01032023</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>105585</td><td>methotrexate 2.5 MG Oral Tablet</td></tr><tr><td>105586</td><td>methotrexate 10 MG Oral Tablet</td></tr><tr><td>1441402</td><td>0.4 ML methotrexate 25 MG/ML Auto-Injector</td></tr><tr><td>1441411</td><td>0.4 ML methotrexate 37.5 MG/ML Auto-Injector</td></tr><tr><td>1441416</td><td>0.4 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1441422</td><td>0.4 ML methotrexate 62.5 MG/ML Auto-Injector</td></tr><tr><td>1544378</td><td>0.2 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544385</td><td>0.25 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544387</td><td>0.3 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544389</td><td>0.35 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544395</td><td>0.45 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544397</td><td>0.5 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544401</td><td>0.6 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544403</td><td>0.15 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1655956</td><td>40 ML methotrexate 25 MG/ML Injection</td></tr><tr><td>1655959</td><td>10 ML methotrexate 25 MG/ML Injection</td></tr><tr><td>1655960</td><td>2 ML methotrexate 25 MG/ML Injection</td></tr><tr><td>1655967</td><td>4 ML methotrexate 25 MG/ML Injection</td></tr><tr><td>1655968</td><td>8 ML methotrexate 25 MG/ML Injection</td></tr><tr><td>1747179</td><td>0.4 ML methotrexate 31.3 MG/ML Auto-Injector</td></tr><tr><td>1747185</td><td>0.4 ML methotrexate 43.8 MG/ML Auto-Injector</td></tr><tr><td>1747192</td><td>0.4 ML methotrexate 56.3 MG/ML Auto-Injector</td></tr><tr><td>1921592</td><td>methotrexate 2.5 MG/ML Oral Solution</td></tr><tr><td>1946772</td><td>methotrexate 25 MG/ML Injectable Solution</td></tr><tr><td>2377333</td><td>0.4 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377341</td><td>0.5 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377343</td><td>0.6 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377345</td><td>0.7 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377347</td><td>0.8 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377349</td><td>0.9 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377351</td><td>1 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377353</td><td>0.3 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>283510</td><td>methotrexate 15 MG Oral Tablet</td></tr><tr><td>283511</td><td>methotrexate 5 MG Oral Tablet</td></tr><tr><td>283671</td><td>methotrexate 7.5 MG Oral Tablet</td></tr><tr><td>311625</td><td>methotrexate 1000 MG Injection</td></tr></table></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/valueset-author",
+    "valueString" : "American Society of Clinical Oncology Author"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/resource-lastReviewDate",
+    "valueDate" : "2022-12-15"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/valueset-effectiveDate",
+    "valueDate" : "2020-09-02"
+  }],
+  "url" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1116.181",
+  "version" : "0.1.0",
+  "name" : "Methotrexate",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2020-09-02T01:00:24-04:00",
+  "publisher" : "Example Publisher",
+  "contact" : [{
+    "name" : "Example Publisher",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://example.org/example-publisher"
+    }]
+  }],
+  "description" : "This value set contains concepts that represent the medication Methotrexate",
+  "jurisdiction" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+      "valueCode" : "unknown"
+    }]
+  }],
+  "purpose" : "(Clinical Focus: This value set contains concepts that represent the medication Methotrexate.),(Data Element Scope: This value set may use the Quality Data Model (QDM) category related to Medication.),(Inclusion Criteria: Includes only relevant concepts associated with semantic clinical drugs (concepts associated with component, form and strength); generic; prescribable; injectable; oral Methotrexate.),(Exclusion Criteria: Excludes branded drugs; components or ingredients only; non-prescribable.)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "version" : "01032023",
+      "concept" : [{
+        "code" : "105585",
+        "display" : "methotrexate 2.5 MG Oral Tablet"
+      },
+      {
+        "code" : "105586",
+        "display" : "methotrexate 10 MG Oral Tablet"
+      },
+      {
+        "code" : "1441402",
+        "display" : "0.4 ML methotrexate 25 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1441411",
+        "display" : "0.4 ML methotrexate 37.5 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1441416",
+        "display" : "0.4 ML methotrexate 50 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1441422",
+        "display" : "0.4 ML methotrexate 62.5 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1544378",
+        "display" : "0.2 ML methotrexate 50 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1544385",
+        "display" : "0.25 ML methotrexate 50 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1544387",
+        "display" : "0.3 ML methotrexate 50 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1544389",
+        "display" : "0.35 ML methotrexate 50 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1544395",
+        "display" : "0.45 ML methotrexate 50 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1544397",
+        "display" : "0.5 ML methotrexate 50 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1544401",
+        "display" : "0.6 ML methotrexate 50 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1544403",
+        "display" : "0.15 ML methotrexate 50 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1655956",
+        "display" : "40 ML methotrexate 25 MG/ML Injection"
+      },
+      {
+        "code" : "1655959",
+        "display" : "10 ML methotrexate 25 MG/ML Injection"
+      },
+      {
+        "code" : "1655960",
+        "display" : "2 ML methotrexate 25 MG/ML Injection"
+      },
+      {
+        "code" : "1655967",
+        "display" : "4 ML methotrexate 25 MG/ML Injection"
+      },
+      {
+        "code" : "1655968",
+        "display" : "8 ML methotrexate 25 MG/ML Injection"
+      },
+      {
+        "code" : "1747179",
+        "display" : "0.4 ML methotrexate 31.3 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1747185",
+        "display" : "0.4 ML methotrexate 43.8 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1747192",
+        "display" : "0.4 ML methotrexate 56.3 MG/ML Auto-Injector"
+      },
+      {
+        "code" : "1921592",
+        "display" : "methotrexate 2.5 MG/ML Oral Solution"
+      },
+      {
+        "code" : "1946772",
+        "display" : "methotrexate 25 MG/ML Injectable Solution"
+      },
+      {
+        "code" : "2377333",
+        "display" : "0.4 ML methotrexate 25 MG/ML Prefilled Syringe"
+      },
+      {
+        "code" : "2377341",
+        "display" : "0.5 ML methotrexate 25 MG/ML Prefilled Syringe"
+      },
+      {
+        "code" : "2377343",
+        "display" : "0.6 ML methotrexate 25 MG/ML Prefilled Syringe"
+      },
+      {
+        "code" : "2377345",
+        "display" : "0.7 ML methotrexate 25 MG/ML Prefilled Syringe"
+      },
+      {
+        "code" : "2377347",
+        "display" : "0.8 ML methotrexate 25 MG/ML Prefilled Syringe"
+      },
+      {
+        "code" : "2377349",
+        "display" : "0.9 ML methotrexate 25 MG/ML Prefilled Syringe"
+      },
+      {
+        "code" : "2377351",
+        "display" : "1 ML methotrexate 25 MG/ML Prefilled Syringe"
+      },
+      {
+        "code" : "2377353",
+        "display" : "0.3 ML methotrexate 25 MG/ML Prefilled Syringe"
+      },
+      {
+        "code" : "283510",
+        "display" : "methotrexate 15 MG Oral Tablet"
+      },
+      {
+        "code" : "283511",
+        "display" : "methotrexate 5 MG Oral Tablet"
+      },
+      {
+        "code" : "283671",
+        "display" : "methotrexate 7.5 MG Oral Tablet"
+      },
+      {
+        "code" : "311625",
+        "display" : "methotrexate 1000 MG Injection"
+      }]
+    }]
+  }
+}

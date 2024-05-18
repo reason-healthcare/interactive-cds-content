@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/PlanDefinition/RheumatoidArthritisGuideline> a fhir:PlanDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "RheumatoidArthritisGuideline"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-pathwaydefinition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-pathwaydefinition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: PlanDefinition</b><a name=\"RheumatoidArthritisGuideline\"> </a><a name=\"hcRheumatoidArthritisGuideline\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource PlanDefinition &quot;RheumatoidArthritisGuideline&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-pathwaydefinition.html\">CPGPathwayDefinition</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>url</b>: <code>http://example.org/PlanDefinition/RheumatoidArthritisGuideline</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: RheumatoidArthritisGuideline</p><p><b>title</b>: Rheumatoid Arthritis Guideline</p><p><b>type</b>: Clinical Protocol <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-plan-definition-type.html\">PlanDefinitionType</a>#clinical-protocol)</span></p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-05-17 14:59:55-0400</p><p><b>publisher</b>: Example Publisher</p><p><b>contact</b>: Example Publisher: <a href=\"http://example.org/example-publisher\">http://example.org/example-publisher</a></p><p><b>description</b>: ### Essentials\n* If rheumatoid arthritis (RA) is suspected, the patient should be referred without delay to a rheumatology outpatient clinic.\n  * RA as an immunological disorder may begin several years before the appearance of symptoms, which may, at first, be unspecific, making it impossible to distinguish incipient RA from other types of arthritis.\n  * If there is inflammation in several, particularly small, joints, and rheumatoid factor and/or citrullinated peptide antibodies in blood, the patient probably has RA. Seronegative polyarthritis differs from seropositive polyarthritis as regards genetics and its more favourable prognosis, and it may prove in follow-up to be psoriatic arthropathy, for example.\n  * ESR and CRP may be normal.\n  * Systemic glucocorticoids interfere with the diagnosis and should therefore not be started in primary health care, but a glucocorticoid can be injected as first aid into inflamed joints.\n  * New patients with symptoms of arthritis need to see a rheumatologist unless the diagnosis is evident and treatment can be provided on the primary care level, as is often the case with gout or reactive arthritis.\n* RA is a progressive, debilitating disease but effective medication started early can make more than half of newly diagnosed patients asymptomatic within six months.\n* The basic medication consists of a combination of methotrexate, sulfasalazine and hydroxychloroquine. Low glucocorticoid doses should be added to the regimen for at least a few months.\n* Inflamed joints should be treated with glucocorticoid injections.\n* RA not responding to combination drug therapy should be treated with biologicals biologicals or with a janus kinase (JAK) inhibitor.\n* Physical exercise will improve the patient's functional ability and reduce the risk of cardiovascular disease.\n\n### Epidemiology\n* About 40 adults per 100 000 per year develop RA.\n* The age at onset is most commonly 65-70 years but two in three of those developing the disease are younger than 65 years old.\n* Two in three patients are women.\n* Some people are genetically susceptible to RA.\n* Smoking doubles the risk of the disease.\n\n### Symptoms\n* The onset of RA is usually insidious.\n* Morning stiffness, tender and swollen joints are typical.\n* Proximal interphalangeal and metacarpophalangeal joints, wrists, and balls of the feet are most commonly affected but basically any joint may become inflamed.\n* Fatigue, malaise and mild fever may occur as systemic symptoms.\n\n### Investigations in primary care\n* See the article Clinical examination of patients with joint inflammation in primary health care 1.\n* Palpation can be used to find out whether a patient with joint symptoms has arthritis.\n* An inflamed joint is characterized by soft swelling, tenderness, pain on movement and a limited range of motion.\n  * Fist closure is often limited in patients with inflammation of small finger joints or with flexor tenosynovitis.\n  * Tenderness on lateral squeezing of the knuckles or balls of the feet suggests arthritis.\n  * It may be difficult to distinguish arthritis from osteoarthritis. In fingers, osteoarthritis occurs in the distal or proximal interphalangeal joints, RA in proximal interphalangeal and metacarpophalangeal joints. Patients with osteoarthritis may develop rheumatoid arthritis.\n* Laboratory tests: ESR, CRP, basic blood count with platelets, RF, anti-CCP antibodies\n  * ALT, ALP, creatinine, urate, Borrelia antibodies, chemical screening of urine, ANAs, antibodies to diagnose reactive arthritis, as considered necessary (see Reactive arthritis &gt; Diagnosis 2).\n* If intra-articular injections are given, a synovial fluid sample should be taken at the same time for examination (synovial fluid leucocytes + differential count from synovial fluid, bacterial culture, possibly synovial fluid crystals), if fluid can be aspirated; see the article 3.\n  * In patients with arthritis, synovial fluid is cloudy, with a leucocyte count exceeding 2 000 x 106/l.\n  * Highly cloudy synovial fluid suggests bacterial arthritis, usually monoarthritis.\n* Imaging of patients with arthritis should mainly be performed at a rheumatology outpatient clinic.\n\n### Principles of drug treatment\n* RA should be diagnosed and medication begun at a rheumatology outpatient clinic.\n---</p><blockquote><p><b>action</b></p><p><b>title</b>: Beginning of treatment</p><p><b>description</b>: Strategy for beginning treatment for RA</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: Screening</p><p><b>description</b>: Strategy for screening before starting to use immunosuppressive medication</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: Monitoring of treatment</p><p><b>description</b>: Strategy for monitoring during antirheumatic medication treatment</p><p><b>code</b>: Guideline-based Care <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html\">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href=\"PlanDefinition-MonitoringTestsForAntirheumaticDrugTherapy.html\">Monitoring Tests for Antirheumatic Drug Therapy</a></p></blockquote></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "computable" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://example.org/PlanDefinition/RheumatoidArthritisGuideline"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "RheumatoidArthritisGuideline"] ; # 
+  fhir:title [ fhir:v "Rheumatoid Arthritis Guideline"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/plan-definition-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "clinical-protocol" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-05-17T14:59:55-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Example Publisher"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Example Publisher" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://example.org/example-publisher" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "### Essentials\n* If rheumatoid arthritis (RA) is suspected, the patient should be referred without delay to a rheumatology outpatient clinic.\n  * RA as an immunological disorder may begin several years before the appearance of symptoms, which may, at first, be unspecific, making it impossible to distinguish incipient RA from other types of arthritis.\n  * If there is inflammation in several, particularly small, joints, and rheumatoid factor and/or citrullinated peptide antibodies in blood, the patient probably has RA. Seronegative polyarthritis differs from seropositive polyarthritis as regards genetics and its more favourable prognosis, and it may prove in follow-up to be psoriatic arthropathy, for example.\n  * ESR and CRP may be normal.\n  * Systemic glucocorticoids interfere with the diagnosis and should therefore not be started in primary health care, but a glucocorticoid can be injected as first aid into inflamed joints.\n  * New patients with symptoms of arthritis need to see a rheumatologist unless the diagnosis is evident and treatment can be provided on the primary care level, as is often the case with gout or reactive arthritis.\n* RA is a progressive, debilitating disease but effective medication started early can make more than half of newly diagnosed patients asymptomatic within six months.\n* The basic medication consists of a combination of methotrexate, sulfasalazine and hydroxychloroquine. Low glucocorticoid doses should be added to the regimen for at least a few months.\n* Inflamed joints should be treated with glucocorticoid injections.\n* RA not responding to combination drug therapy should be treated with biologicals biologicals or with a janus kinase (JAK) inhibitor.\n* Physical exercise will improve the patient's functional ability and reduce the risk of cardiovascular disease.\n\n### Epidemiology\n* About 40 adults per 100 000 per year develop RA.\n* The age at onset is most commonly 65-70 years but two in three of those developing the disease are younger than 65 years old.\n* Two in three patients are women.\n* Some people are genetically susceptible to RA.\n* Smoking doubles the risk of the disease.\n\n### Symptoms\n* The onset of RA is usually insidious.\n* Morning stiffness, tender and swollen joints are typical.\n* Proximal interphalangeal and metacarpophalangeal joints, wrists, and balls of the feet are most commonly affected but basically any joint may become inflamed.\n* Fatigue, malaise and mild fever may occur as systemic symptoms.\n\n### Investigations in primary care\n* See the article Clinical examination of patients with joint inflammation in primary health care 1.\n* Palpation can be used to find out whether a patient with joint symptoms has arthritis.\n* An inflamed joint is characterized by soft swelling, tenderness, pain on movement and a limited range of motion.\n  * Fist closure is often limited in patients with inflammation of small finger joints or with flexor tenosynovitis.\n  * Tenderness on lateral squeezing of the knuckles or balls of the feet suggests arthritis.\n  * It may be difficult to distinguish arthritis from osteoarthritis. In fingers, osteoarthritis occurs in the distal or proximal interphalangeal joints, RA in proximal interphalangeal and metacarpophalangeal joints. Patients with osteoarthritis may develop rheumatoid arthritis.\n* Laboratory tests: ESR, CRP, basic blood count with platelets, RF, anti-CCP antibodies\n  * ALT, ALP, creatinine, urate, Borrelia antibodies, chemical screening of urine, ANAs, antibodies to diagnose reactive arthritis, as considered necessary (see Reactive arthritis > Diagnosis 2).\n* If intra-articular injections are given, a synovial fluid sample should be taken at the same time for examination (synovial fluid leucocytes + differential count from synovial fluid, bacterial culture, possibly synovial fluid crystals), if fluid can be aspirated; see the article 3.\n  * In patients with arthritis, synovial fluid is cloudy, with a leucocyte count exceeding 2 000 x 106/l.\n  * Highly cloudy synovial fluid suggests bacterial arthritis, usually monoarthritis.\n* Imaging of patients with arthritis should mainly be performed at a rheumatology outpatient clinic.\n\n### Principles of drug treatment\n* RA should be diagnosed and medication begun at a rheumatology outpatient clinic.\n---"] ; # 
+  fhir:action ( [
+     fhir:title [ fhir:v "Beginning of treatment" ] ;
+     fhir:description [ fhir:v "Strategy for beginning treatment for RA" ] ;
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "guideline-based-care" ]
+       ] )
+     ] )
+  ] [
+     fhir:title [ fhir:v "Screening" ] ;
+     fhir:description [ fhir:v "Strategy for screening before starting to use immunosuppressive medication" ] ;
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "guideline-based-care" ]
+       ] )
+     ] )
+  ] [
+     fhir:title [ fhir:v "Monitoring of treatment" ] ;
+     fhir:description [ fhir:v "Strategy for monitoring during antirheumatic medication treatment" ] ;
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "guideline-based-care" ]
+       ] )
+     ] ) ;
+     fhir:definition [
+       fhir:v "http://example.org/PlanDefinition/MonitoringTestsForAntirheumaticDrugTherapy"^^xsd:anyURI ;
+       fhir:link <http://example.org/PlanDefinition/MonitoringTestsForAntirheumaticDrugTherapy>
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

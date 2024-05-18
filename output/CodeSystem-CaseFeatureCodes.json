@@ -1,0 +1,38 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "CaseFeatureCodes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>http://example.org/CodeSystem/CaseFeatureCodes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">on-medication-methotrexate<a name=\"CaseFeatureCodes-on-medication-methotrexate\"> </a></td><td>On Methotrexate Feature</td><td>Currently taking Methotrexate</td></tr><tr><td style=\"white-space:nowrap\">on-medication-sulfasalazine<a name=\"CaseFeatureCodes-on-medication-sulfasalazine\"> </a></td><td>On Sulfasalazine Feature</td><td>Currently taking Sulfasalazine</td></tr><tr><td style=\"white-space:nowrap\">last-cbc-panel-report-date<a name=\"CaseFeatureCodes-last-cbc-panel-report-date\"> </a></td><td>Date of last CBC Panel</td><td>Effective date of last CBC Panel report</td></tr></table></div>"
+  },
+  "url" : "http://example.org/CodeSystem/CaseFeatureCodes",
+  "version" : "0.1.0",
+  "name" : "CaseFeatureCodes",
+  "status" : "draft",
+  "date" : "2024-05-17T14:59:55-04:00",
+  "publisher" : "Example Publisher",
+  "contact" : [{
+    "name" : "Example Publisher",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://example.org/example-publisher"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "on-medication-methotrexate",
+    "display" : "On Methotrexate Feature",
+    "definition" : "Currently taking Methotrexate"
+  },
+  {
+    "code" : "on-medication-sulfasalazine",
+    "display" : "On Sulfasalazine Feature",
+    "definition" : "Currently taking Sulfasalazine"
+  },
+  {
+    "code" : "last-cbc-panel-report-date",
+    "display" : "Date of last CBC Panel",
+    "definition" : "Effective date of last CBC Panel report"
+  }]
+}

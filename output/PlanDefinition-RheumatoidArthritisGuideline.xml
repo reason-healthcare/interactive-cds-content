@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="RheumatoidArthritisGuideline"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-pathwaydefinition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: PlanDefinition</b><a name="RheumatoidArthritisGuideline"> </a><a name="hcRheumatoidArthritisGuideline"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource PlanDefinition &quot;RheumatoidArthritisGuideline&quot; </p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-pathwaydefinition.html">CPGPathwayDefinition</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>url</b>: <code>http://example.org/PlanDefinition/RheumatoidArthritisGuideline</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: RheumatoidArthritisGuideline</p><p><b>title</b>: Rheumatoid Arthritis Guideline</p><p><b>type</b>: Clinical Protocol <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.5.0/CodeSystem-plan-definition-type.html">PlanDefinitionType</a>#clinical-protocol)</span></p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-05-17 14:59:55-0400</p><p><b>publisher</b>: Example Publisher</p><p><b>contact</b>: Example Publisher: <a href="http://example.org/example-publisher">http://example.org/example-publisher</a></p><p><b>description</b>: ### Essentials
+* If rheumatoid arthritis (RA) is suspected, the patient should be referred without delay to a rheumatology outpatient clinic.
+  * RA as an immunological disorder may begin several years before the appearance of symptoms, which may, at first, be unspecific, making it impossible to distinguish incipient RA from other types of arthritis.
+  * If there is inflammation in several, particularly small, joints, and rheumatoid factor and/or citrullinated peptide antibodies in blood, the patient probably has RA. Seronegative polyarthritis differs from seropositive polyarthritis as regards genetics and its more favourable prognosis, and it may prove in follow-up to be psoriatic arthropathy, for example.
+  * ESR and CRP may be normal.
+  * Systemic glucocorticoids interfere with the diagnosis and should therefore not be started in primary health care, but a glucocorticoid can be injected as first aid into inflamed joints.
+  * New patients with symptoms of arthritis need to see a rheumatologist unless the diagnosis is evident and treatment can be provided on the primary care level, as is often the case with gout or reactive arthritis.
+* RA is a progressive, debilitating disease but effective medication started early can make more than half of newly diagnosed patients asymptomatic within six months.
+* The basic medication consists of a combination of methotrexate, sulfasalazine and hydroxychloroquine. Low glucocorticoid doses should be added to the regimen for at least a few months.
+* Inflamed joints should be treated with glucocorticoid injections.
+* RA not responding to combination drug therapy should be treated with biologicals biologicals or with a janus kinase (JAK) inhibitor.
+* Physical exercise will improve the patient's functional ability and reduce the risk of cardiovascular disease.
+
+### Epidemiology
+* About 40 adults per 100 000 per year develop RA.
+* The age at onset is most commonly 65-70 years but two in three of those developing the disease are younger than 65 years old.
+* Two in three patients are women.
+* Some people are genetically susceptible to RA.
+* Smoking doubles the risk of the disease.
+
+### Symptoms
+* The onset of RA is usually insidious.
+* Morning stiffness, tender and swollen joints are typical.
+* Proximal interphalangeal and metacarpophalangeal joints, wrists, and balls of the feet are most commonly affected but basically any joint may become inflamed.
+* Fatigue, malaise and mild fever may occur as systemic symptoms.
+
+### Investigations in primary care
+* See the article Clinical examination of patients with joint inflammation in primary health care 1.
+* Palpation can be used to find out whether a patient with joint symptoms has arthritis.
+* An inflamed joint is characterized by soft swelling, tenderness, pain on movement and a limited range of motion.
+  * Fist closure is often limited in patients with inflammation of small finger joints or with flexor tenosynovitis.
+  * Tenderness on lateral squeezing of the knuckles or balls of the feet suggests arthritis.
+  * It may be difficult to distinguish arthritis from osteoarthritis. In fingers, osteoarthritis occurs in the distal or proximal interphalangeal joints, RA in proximal interphalangeal and metacarpophalangeal joints. Patients with osteoarthritis may develop rheumatoid arthritis.
+* Laboratory tests: ESR, CRP, basic blood count with platelets, RF, anti-CCP antibodies
+  * ALT, ALP, creatinine, urate, Borrelia antibodies, chemical screening of urine, ANAs, antibodies to diagnose reactive arthritis, as considered necessary (see Reactive arthritis &gt; Diagnosis 2).
+* If intra-articular injections are given, a synovial fluid sample should be taken at the same time for examination (synovial fluid leucocytes + differential count from synovial fluid, bacterial culture, possibly synovial fluid crystals), if fluid can be aspirated; see the article 3.
+  * In patients with arthritis, synovial fluid is cloudy, with a leucocyte count exceeding 2 000 x 106/l.
+  * Highly cloudy synovial fluid suggests bacterial arthritis, usually monoarthritis.
+* Imaging of patients with arthritis should mainly be performed at a rheumatology outpatient clinic.
+
+### Principles of drug treatment
+* RA should be diagnosed and medication begun at a rheumatology outpatient clinic.
+---</p><blockquote><p><b>action</b></p><p><b>title</b>: Beginning of treatment</p><p><b>description</b>: Strategy for beginning treatment for RA</p><p><b>code</b>: Guideline-based Care <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html">CPG Common Process</a>#guideline-based-care)</span></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: Screening</p><p><b>description</b>: Strategy for screening before starting to use immunosuppressive medication</p><p><b>code</b>: Guideline-based Care <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html">CPG Common Process</a>#guideline-based-care)</span></p></blockquote><blockquote><p><b>action</b></p><p><b>title</b>: Monitoring of treatment</p><p><b>description</b>: Strategy for monitoring during antirheumatic medication treatment</p><p><b>code</b>: Guideline-based Care <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html">CPG Common Process</a>#guideline-based-care)</span></p><p><b>definition</b>: <a href="PlanDefinition-MonitoringTestsForAntirheumaticDrugTherapy.html">Monitoring Tests for Antirheumatic Drug Therapy</a></p></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <url value="http://example.org/PlanDefinition/RheumatoidArthritisGuideline"/>
+  <version value="0.1.0"/>
+  <name value="RheumatoidArthritisGuideline"/>
+  <title value="Rheumatoid Arthritis Guideline"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="clinical-protocol"/>
+    </coding>
+  </type>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-05-17T14:59:55-04:00"/>
+  <publisher value="Example Publisher"/>
+  <contact>
+    <name value="Example Publisher"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/example-publisher"/>
+    </telecom>
+  </contact>
+  <description value="### Essentials&#xA;* If rheumatoid arthritis (RA) is suspected, the patient should be referred without delay to a rheumatology outpatient clinic.&#xA;  * RA as an immunological disorder may begin several years before the appearance of symptoms, which may, at first, be unspecific, making it impossible to distinguish incipient RA from other types of arthritis.&#xA;  * If there is inflammation in several, particularly small, joints, and rheumatoid factor and/or citrullinated peptide antibodies in blood, the patient probably has RA. Seronegative polyarthritis differs from seropositive polyarthritis as regards genetics and its more favourable prognosis, and it may prove in follow-up to be psoriatic arthropathy, for example.&#xA;  * ESR and CRP may be normal.&#xA;  * Systemic glucocorticoids interfere with the diagnosis and should therefore not be started in primary health care, but a glucocorticoid can be injected as first aid into inflamed joints.&#xA;  * New patients with symptoms of arthritis need to see a rheumatologist unless the diagnosis is evident and treatment can be provided on the primary care level, as is often the case with gout or reactive arthritis.&#xA;* RA is a progressive, debilitating disease but effective medication started early can make more than half of newly diagnosed patients asymptomatic within six months.&#xA;* The basic medication consists of a combination of methotrexate, sulfasalazine and hydroxychloroquine. Low glucocorticoid doses should be added to the regimen for at least a few months.&#xA;* Inflamed joints should be treated with glucocorticoid injections.&#xA;* RA not responding to combination drug therapy should be treated with biologicals biologicals or with a janus kinase (JAK) inhibitor.&#xA;* Physical exercise will improve the patient's functional ability and reduce the risk of cardiovascular disease.&#xA;&#xA;### Epidemiology&#xA;* About 40 adults per 100 000 per year develop RA.&#xA;* The age at onset is most commonly 65-70 years but two in three of those developing the disease are younger than 65 years old.&#xA;* Two in three patients are women.&#xA;* Some people are genetically susceptible to RA.&#xA;* Smoking doubles the risk of the disease.&#xA;&#xA;### Symptoms&#xA;* The onset of RA is usually insidious.&#xA;* Morning stiffness, tender and swollen joints are typical.&#xA;* Proximal interphalangeal and metacarpophalangeal joints, wrists, and balls of the feet are most commonly affected but basically any joint may become inflamed.&#xA;* Fatigue, malaise and mild fever may occur as systemic symptoms.&#xA;&#xA;### Investigations in primary care&#xA;* See the article Clinical examination of patients with joint inflammation in primary health care 1.&#xA;* Palpation can be used to find out whether a patient with joint symptoms has arthritis.&#xA;* An inflamed joint is characterized by soft swelling, tenderness, pain on movement and a limited range of motion.&#xA;  * Fist closure is often limited in patients with inflammation of small finger joints or with flexor tenosynovitis.&#xA;  * Tenderness on lateral squeezing of the knuckles or balls of the feet suggests arthritis.&#xA;  * It may be difficult to distinguish arthritis from osteoarthritis. In fingers, osteoarthritis occurs in the distal or proximal interphalangeal joints, RA in proximal interphalangeal and metacarpophalangeal joints. Patients with osteoarthritis may develop rheumatoid arthritis.&#xA;* Laboratory tests: ESR, CRP, basic blood count with platelets, RF, anti-CCP antibodies&#xA;  * ALT, ALP, creatinine, urate, Borrelia antibodies, chemical screening of urine, ANAs, antibodies to diagnose reactive arthritis, as considered necessary (see Reactive arthritis &gt; Diagnosis 2).&#xA;* If intra-articular injections are given, a synovial fluid sample should be taken at the same time for examination (synovial fluid leucocytes + differential count from synovial fluid, bacterial culture, possibly synovial fluid crystals), if fluid can be aspirated; see the article 3.&#xA;  * In patients with arthritis, synovial fluid is cloudy, with a leucocyte count exceeding 2 000 x 106/l.&#xA;  * Highly cloudy synovial fluid suggests bacterial arthritis, usually monoarthritis.&#xA;* Imaging of patients with arthritis should mainly be performed at a rheumatology outpatient clinic.&#xA;&#xA;### Principles of drug treatment&#xA;* RA should be diagnosed and medication begun at a rheumatology outpatient clinic.&#xA;---"/>
+  <action>
+    <title value="Beginning of treatment"/>
+    <description value="Strategy for beginning treatment for RA"/>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"/>
+        <code value="guideline-based-care"/>
+      </coding>
+    </code>
+  </action>
+  <action>
+    <title value="Screening"/>
+    <description value="Strategy for screening before starting to use immunosuppressive medication"/>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"/>
+        <code value="guideline-based-care"/>
+      </coding>
+    </code>
+  </action>
+  <action>
+    <title value="Monitoring of treatment"/>
+    <description value="Strategy for monitoring during antirheumatic medication treatment"/>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"/>
+        <code value="guideline-based-care"/>
+      </coding>
+    </code>
+    <definitionCanonical value="http://example.org/PlanDefinition/MonitoringTestsForAntirheumaticDrugTherapy"/>
+  </action>
+</PlanDefinition>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="AssembleParameters1"/>
+  <parameter>
+    <name value="questionnaire"/>
+    <resource>
+      <Questionnaire>
+        <id value="ModularQuestionnaire1"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-modular"/>
+        </meta>
+        <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation">
+          <valueCode value="assemble-root"/>
+        </extension>
+        <url value="http://questionnaire-processor/Questionnaire/ModularQuestionnaire1"/>
+        <status value="draft"/>
+        <item>
+          <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire">
+            <valueCanonical value="http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1"/>
+          </extension>
+          <linkId value="ActiveSulfasalazineFeature#Observation"/>
+          <definition value="http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation"/>
+          <text value="ActiveSulfasalazineFeature sub-questionnaire"/>
+          <type value="display"/>
+        </item>
+        <item>
+          <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire">
+            <valueCanonical value="http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1"/>
+          </extension>
+          <linkId value="LastCbcPanelReportDateFeature#Observation"/>
+          <definition value="http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation"/>
+          <text value="LastCbcPanelReportDateFeature sub-questionnaire"/>
+          <type value="display"/>
+        </item>
+      </Questionnaire>
+    </resource>
+  </parameter>
+</Parameters>

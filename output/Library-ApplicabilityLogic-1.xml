@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators" signatureLevel="None" xsi:type="a:CqlToElmInfo"/>
+   <annotation message="The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation message="The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation message="The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="100">
+         <a:s>library ApplicabilityLogic version '0.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="ApplicabilityLogic" system="http://example.org" version="0.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="5:1-5:35" localIdentifier="FHIRHelpers" path="http://example.org/FHIRHelpers" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '0.1.0'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="6:1-6:87" localIdentifier="ActiveMethotrexateFeature" path="http://example.org/ActiveMethotrexateFeatureLogic" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>ActiveMethotrexateFeatureLogic</a:s>
+               </a:s>
+               <a:s> version '0.1.0' called ActiveMethotrexateFeature</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="4" locator="7:1-7:89" localIdentifier="ActiveSulfasalazineFeature" path="http://example.org/ActiveSulfasalazineFeatureLogic" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>ActiveSulfasalazineFeatureLogic</a:s>
+               </a:s>
+               <a:s> version '0.1.0' called ActiveSulfasalazineFeature</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="5" locator="8:1-8:100" localIdentifier="LastCbcPanelReportDateFeatureLogic" path="http://example.org/LastCbcPanelReportDateFeatureLogic" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="5">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>LastCbcPanelReportDateFeatureLogic</a:s>
+               </a:s>
+               <a:s> version '0.1.0' called LastCbcPanelReportDateFeatureLogic</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <contexts>
+      <def locator="11:1-11:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="11:1-11:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="11:1-11:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="16" locator="13:1-17:9" name="On Methotrexate therapy" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="16">
+               <a:s>define &quot;On Methotrexate therapy&quot;:
+  </a:s>
+               <a:s r="15">
+                  <a:s>if </a:s>
+                  <a:s r="8">
+                     <a:s>(</a:s>
+                     <a:s r="8">
+                        <a:s>exists</a:s>
+                        <a:s r="7">
+                           <a:s>(</a:s>
+                           <a:s r="7">
+                              <a:s r="6">
+                                 <a:s>ActiveMethotrexateFeature</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="7">
+                                 <a:s>&quot;On Methotrexate&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+                  <a:s> then
+    </a:s>
+                  <a:s r="13">
+                     <a:s r="11">
+                        <a:s r="10">
+                           <a:s r="9">
+                              <a:s>ActiveMethotrexateFeature</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="10">
+                              <a:s>&quot;On Methotrexate&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="11">
+                           <a:s>value</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> as </a:s>
+                     <a:s r="12">
+                        <a:s>boolean</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="14">
+  else
+    false</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="15" locator="14:3-17:9" xsi:type="If">
+            <condition localId="8" locator="14:6-14:58" xsi:type="Exists">
+               <operand xsi:type="ToList">
+                  <operand localId="7" locator="14:13-14:57" name="On Methotrexate" libraryName="ActiveMethotrexateFeature" xsi:type="ExpressionRef"/>
+               </operand>
+            </condition>
+            <then name="ToBoolean" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="13" locator="15:5-15:64" strict="false" xsi:type="As">
+                  <operand localId="11" locator="15:5-15:53" path="value" xsi:type="Property">
+                     <source localId="10" locator="15:5-15:47" name="On Methotrexate" libraryName="ActiveMethotrexateFeature" xsi:type="ExpressionRef"/>
+                  </operand>
+                  <asTypeSpecifier localId="12" locator="15:58-15:64" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+               </operand>
+            </then>
+            <else localId="14" locator="17:5-17:9" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="27" locator="19:1-23:9" name="On Sulfasalazine therapy" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="27">
+               <a:s>define &quot;On Sulfasalazine therapy&quot;:
+  </a:s>
+               <a:s r="26">
+                  <a:s>if </a:s>
+                  <a:s r="19">
+                     <a:s>(</a:s>
+                     <a:s r="19">
+                        <a:s>exists</a:s>
+                        <a:s r="18">
+                           <a:s>(</a:s>
+                           <a:s r="18">
+                              <a:s r="17">
+                                 <a:s>ActiveSulfasalazineFeature</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="18">
+                                 <a:s>&quot;On Sulfasalazine&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+                  <a:s> then
+    </a:s>
+                  <a:s r="24">
+                     <a:s r="22">
+                        <a:s r="21">
+                           <a:s r="20">
+                              <a:s>ActiveSulfasalazineFeature</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="21">
+                              <a:s>&quot;On Sulfasalazine&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="22">
+                           <a:s>value</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> as </a:s>
+                     <a:s r="23">
+                        <a:s>boolean</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="25">
+  else
+    false</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="26" locator="20:3-23:9" xsi:type="If">
+            <condition localId="19" locator="20:6-20:60" xsi:type="Exists">
+               <operand xsi:type="ToList">
+                  <operand localId="18" locator="20:13-20:59" name="On Sulfasalazine" libraryName="ActiveSulfasalazineFeature" xsi:type="ExpressionRef"/>
+               </operand>
+            </condition>
+            <then name="ToBoolean" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="24" locator="21:5-21:66" strict="false" xsi:type="As">
+                  <operand localId="22" locator="21:5-21:55" path="value" xsi:type="Property">
+                     <source localId="21" locator="21:5-21:49" name="On Sulfasalazine" libraryName="ActiveSulfasalazineFeature" xsi:type="ExpressionRef"/>
+                  </operand>
+                  <asTypeSpecifier localId="23" locator="21:60-21:66" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+               </operand>
+            </then>
+            <else localId="25" locator="23:5-23:9" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="35" locator="25:1-28:3" name="Condition" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="35">
+               <a:s>define &quot;Condition&quot;:
+  </a:s>
+               <a:s r="34">
+                  <a:s>First(</a:s>
+                  <a:s r="33">
+                     <a:s>
+                        <a:s r="29">
+                           <a:s r="28">
+                              <a:s r="28">
+                                 <a:s>[Condition]</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> M</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="32">
+                        <a:s>sort by </a:s>
+                        <a:s r="31">
+                           <a:s r="30">
+                              <a:s>recordedDate</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+  )</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="34" locator="26:3-28:3" xsi:type="First">
+            <source localId="33" locator="26:9-27:24" xsi:type="Query">
+               <source localId="29" locator="26:9-26:21" alias="M">
+                  <expression localId="28" locator="26:9-26:19" dataType="fhir:Condition" templateId="http://hl7.org/fhir/StructureDefinition/Condition" xsi:type="Retrieve"/>
+               </source>
+               <sort localId="32" locator="27:5-27:24">
+                  <by localId="31" locator="27:13-27:24" direction="asc" path="recordedDate" xsi:type="ByColumn"/>
+               </sort>
+            </source>
+         </expression>
+      </def>
+      <def localId="39" locator="30:1-31:32" name="Timing of Service" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="39">
+               <a:s>define &quot;Timing of Service&quot;:
+  </a:s>
+               <a:s r="38">
+                  <a:s r="37">
+                     <a:s r="36">
+                        <a:s>&quot;Condition&quot;</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="37">
+                        <a:s>recordedDate</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="38">
+                     <a:s>value</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="38" locator="31:3-31:32" path="value" xsi:type="Property">
+            <source localId="37" locator="31:3-31:26" path="recordedDate" xsi:type="Property">
+               <source localId="36" locator="31:3-31:13" name="Condition" xsi:type="ExpressionRef"/>
+            </source>
+         </expression>
+      </def>
+      <def localId="58" locator="37:1-41:8" name="Missing last CBC result" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="58">
+               <a:s>/**
+ * @description
+ * This is true if: there are no results, or the results are older than 6 months
+ */
+define &quot;Missing last CBC result&quot;:
+  </a:s>
+               <a:s r="57">
+                  <a:s>if </a:s>
+                  <a:s r="46">
+                     <a:s>exists</a:s>
+                     <a:s r="45">
+                        <a:s>(</a:s>
+                        <a:s r="45">
+                           <a:s r="44">
+                              <a:s>(</a:s>
+                              <a:s r="44">
+                                 <a:s r="42">
+                                    <a:s r="41">
+                                       <a:s r="40">
+                                          <a:s>LastCbcPanelReportDateFeatureLogic</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="41">
+                                          <a:s>&quot;Last CBC Panel Report Date&quot;</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="42">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> as </a:s>
+                                 <a:s r="43">
+                                    <a:s>dateTime</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="45">
+                              <a:s>value</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> then
+    </a:s>
+                  <a:s r="55">
+                     <a:s r="51">
+                        <a:s r="49">
+                           <a:s r="48">
+                              <a:s r="47">
+                                 <a:s>LastCbcPanelReportDateFeatureLogic</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="48">
+                                 <a:s>&quot;Last CBC Panel Report Date&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="49">
+                              <a:s>value</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> as </a:s>
+                        <a:s r="50">
+                           <a:s>dateTime</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s r="55"> before </a:s>
+                     <a:s r="54">
+                        <a:s>(</a:s>
+                        <a:s r="54">
+                           <a:s r="52">
+                              <a:s>Today()</a:s>
+                           </a:s>
+                           <a:s> - </a:s>
+                           <a:s r="53">
+                              <a:s>6 months</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s r="56">
+  else
+    true</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="57" locator="38:3-41:8" xsi:type="If">
+            <condition localId="46" locator="38:6-38:102" xsi:type="Exists">
+               <operand xsi:type="ToList">
+                  <operand localId="45" locator="38:12-38:102" path="value" xsi:type="Property">
+                     <source localId="44" locator="38:13-38:95" strict="false" xsi:type="As">
+                        <operand localId="42" locator="38:14-38:82" path="value" xsi:type="Property">
+                           <source localId="41" locator="38:14-38:76" name="Last CBC Panel Report Date" libraryName="LastCbcPanelReportDateFeatureLogic" xsi:type="ExpressionRef"/>
+                        </operand>
+                        <asTypeSpecifier localId="43" locator="38:87-38:94" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                     </source>
+                  </operand>
+               </operand>
+            </condition>
+            <then localId="55" locator="39:5-39:113" xsi:type="Before">
+               <operand name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="51" locator="39:5-39:85" strict="false" xsi:type="As">
+                     <operand localId="49" locator="39:5-39:73" path="value" xsi:type="Property">
+                        <source localId="48" locator="39:5-39:67" name="Last CBC Panel Report Date" libraryName="LastCbcPanelReportDateFeatureLogic" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <asTypeSpecifier localId="50" locator="39:78-39:85" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                  </operand>
+               </operand>
+               <operand xsi:type="ToDateTime">
+                  <operand localId="54" locator="39:94-39:113" xsi:type="Subtract">
+                     <operand localId="52" locator="39:95-39:101" xsi:type="Today"/>
+                     <operand localId="53" locator="39:105-39:112" value="6" unit="months" xsi:type="Quantity"/>
+                  </operand>
+               </operand>
+            </then>
+            <else localId="56" locator="41:5-41:8" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="62" locator="43:1-44:73" name="DEBUG 1 (value)" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="62">
+               <a:s>define &quot;DEBUG 1 (value)&quot;:
+  </a:s>
+               <a:s r="61">
+                  <a:s>(</a:s>
+                  <a:s r="61">
+                     <a:s r="60">
+                        <a:s r="59">
+                           <a:s>LastCbcPanelReportDateFeatureLogic</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="60">
+                           <a:s>&quot;Last CBC Panel Report Date&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="61">
+                        <a:s>value</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="61" locator="44:3-44:73" path="value" xsi:type="Property">
+            <source localId="60" locator="44:4-44:66" name="Last CBC Panel Report Date" libraryName="LastCbcPanelReportDateFeatureLogic" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="67" locator="46:1-47:79" name="DEBUG 2 (value.value)" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="67">
+               <a:s>define &quot;DEBUG 2 (value.value)&quot;:
+  </a:s>
+               <a:s r="66">
+                  <a:s r="65">
+                     <a:s>(</a:s>
+                     <a:s r="65">
+                        <a:s r="64">
+                           <a:s r="63">
+                              <a:s>LastCbcPanelReportDateFeatureLogic</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="64">
+                              <a:s>&quot;Last CBC Panel Report Date&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="65">
+                           <a:s>value</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="66">
+                     <a:s>value</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="66" locator="47:3-47:79" path="value" xsi:type="Property">
+            <source localId="65" locator="47:3-47:73" path="value" xsi:type="Property">
+               <source localId="64" locator="47:4-47:66" name="Last CBC Panel Report Date" libraryName="LastCbcPanelReportDateFeatureLogic" xsi:type="ExpressionRef"/>
+            </source>
+         </expression>
+      </def>
+      <def localId="71" locator="49:1-50:73" name="DEBUG 3 (exists)" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="71">
+               <a:s>define &quot;DEBUG 3 (exists)&quot;:
+  </a:s>
+               <a:s r="70">
+                  <a:s>exists</a:s>
+                  <a:s r="69">
+                     <a:s>(</a:s>
+                     <a:s r="69">
+                        <a:s r="68">
+                           <a:s>LastCbcPanelReportDateFeatureLogic</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="69">
+                           <a:s>&quot;Last CBC Panel Report Date&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="70" locator="50:3-50:73" xsi:type="Exists">
+            <operand xsi:type="ToList">
+               <operand localId="69" locator="50:9-50:73" name="Last CBC Panel Report Date" libraryName="LastCbcPanelReportDateFeatureLogic" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="78" locator="52:1-53:91" name="DEBUG 4 (exists value as dateTime)" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="78">
+               <a:s>define &quot;DEBUG 4 (exists value as dateTime)&quot;:
+  </a:s>
+               <a:s r="77">
+                  <a:s>exists</a:s>
+                  <a:s r="76">
+                     <a:s>(</a:s>
+                     <a:s r="76">
+                        <a:s r="74">
+                           <a:s r="73">
+                              <a:s r="72">
+                                 <a:s>LastCbcPanelReportDateFeatureLogic</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="73">
+                                 <a:s>&quot;Last CBC Panel Report Date&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="74">
+                              <a:s>value</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> as </a:s>
+                        <a:s r="75">
+                           <a:s>dateTime</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="77" locator="53:3-53:91" xsi:type="Exists">
+            <operand xsi:type="ToList">
+               <operand localId="76" locator="53:9-53:91" strict="false" xsi:type="As">
+                  <operand localId="74" locator="53:10-53:78" path="value" xsi:type="Property">
+                     <source localId="73" locator="53:10-53:72" name="Last CBC Panel Report Date" libraryName="LastCbcPanelReportDateFeatureLogic" xsi:type="ExpressionRef"/>
+                  </operand>
+                  <asTypeSpecifier localId="75" locator="53:83-53:90" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+               </operand>
+            </operand>
+         </expression>
+      </def>
+      <def localId="86" locator="55:1-56:99" name="DEBUG 5 (exists value as dateTime).value" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="86">
+               <a:s>define &quot;DEBUG 5 (exists value as dateTime).value&quot;:
+  </a:s>
+               <a:s r="85">
+                  <a:s>exists</a:s>
+                  <a:s r="84">
+                     <a:s>(</a:s>
+                     <a:s r="84">
+                        <a:s r="83">
+                           <a:s>(</a:s>
+                           <a:s r="83">
+                              <a:s r="81">
+                                 <a:s r="80">
+                                    <a:s r="79">
+                                       <a:s>LastCbcPanelReportDateFeatureLogic</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="80">
+                                       <a:s>&quot;Last CBC Panel Report Date&quot;</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="81">
+                                    <a:s>value</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> as </a:s>
+                              <a:s r="82">
+                                 <a:s>dateTime</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="84">
+                           <a:s>value</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="85" locator="56:3-56:99" xsi:type="Exists">
+            <operand xsi:type="ToList">
+               <operand localId="84" locator="56:9-56:99" path="value" xsi:type="Property">
+                  <source localId="83" locator="56:10-56:92" strict="false" xsi:type="As">
+                     <operand localId="81" locator="56:11-56:79" path="value" xsi:type="Property">
+                        <source localId="80" locator="56:11-56:73" name="Last CBC Panel Report Date" libraryName="LastCbcPanelReportDateFeatureLogic" xsi:type="ExpressionRef"/>
+                     </operand>
+                     <asTypeSpecifier localId="82" locator="56:84-56:91" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                  </source>
+               </operand>
+            </operand>
+         </expression>
+      </def>
+      <def localId="93" locator="62:1-66:9" name="Should order CBC if on Sulfasalazine therapy and missing test" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="93">
+               <a:s>/**
+ * @description
+ * Use case feature expressions to build out applicability
+ */
+define &quot;Should order CBC if on Sulfasalazine therapy and missing test&quot;:
+  </a:s>
+               <a:s r="92">
+                  <a:s>if </a:s>
+                  <a:s r="89">
+                     <a:s>(</a:s>
+                     <a:s r="89">
+                        <a:s r="87">
+                           <a:s>&quot;Missing last CBC result&quot;</a:s>
+                        </a:s>
+                        <a:s> and </a:s>
+                        <a:s r="88">
+                           <a:s>&quot;On Sulfasalazine therapy&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+                  <a:s r="90"> then
+    true
+  else
+    false</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="92" locator="63:3-66:9" xsi:type="If">
+            <condition localId="89" locator="63:6-63:63" xsi:type="And">
+               <operand localId="87" locator="63:7-63:31" name="Missing last CBC result" xsi:type="ExpressionRef"/>
+               <operand localId="88" locator="63:37-63:62" name="On Sulfasalazine therapy" xsi:type="ExpressionRef"/>
+            </condition>
+            <then localId="90" locator="64:5-64:8" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+            <else localId="91" locator="66:5-66:9" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="100" locator="72:1-76:9" name="Should order CBC if on Methotrexate therapy and missing test" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="100">
+               <a:s>/**
+ * @description
+ * Use case feature expressions to build out applicability
+ */
+define &quot;Should order CBC if on Methotrexate therapy and missing test&quot;:
+  </a:s>
+               <a:s r="99">
+                  <a:s>if </a:s>
+                  <a:s r="96">
+                     <a:s>(</a:s>
+                     <a:s r="96">
+                        <a:s r="94">
+                           <a:s>&quot;Missing last CBC result&quot;</a:s>
+                        </a:s>
+                        <a:s> and </a:s>
+                        <a:s r="95">
+                           <a:s>&quot;On Methotrexate therapy&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+                  <a:s r="97"> then
+    true
+  else
+    false</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="99" locator="73:3-76:9" xsi:type="If">
+            <condition localId="96" locator="73:6-73:62" xsi:type="And">
+               <operand localId="94" locator="73:7-73:31" name="Missing last CBC result" xsi:type="ExpressionRef"/>
+               <operand localId="95" locator="73:37-73:61" name="On Methotrexate therapy" xsi:type="ExpressionRef"/>
+            </condition>
+            <then localId="97" locator="74:5-74:8" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+            <else localId="98" locator="76:5-76:9" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+         </expression>
+      </def>
+   </statements>
+</library>

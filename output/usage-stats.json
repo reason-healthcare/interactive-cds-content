@@ -1,0 +1,127 @@
+{
+  "package": "fhir.example",
+  "version": "0.1.0",
+  "fhirVersion": "4.0.1",
+  "extensions": [],
+  "profiles": {
+    "Observation": [
+      {
+        "url": "http://example.org/StructureDefinition/ActiveMethotrexateFeature",
+        "title": "Active Methotrexate Feature"
+      },
+      {
+        "url": "http://example.org/StructureDefinition/ActiveSulfasalazineFeature",
+        "title": "Active Sulfasalazine Feature"
+      },
+      {
+        "url": "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature",
+        "title": "Last CBC Panel Report Date Feature"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence": [
+      "PlanDefinition.action"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation": [
+      "PlanDefinition.action"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
+      "ValueSet.jurisdiction"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden": [
+      "Bundle.entry.resource.item.item",
+      "Questionnaire.item.item"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/resource-lastReviewDate": [
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm": [
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version": [
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg": [
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/valueset-author": [
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/valueset-effectiveDate": [
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-assertionExpression": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-directionOfRecommendation": [
+      "PlanDefinition.action"
+    ],
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-featureExpression": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-inferenceExpression": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability": [
+      "ActivityDefinition",
+      "Library",
+      "PlanDefinition",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation": [
+      "Bundle.entry.resource",
+      "Parameters.parameter.resource",
+      "Questionnaire"
+    ],
+    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemExtractionContext": [
+      "Bundle.entry.resource.item",
+      "Questionnaire.item"
+    ],
+    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire": [
+      "Bundle.entry.resource.item",
+      "Parameters.parameter.resource.item",
+      "Questionnaire.item"
+    ]
+  }
+}

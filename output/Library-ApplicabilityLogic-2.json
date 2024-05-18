@@ -1,0 +1,1448 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators",
+         "signatureLevel" : "None",
+         "type" : "CqlToElmInfo"
+      }, {
+         "message" : "The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "100",
+            "s" : [ {
+               "value" : [ "","library ApplicabilityLogic version '0.1.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "ApplicabilityLogic",
+         "system" : "http://example.org",
+         "version" : "0.1.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "1",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "2",
+            "locator" : "5:1-5:35",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://example.org/FHIRHelpers",
+            "version" : "0.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'0.1.0'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "3",
+            "locator" : "6:1-6:87",
+            "localIdentifier" : "ActiveMethotrexateFeature",
+            "path" : "http://example.org/ActiveMethotrexateFeatureLogic",
+            "version" : "0.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "3",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "ActiveMethotrexateFeatureLogic" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'0.1.0'"," called ","ActiveMethotrexateFeature" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "4",
+            "locator" : "7:1-7:89",
+            "localIdentifier" : "ActiveSulfasalazineFeature",
+            "path" : "http://example.org/ActiveSulfasalazineFeatureLogic",
+            "version" : "0.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "4",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "ActiveSulfasalazineFeatureLogic" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'0.1.0'"," called ","ActiveSulfasalazineFeature" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "5",
+            "locator" : "8:1-8:100",
+            "localIdentifier" : "LastCbcPanelReportDateFeatureLogic",
+            "path" : "http://example.org/LastCbcPanelReportDateFeatureLogic",
+            "version" : "0.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "5",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "LastCbcPanelReportDateFeatureLogic" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'0.1.0'"," called ","LastCbcPanelReportDateFeatureLogic" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "locator" : "11:1-11:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "locator" : "11:1-11:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "type" : "SingletonFrom",
+               "operand" : {
+                  "locator" : "11:1-11:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve"
+               }
+            }
+         }, {
+            "localId" : "16",
+            "locator" : "13:1-17:9",
+            "name" : "On Methotrexate therapy",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "16",
+                  "s" : [ {
+                     "value" : [ "","define ","\"On Methotrexate therapy\"",":\n  " ]
+                  }, {
+                     "r" : "15",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "8",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "8",
+                           "s" : [ {
+                              "value" : [ "exists" ]
+                           }, {
+                              "r" : "7",
+                              "s" : [ {
+                                 "value" : [ "(" ]
+                              }, {
+                                 "r" : "7",
+                                 "s" : [ {
+                                    "r" : "6",
+                                    "s" : [ {
+                                       "value" : [ "ActiveMethotrexateFeature" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "7",
+                                    "s" : [ {
+                                       "value" : [ "\"On Methotrexate\"" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "13",
+                        "s" : [ {
+                           "r" : "11",
+                           "s" : [ {
+                              "r" : "10",
+                              "s" : [ {
+                                 "r" : "9",
+                                 "s" : [ {
+                                    "value" : [ "ActiveMethotrexateFeature" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "10",
+                                 "s" : [ {
+                                    "value" : [ "\"On Methotrexate\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "11",
+                              "s" : [ {
+                                 "value" : [ "value" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " as " ]
+                        }, {
+                           "r" : "12",
+                           "s" : [ {
+                              "value" : [ "boolean" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "14",
+                        "value" : [ "\n  else\n    ","false" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "15",
+               "locator" : "14:3-17:9",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "8",
+                  "locator" : "14:6-14:58",
+                  "type" : "Exists",
+                  "operand" : {
+                     "type" : "ToList",
+                     "operand" : {
+                        "localId" : "7",
+                        "locator" : "14:13-14:57",
+                        "name" : "On Methotrexate",
+                        "libraryName" : "ActiveMethotrexateFeature",
+                        "type" : "ExpressionRef"
+                     }
+                  }
+               },
+               "then" : {
+                  "name" : "ToBoolean",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "operand" : [ {
+                     "localId" : "13",
+                     "locator" : "15:5-15:64",
+                     "strict" : false,
+                     "type" : "As",
+                     "operand" : {
+                        "localId" : "11",
+                        "locator" : "15:5-15:53",
+                        "path" : "value",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "10",
+                           "locator" : "15:5-15:47",
+                           "name" : "On Methotrexate",
+                           "libraryName" : "ActiveMethotrexateFeature",
+                           "type" : "ExpressionRef"
+                        }
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "12",
+                        "locator" : "15:58-15:64",
+                        "name" : "{http://hl7.org/fhir}boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               },
+               "else" : {
+                  "localId" : "14",
+                  "locator" : "17:5-17:9",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "27",
+            "locator" : "19:1-23:9",
+            "name" : "On Sulfasalazine therapy",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "27",
+                  "s" : [ {
+                     "value" : [ "","define ","\"On Sulfasalazine therapy\"",":\n  " ]
+                  }, {
+                     "r" : "26",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "19",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "19",
+                           "s" : [ {
+                              "value" : [ "exists" ]
+                           }, {
+                              "r" : "18",
+                              "s" : [ {
+                                 "value" : [ "(" ]
+                              }, {
+                                 "r" : "18",
+                                 "s" : [ {
+                                    "r" : "17",
+                                    "s" : [ {
+                                       "value" : [ "ActiveSulfasalazineFeature" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "18",
+                                    "s" : [ {
+                                       "value" : [ "\"On Sulfasalazine\"" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "24",
+                        "s" : [ {
+                           "r" : "22",
+                           "s" : [ {
+                              "r" : "21",
+                              "s" : [ {
+                                 "r" : "20",
+                                 "s" : [ {
+                                    "value" : [ "ActiveSulfasalazineFeature" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "21",
+                                 "s" : [ {
+                                    "value" : [ "\"On Sulfasalazine\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "22",
+                              "s" : [ {
+                                 "value" : [ "value" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " as " ]
+                        }, {
+                           "r" : "23",
+                           "s" : [ {
+                              "value" : [ "boolean" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "25",
+                        "value" : [ "\n  else\n    ","false" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "26",
+               "locator" : "20:3-23:9",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "19",
+                  "locator" : "20:6-20:60",
+                  "type" : "Exists",
+                  "operand" : {
+                     "type" : "ToList",
+                     "operand" : {
+                        "localId" : "18",
+                        "locator" : "20:13-20:59",
+                        "name" : "On Sulfasalazine",
+                        "libraryName" : "ActiveSulfasalazineFeature",
+                        "type" : "ExpressionRef"
+                     }
+                  }
+               },
+               "then" : {
+                  "name" : "ToBoolean",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "operand" : [ {
+                     "localId" : "24",
+                     "locator" : "21:5-21:66",
+                     "strict" : false,
+                     "type" : "As",
+                     "operand" : {
+                        "localId" : "22",
+                        "locator" : "21:5-21:55",
+                        "path" : "value",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "21",
+                           "locator" : "21:5-21:49",
+                           "name" : "On Sulfasalazine",
+                           "libraryName" : "ActiveSulfasalazineFeature",
+                           "type" : "ExpressionRef"
+                        }
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "23",
+                        "locator" : "21:60-21:66",
+                        "name" : "{http://hl7.org/fhir}boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               },
+               "else" : {
+                  "localId" : "25",
+                  "locator" : "23:5-23:9",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "35",
+            "locator" : "25:1-28:3",
+            "name" : "Condition",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "35",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Condition\"",":\n  " ]
+                  }, {
+                     "r" : "34",
+                     "s" : [ {
+                        "value" : [ "First","(" ]
+                     }, {
+                        "r" : "33",
+                        "s" : [ {
+                           "s" : [ {
+                              "r" : "29",
+                              "s" : [ {
+                                 "r" : "28",
+                                 "s" : [ {
+                                    "r" : "28",
+                                    "s" : [ {
+                                       "value" : [ "[","Condition","]" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ","M" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    " ]
+                        }, {
+                           "r" : "32",
+                           "s" : [ {
+                              "value" : [ "sort by " ]
+                           }, {
+                              "r" : "31",
+                              "s" : [ {
+                                 "r" : "30",
+                                 "s" : [ {
+                                    "value" : [ "recordedDate" ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n  )" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "34",
+               "locator" : "26:3-28:3",
+               "type" : "First",
+               "source" : {
+                  "localId" : "33",
+                  "locator" : "26:9-27:24",
+                  "type" : "Query",
+                  "source" : [ {
+                     "localId" : "29",
+                     "locator" : "26:9-26:21",
+                     "alias" : "M",
+                     "expression" : {
+                        "localId" : "28",
+                        "locator" : "26:9-26:19",
+                        "dataType" : "{http://hl7.org/fhir}Condition",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Condition",
+                        "type" : "Retrieve"
+                     }
+                  } ],
+                  "relationship" : [ ],
+                  "sort" : {
+                     "localId" : "32",
+                     "locator" : "27:5-27:24",
+                     "by" : [ {
+                        "localId" : "31",
+                        "locator" : "27:13-27:24",
+                        "direction" : "asc",
+                        "path" : "recordedDate",
+                        "type" : "ByColumn"
+                     } ]
+                  }
+               }
+            }
+         }, {
+            "localId" : "39",
+            "locator" : "30:1-31:32",
+            "name" : "Timing of Service",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "39",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Timing of Service\"",":\n  " ]
+                  }, {
+                     "r" : "38",
+                     "s" : [ {
+                        "r" : "37",
+                        "s" : [ {
+                           "r" : "36",
+                           "s" : [ {
+                              "value" : [ "\"Condition\"" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "37",
+                           "s" : [ {
+                              "value" : [ "recordedDate" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "38",
+                        "s" : [ {
+                           "value" : [ "value" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "38",
+               "locator" : "31:3-31:32",
+               "path" : "value",
+               "type" : "Property",
+               "source" : {
+                  "localId" : "37",
+                  "locator" : "31:3-31:26",
+                  "path" : "recordedDate",
+                  "type" : "Property",
+                  "source" : {
+                     "localId" : "36",
+                     "locator" : "31:3-31:13",
+                     "name" : "Condition",
+                     "type" : "ExpressionRef"
+                  }
+               }
+            }
+         }, {
+            "localId" : "58",
+            "locator" : "37:1-41:8",
+            "name" : "Missing last CBC result",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "58",
+                  "s" : [ {
+                     "value" : [ "/**\n * @description\n * This is true if: there are no results, or the results are older than 6 months\n */\n","define ","\"Missing last CBC result\"",":\n  " ]
+                  }, {
+                     "r" : "57",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "46",
+                        "s" : [ {
+                           "value" : [ "exists" ]
+                        }, {
+                           "r" : "45",
+                           "s" : [ {
+                              "value" : [ "(" ]
+                           }, {
+                              "r" : "45",
+                              "s" : [ {
+                                 "r" : "44",
+                                 "s" : [ {
+                                    "value" : [ "(" ]
+                                 }, {
+                                    "r" : "44",
+                                    "s" : [ {
+                                       "r" : "42",
+                                       "s" : [ {
+                                          "r" : "41",
+                                          "s" : [ {
+                                             "r" : "40",
+                                             "s" : [ {
+                                                "value" : [ "LastCbcPanelReportDateFeatureLogic" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "41",
+                                             "s" : [ {
+                                                "value" : [ "\"Last CBC Panel Report Date\"" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "42",
+                                          "s" : [ {
+                                             "value" : [ "value" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " as " ]
+                                    }, {
+                                       "r" : "43",
+                                       "s" : [ {
+                                          "value" : [ "dateTime" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ ")" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "45",
+                                 "s" : [ {
+                                    "value" : [ "value" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "55",
+                        "s" : [ {
+                           "r" : "51",
+                           "s" : [ {
+                              "r" : "49",
+                              "s" : [ {
+                                 "r" : "48",
+                                 "s" : [ {
+                                    "r" : "47",
+                                    "s" : [ {
+                                       "value" : [ "LastCbcPanelReportDateFeatureLogic" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "48",
+                                    "s" : [ {
+                                       "value" : [ "\"Last CBC Panel Report Date\"" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "49",
+                                 "s" : [ {
+                                    "value" : [ "value" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " as " ]
+                           }, {
+                              "r" : "50",
+                              "s" : [ {
+                                 "value" : [ "dateTime" ]
+                              } ]
+                           } ]
+                        }, {
+                           "r" : "55",
+                           "value" : [ " ","before"," " ]
+                        }, {
+                           "r" : "54",
+                           "s" : [ {
+                              "value" : [ "(" ]
+                           }, {
+                              "r" : "54",
+                              "s" : [ {
+                                 "r" : "52",
+                                 "s" : [ {
+                                    "value" : [ "Today","()" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " - " ]
+                              }, {
+                                 "r" : "53",
+                                 "s" : [ {
+                                    "value" : [ "6 ","months" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "56",
+                        "value" : [ "\n  else\n    ","true" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "57",
+               "locator" : "38:3-41:8",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "46",
+                  "locator" : "38:6-38:102",
+                  "type" : "Exists",
+                  "operand" : {
+                     "type" : "ToList",
+                     "operand" : {
+                        "localId" : "45",
+                        "locator" : "38:12-38:102",
+                        "path" : "value",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "44",
+                           "locator" : "38:13-38:95",
+                           "strict" : false,
+                           "type" : "As",
+                           "operand" : {
+                              "localId" : "42",
+                              "locator" : "38:14-38:82",
+                              "path" : "value",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "41",
+                                 "locator" : "38:14-38:76",
+                                 "name" : "Last CBC Panel Report Date",
+                                 "libraryName" : "LastCbcPanelReportDateFeatureLogic",
+                                 "type" : "ExpressionRef"
+                              }
+                           },
+                           "asTypeSpecifier" : {
+                              "localId" : "43",
+                              "locator" : "38:87-38:94",
+                              "name" : "{http://hl7.org/fhir}dateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
+                     }
+                  }
+               },
+               "then" : {
+                  "localId" : "55",
+                  "locator" : "39:5-39:113",
+                  "type" : "Before",
+                  "operand" : [ {
+                     "name" : "ToDateTime",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "operand" : [ {
+                        "localId" : "51",
+                        "locator" : "39:5-39:85",
+                        "strict" : false,
+                        "type" : "As",
+                        "operand" : {
+                           "localId" : "49",
+                           "locator" : "39:5-39:73",
+                           "path" : "value",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "48",
+                              "locator" : "39:5-39:67",
+                              "name" : "Last CBC Panel Report Date",
+                              "libraryName" : "LastCbcPanelReportDateFeatureLogic",
+                              "type" : "ExpressionRef"
+                           }
+                        },
+                        "asTypeSpecifier" : {
+                           "localId" : "50",
+                           "locator" : "39:78-39:85",
+                           "name" : "{http://hl7.org/fhir}dateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  }, {
+                     "type" : "ToDateTime",
+                     "operand" : {
+                        "localId" : "54",
+                        "locator" : "39:94-39:113",
+                        "type" : "Subtract",
+                        "operand" : [ {
+                           "localId" : "52",
+                           "locator" : "39:95-39:101",
+                           "type" : "Today"
+                        }, {
+                           "localId" : "53",
+                           "locator" : "39:105-39:112",
+                           "value" : 6,
+                           "unit" : "months",
+                           "type" : "Quantity"
+                        } ]
+                     }
+                  } ]
+               },
+               "else" : {
+                  "localId" : "56",
+                  "locator" : "41:5-41:8",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "true",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "62",
+            "locator" : "43:1-44:73",
+            "name" : "DEBUG 1 (value)",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "62",
+                  "s" : [ {
+                     "value" : [ "","define ","\"DEBUG 1 (value)\"",":\n  " ]
+                  }, {
+                     "r" : "61",
+                     "s" : [ {
+                        "value" : [ "(" ]
+                     }, {
+                        "r" : "61",
+                        "s" : [ {
+                           "r" : "60",
+                           "s" : [ {
+                              "r" : "59",
+                              "s" : [ {
+                                 "value" : [ "LastCbcPanelReportDateFeatureLogic" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "60",
+                              "s" : [ {
+                                 "value" : [ "\"Last CBC Panel Report Date\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "61",
+                           "s" : [ {
+                              "value" : [ "value" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "61",
+               "locator" : "44:3-44:73",
+               "path" : "value",
+               "type" : "Property",
+               "source" : {
+                  "localId" : "60",
+                  "locator" : "44:4-44:66",
+                  "name" : "Last CBC Panel Report Date",
+                  "libraryName" : "LastCbcPanelReportDateFeatureLogic",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "67",
+            "locator" : "46:1-47:79",
+            "name" : "DEBUG 2 (value.value)",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "67",
+                  "s" : [ {
+                     "value" : [ "","define ","\"DEBUG 2 (value.value)\"",":\n  " ]
+                  }, {
+                     "r" : "66",
+                     "s" : [ {
+                        "r" : "65",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "65",
+                           "s" : [ {
+                              "r" : "64",
+                              "s" : [ {
+                                 "r" : "63",
+                                 "s" : [ {
+                                    "value" : [ "LastCbcPanelReportDateFeatureLogic" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "64",
+                                 "s" : [ {
+                                    "value" : [ "\"Last CBC Panel Report Date\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "65",
+                              "s" : [ {
+                                 "value" : [ "value" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "66",
+                        "s" : [ {
+                           "value" : [ "value" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "66",
+               "locator" : "47:3-47:79",
+               "path" : "value",
+               "type" : "Property",
+               "source" : {
+                  "localId" : "65",
+                  "locator" : "47:3-47:73",
+                  "path" : "value",
+                  "type" : "Property",
+                  "source" : {
+                     "localId" : "64",
+                     "locator" : "47:4-47:66",
+                     "name" : "Last CBC Panel Report Date",
+                     "libraryName" : "LastCbcPanelReportDateFeatureLogic",
+                     "type" : "ExpressionRef"
+                  }
+               }
+            }
+         }, {
+            "localId" : "71",
+            "locator" : "49:1-50:73",
+            "name" : "DEBUG 3 (exists)",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "71",
+                  "s" : [ {
+                     "value" : [ "","define ","\"DEBUG 3 (exists)\"",":\n  " ]
+                  }, {
+                     "r" : "70",
+                     "s" : [ {
+                        "value" : [ "exists" ]
+                     }, {
+                        "r" : "69",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "69",
+                           "s" : [ {
+                              "r" : "68",
+                              "s" : [ {
+                                 "value" : [ "LastCbcPanelReportDateFeatureLogic" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "69",
+                              "s" : [ {
+                                 "value" : [ "\"Last CBC Panel Report Date\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "70",
+               "locator" : "50:3-50:73",
+               "type" : "Exists",
+               "operand" : {
+                  "type" : "ToList",
+                  "operand" : {
+                     "localId" : "69",
+                     "locator" : "50:9-50:73",
+                     "name" : "Last CBC Panel Report Date",
+                     "libraryName" : "LastCbcPanelReportDateFeatureLogic",
+                     "type" : "ExpressionRef"
+                  }
+               }
+            }
+         }, {
+            "localId" : "78",
+            "locator" : "52:1-53:91",
+            "name" : "DEBUG 4 (exists value as dateTime)",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "78",
+                  "s" : [ {
+                     "value" : [ "","define ","\"DEBUG 4 (exists value as dateTime)\"",":\n  " ]
+                  }, {
+                     "r" : "77",
+                     "s" : [ {
+                        "value" : [ "exists" ]
+                     }, {
+                        "r" : "76",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "76",
+                           "s" : [ {
+                              "r" : "74",
+                              "s" : [ {
+                                 "r" : "73",
+                                 "s" : [ {
+                                    "r" : "72",
+                                    "s" : [ {
+                                       "value" : [ "LastCbcPanelReportDateFeatureLogic" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "73",
+                                    "s" : [ {
+                                       "value" : [ "\"Last CBC Panel Report Date\"" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "74",
+                                 "s" : [ {
+                                    "value" : [ "value" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " as " ]
+                           }, {
+                              "r" : "75",
+                              "s" : [ {
+                                 "value" : [ "dateTime" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "77",
+               "locator" : "53:3-53:91",
+               "type" : "Exists",
+               "operand" : {
+                  "type" : "ToList",
+                  "operand" : {
+                     "localId" : "76",
+                     "locator" : "53:9-53:91",
+                     "strict" : false,
+                     "type" : "As",
+                     "operand" : {
+                        "localId" : "74",
+                        "locator" : "53:10-53:78",
+                        "path" : "value",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "73",
+                           "locator" : "53:10-53:72",
+                           "name" : "Last CBC Panel Report Date",
+                           "libraryName" : "LastCbcPanelReportDateFeatureLogic",
+                           "type" : "ExpressionRef"
+                        }
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "75",
+                        "locator" : "53:83-53:90",
+                        "name" : "{http://hl7.org/fhir}dateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }
+               }
+            }
+         }, {
+            "localId" : "86",
+            "locator" : "55:1-56:99",
+            "name" : "DEBUG 5 (exists value as dateTime).value",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "86",
+                  "s" : [ {
+                     "value" : [ "","define ","\"DEBUG 5 (exists value as dateTime).value\"",":\n  " ]
+                  }, {
+                     "r" : "85",
+                     "s" : [ {
+                        "value" : [ "exists" ]
+                     }, {
+                        "r" : "84",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "84",
+                           "s" : [ {
+                              "r" : "83",
+                              "s" : [ {
+                                 "value" : [ "(" ]
+                              }, {
+                                 "r" : "83",
+                                 "s" : [ {
+                                    "r" : "81",
+                                    "s" : [ {
+                                       "r" : "80",
+                                       "s" : [ {
+                                          "r" : "79",
+                                          "s" : [ {
+                                             "value" : [ "LastCbcPanelReportDateFeatureLogic" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "80",
+                                          "s" : [ {
+                                             "value" : [ "\"Last CBC Panel Report Date\"" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "81",
+                                       "s" : [ {
+                                          "value" : [ "value" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " as " ]
+                                 }, {
+                                    "r" : "82",
+                                    "s" : [ {
+                                       "value" : [ "dateTime" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "84",
+                              "s" : [ {
+                                 "value" : [ "value" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "85",
+               "locator" : "56:3-56:99",
+               "type" : "Exists",
+               "operand" : {
+                  "type" : "ToList",
+                  "operand" : {
+                     "localId" : "84",
+                     "locator" : "56:9-56:99",
+                     "path" : "value",
+                     "type" : "Property",
+                     "source" : {
+                        "localId" : "83",
+                        "locator" : "56:10-56:92",
+                        "strict" : false,
+                        "type" : "As",
+                        "operand" : {
+                           "localId" : "81",
+                           "locator" : "56:11-56:79",
+                           "path" : "value",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "80",
+                              "locator" : "56:11-56:73",
+                              "name" : "Last CBC Panel Report Date",
+                              "libraryName" : "LastCbcPanelReportDateFeatureLogic",
+                              "type" : "ExpressionRef"
+                           }
+                        },
+                        "asTypeSpecifier" : {
+                           "localId" : "82",
+                           "locator" : "56:84-56:91",
+                           "name" : "{http://hl7.org/fhir}dateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }
+                  }
+               }
+            }
+         }, {
+            "localId" : "93",
+            "locator" : "62:1-66:9",
+            "name" : "Should order CBC if on Sulfasalazine therapy and missing test",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "93",
+                  "s" : [ {
+                     "value" : [ "/**\n * @description\n * Use case feature expressions to build out applicability\n */\n","define ","\"Should order CBC if on Sulfasalazine therapy and missing test\"",":\n  " ]
+                  }, {
+                     "r" : "92",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "89",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "89",
+                           "s" : [ {
+                              "r" : "87",
+                              "s" : [ {
+                                 "value" : [ "\"Missing last CBC result\"" ]
+                              } ]
+                           }, {
+                              "value" : [ " and " ]
+                           }, {
+                              "r" : "88",
+                              "s" : [ {
+                                 "value" : [ "\"On Sulfasalazine therapy\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "r" : "90",
+                        "value" : [ " then\n    ","true","\n  else\n    ","false" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "92",
+               "locator" : "63:3-66:9",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "89",
+                  "locator" : "63:6-63:63",
+                  "type" : "And",
+                  "operand" : [ {
+                     "localId" : "87",
+                     "locator" : "63:7-63:31",
+                     "name" : "Missing last CBC result",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "88",
+                     "locator" : "63:37-63:62",
+                     "name" : "On Sulfasalazine therapy",
+                     "type" : "ExpressionRef"
+                  } ]
+               },
+               "then" : {
+                  "localId" : "90",
+                  "locator" : "64:5-64:8",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "true",
+                  "type" : "Literal"
+               },
+               "else" : {
+                  "localId" : "91",
+                  "locator" : "66:5-66:9",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "100",
+            "locator" : "72:1-76:9",
+            "name" : "Should order CBC if on Methotrexate therapy and missing test",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "100",
+                  "s" : [ {
+                     "value" : [ "/**\n * @description\n * Use case feature expressions to build out applicability\n */\n","define ","\"Should order CBC if on Methotrexate therapy and missing test\"",":\n  " ]
+                  }, {
+                     "r" : "99",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "96",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "96",
+                           "s" : [ {
+                              "r" : "94",
+                              "s" : [ {
+                                 "value" : [ "\"Missing last CBC result\"" ]
+                              } ]
+                           }, {
+                              "value" : [ " and " ]
+                           }, {
+                              "r" : "95",
+                              "s" : [ {
+                                 "value" : [ "\"On Methotrexate therapy\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "r" : "97",
+                        "value" : [ " then\n    ","true","\n  else\n    ","false" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "99",
+               "locator" : "73:3-76:9",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "96",
+                  "locator" : "73:6-73:62",
+                  "type" : "And",
+                  "operand" : [ {
+                     "localId" : "94",
+                     "locator" : "73:7-73:31",
+                     "name" : "Missing last CBC result",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "95",
+                     "locator" : "73:37-73:61",
+                     "name" : "On Methotrexate therapy",
+                     "type" : "ExpressionRef"
+                  } ]
+               },
+               "then" : {
+                  "localId" : "97",
+                  "locator" : "74:5-74:8",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "true",
+                  "type" : "Literal"
+               },
+               "else" : {
+                  "localId" : "98",
+                  "locator" : "76:5-76:9",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               }
+            }
+         } ]
+      }
+   }
+}

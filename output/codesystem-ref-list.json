@@ -1,0 +1,41 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/observation-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationStatus",
+      "title" : "ObservationStatus",
+      "description" : "Codes providing the status of an observation.",
+      "oids" : ["2.16.840.1.113883.4.642.4.401"],
+      "uses" : {
+      },
+      "ValueSet-observation-status.html" : "ObservationStatus"
+    },
+    {
+      "url" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "version" : "3.0.1",
+      "status" : "active",
+      "name" : "RxNorm",
+      "title" : "RxNorm",
+      "description" : "RxNorm provides normalized names for clinical drugs and links its names to many of the drug vocabularies commonly used in pharmacy management and drug interaction software, including those of First Databank, Micromedex, and Gold Standard Drug Database. By providing links between these vocabularies, RxNorm can mediate messages between systems not using the same software and vocabulary. RxNorm now includes the United States Pharmacopeia (USP) Compendial Nomenclature from the United States Pharmacopeial Convention. USP is a cumulative data set of all Active Pharmaceutical Ingredients (API).",
+      "oids" : ["2.16.840.1.113883.6.88"],
+      "uses" : {
+      },
+      "ValueSet-2.16.840.1.113762.1.4.1116.181-20200902.html" : "Methotrexate",
+      "ValueSet-sulfasalazine-vs.html" : "SulfasalazineVS"
+    },
+    {
+      "url" : "http://www.whocc.no/atc",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "WC",
+      "title" : "WHO ATC",
+      "description" : "WHO ATC",
+      "oids" : ["2.16.840.1.113883.6.73"],
+      "uses" : {
+      },
+      "ValueSet-sulfasalazine-vs.html" : "SulfasalazineVS"
+    }
+  ]
+}

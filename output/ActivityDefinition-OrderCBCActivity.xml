@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ActivityDefinition xmlns="http://hl7.org/fhir">
+  <id value="OrderCBCActivity"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequestactivity"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ActivityDefinition</b><a name="OrderCBCActivity"> </a><a name="hcOrderCBCActivity"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ActivityDefinition &quot;OrderCBCActivity&quot; </p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-servicerequestactivity.html">CPGServiceRequestActivity</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>url</b>: <code>http://example.org/ActivityDefinition/OrderCBCActivity</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: OrderCBCActivity</p><p><b>title</b>: Order CBC Activity</p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-05-17 14:59:55-0400</p><p><b>publisher</b>: Example Publisher</p><p><b>contact</b>: Example Publisher: <a href="http://example.org/example-publisher">http://example.org/example-publisher</a></p><p><b>description</b>: Order hemogram plus platelet count labratory panel</p><p><b>kind</b>: ServiceRequest</p><p><b>profile</b>: <a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-servicerequest.html">CPGServiceRequest</a></p><p><b>intent</b>: proposal</p><p><b>doNotPerform</b>: false</p><p><b>product</b>: CBC panel - Blood by Automated count <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#58410-2)</span></p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <url value="http://example.org/ActivityDefinition/OrderCBCActivity"/>
+  <version value="0.1.0"/>
+  <name value="OrderCBCActivity"/>
+  <title value="Order CBC Activity"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-05-17T14:59:55-04:00"/>
+  <publisher value="Example Publisher"/>
+  <contact>
+    <name value="Example Publisher"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/example-publisher"/>
+    </telecom>
+  </contact>
+  <description value="Order hemogram plus platelet count labratory panel"/>
+  <kind value="ServiceRequest"/>
+  <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequest"/>
+  <intent value="proposal"/>
+  <doNotPerform value="false"/>
+  <productCodeableConcept>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="58410-2"/>
+      <display value="CBC panel - Blood by Automated count"/>
+    </coding>
+  </productCodeableConcept>
+</ActivityDefinition>

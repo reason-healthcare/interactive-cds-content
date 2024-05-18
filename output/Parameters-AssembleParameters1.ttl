@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/Parameters/AssembleParameters1> a fhir:Parameters ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "AssembleParameters1"] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "questionnaire" ] ;
+     fhir:Parameters.parameter.resource ( [
+       a fhir:Questionnaire ;
+       fhir:id [ fhir:v "ModularQuestionnaire1" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-modular"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-modular>
+         ] )
+       ] ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "assemble-root" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://questionnaire-processor/Questionnaire/ModularQuestionnaire1"^^xsd:anyURI ] ;
+       fhir:status [ fhir:v "draft" ] ;
+       fhir:item ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"^^xsd:anyURI ] ;
+           fhir:value [
+             fhir:v "http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1"^^xsd:anyURI ;
+             fhir:link <http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1>
+           ]
+         ] ) ;
+         fhir:linkId [ fhir:v "ActiveSulfasalazineFeature#Observation" ] ;
+         fhir:definition [ fhir:v "http://example.org/StructureDefinition/ActiveSulfasalazineFeature#Observation"^^xsd:anyURI ] ;
+         fhir:text [ fhir:v "ActiveSulfasalazineFeature sub-questionnaire" ] ;
+         fhir:type [ fhir:v "display" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"^^xsd:anyURI ] ;
+           fhir:value [
+             fhir:v "http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1"^^xsd:anyURI ;
+             fhir:link <http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1>
+           ]
+         ] ) ;
+         fhir:linkId [ fhir:v "LastCbcPanelReportDateFeature#Observation" ] ;
+         fhir:definition [ fhir:v "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature#Observation"^^xsd:anyURI ] ;
+         fhir:text [ fhir:v "LastCbcPanelReportDateFeature sub-questionnaire" ] ;
+         fhir:type [ fhir:v "display" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

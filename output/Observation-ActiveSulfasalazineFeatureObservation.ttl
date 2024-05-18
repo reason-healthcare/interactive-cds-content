@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/Observation/ActiveSulfasalazineFeatureObservation> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ActiveSulfasalazineFeatureObservation"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://example.org/StructureDefinition/ActiveSulfasalazineFeature"^^xsd:anyURI ;
+       fhir:link <http://example.org/StructureDefinition/ActiveSulfasalazineFeature>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"ActiveSulfasalazineFeatureObservation\"> </a><a name=\"hcActiveSulfasalazineFeatureObservation\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;ActiveSulfasalazineFeatureObservation&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ActiveSulfasalazineFeature.html\">Active Sulfasalazine Feature</a></p></div><p><b>status</b>: final</p><p><b>code</b>: On Sulfasalazine Feature <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-CaseFeatureCodes.html\">CaseFeatureCodes</a>#on-medication-sulfasalazine)</span></p><p><b>subject</b>: <a href=\"Patient-Patient1.html\">Patient/Patient1</a> &quot; PATIENT1&quot;</p><p><b>effective</b>: 2023-12-13</p><p><b>performer</b>: <a href=\"Organization-OrganizationShared.html\">Organization/OrganizationShared</a> &quot;organizationshared&quot;</p><p><b>value</b>: true</p><p><b>derivedFrom</b>: <a href=\"Questionnaire/QuestionnaireResponse1\">Questionnaire/QuestionnaireResponse1</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://example.org/CodeSystem/CaseFeatureCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "on-medication-sulfasalazine" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://example.org/Patient/Patient1> ;
+     fhir:reference [ fhir:v "Patient/Patient1" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2023-12-13"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <http://example.org/Organization/OrganizationShared> ;
+     fhir:reference [ fhir:v "Organization/OrganizationShared" ]
+  ] ) ; # 
+  fhir:value [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:derivedFrom ( [
+     fhir:link <http://example.org/Questionnaire/QuestionnaireResponse1> ;
+     fhir:reference [ fhir:v "Questionnaire/QuestionnaireResponse1" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

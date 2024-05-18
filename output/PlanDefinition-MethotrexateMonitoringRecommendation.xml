@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="MethotrexateMonitoringRecommendation"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: PlanDefinition</b><a name="MethotrexateMonitoringRecommendation"> </a><a name="hcMethotrexateMonitoringRecommendation"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource PlanDefinition &quot;MethotrexateMonitoringRecommendation&quot; </p><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-recommendationdefinition.html">CPGRecommendationDefinition</a></p></div><p><b>knowledgeCapability</b>: computable</p><p><b>url</b>: <code>http://example.org/PlanDefinition/MethotrexateMonitoringRecommendation</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: MethotrexateMonitoringRecommendation</p><p><b>title</b>: Methotrexate Monitoring Recommendation</p><p><b>type</b>: ECA Rule <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.5.0/CodeSystem-plan-definition-type.html">PlanDefinitionType</a>#eca-rule)</span></p><p><b>status</b>: draft</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-05-17 14:59:55-0400</p><p><b>publisher</b>: Example Publisher</p><p><b>contact</b>: Example Publisher: <a href="http://example.org/example-publisher">http://example.org/example-publisher</a></p><p><b>description</b>: Monitoring tests for antirheumatic drug therapy for Methotrexate.</p><blockquote><p><b>relatedArtifact</b></p><p><b>type</b>: citation</p><p><b>citation</b>: Criswell LA, Saag KG, Sems KM et al. Moderate-term, low-dose corticosteroids for rheumatoid arthritis. Cochrane Database Syst Rev 2000;(2):CD001158 PubMed.</p><p><b>url</b>: <a href="https://pubmed.ncbi.nlm.nih.gov/10796420">https://pubmed.ncbi.nlm.nih.gov/10796420</a></p><blockquote><p><b>document</b></p></blockquote></blockquote><p><b>library</b>: <a href="Library-ApplicabilityLogic.html">ApplicabilityLogic</a></p><blockquote><p><b>action</b></p><p><b>Quality of evidence</b>: High quality <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.5.0/CodeSystem-evidence-quality.html">QualityOfEvidenceRating</a>#high)</span></p><p><b>Strength of recommendation</b>: Strong <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.5.0/CodeSystem-recommendation-strength.html">StrengthOfRecommendationRating</a>#strong)</span></p><p><b>directionOfRecommendation</b>: For <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-recommendation-direction.html">CPG Recommendation Direction</a>#for)</span></p><p><b>title</b>: Order monitoring tests for antirheumatic drug therapy (Methotrexate).</p><p><b>description</b>: Order monitoring tests for antirheumatic drug therapy (Methotrexate).</p><p><b>code</b>: Conduct Diagnostic Tests <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://hl7.org/fhir/uv/cpg/STU1/CodeSystem-cpg-common-process.html">CPG Common Process</a>#diagnostic-testing)</span></p><blockquote><p><b>condition</b></p><p><b>kind</b>: applicability</p><h3>Expressions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style="display: none">*</td><td>text/cql-identifier</td><td>Should order CBC if on Methotrexate therapy and missing test</td></tr></table></blockquote><h3>Inputs</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Profile</b></td></tr><tr><td style="display: none">*</td><td>Observation</td><td><a href="StructureDefinition-ActiveMethotrexateFeature.html">Active Methotrexate Feature</a></td></tr><tr><td style="display: none">*</td><td>Observation</td><td><a href="StructureDefinition-LastCbcPanelReportDateFeature.html">Last CBC Panel Report Date Feature</a></td></tr></table><p><b>definition</b>: <a href="ActivityDefinition-OrderCBCActivity.html">Order CBC Activity</a></p></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <url value="http://example.org/PlanDefinition/MethotrexateMonitoringRecommendation"/>
+  <version value="0.1.0"/>
+  <name value="MethotrexateMonitoringRecommendation"/>
+  <title value="Methotrexate Monitoring Recommendation"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="eca-rule"/>
+    </coding>
+  </type>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-05-17T14:59:55-04:00"/>
+  <publisher value="Example Publisher"/>
+  <contact>
+    <name value="Example Publisher"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/example-publisher"/>
+    </telecom>
+  </contact>
+  <description value="Monitoring tests for antirheumatic drug therapy for Methotrexate."/>
+  <relatedArtifact>
+    <type value="citation"/>
+    <citation value="Criswell LA, Saag KG, Sems KM et al. Moderate-term, low-dose corticosteroids for rheumatoid arthritis. Cochrane Database Syst Rev 2000;(2):CD001158 PubMed."/>
+    <url value="https://pubmed.ncbi.nlm.nih.gov/10796420"/>
+    <document>
+      <url value="https://pubmed.ncbi.nlm.nih.gov/10796420"/>
+    </document>
+  </relatedArtifact>
+  <library value="http://example.org/Library/ApplicabilityLogic"/>
+  <action>
+    <extension url="http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/evidence-quality"/>
+          <code value="high"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/recommendation-strength"/>
+          <code value="strong"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-directionOfRecommendation">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-recommendation-direction"/>
+          <code value="for"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <title value="Order monitoring tests for antirheumatic drug therapy (Methotrexate)."/>
+    <description value="Order monitoring tests for antirheumatic drug therapy (Methotrexate)."/>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process"/>
+        <code value="diagnostic-testing"/>
+      </coding>
+    </code>
+    <condition>
+      <kind value="applicability"/>
+      <expression>
+        <language value="text/cql-identifier"/>
+        <expression value="Should order CBC if on Methotrexate therapy and missing test"/>
+      </expression>
+    </condition>
+    <input>
+      <type value="Observation"/>
+      <profile value="http://example.org/StructureDefinition/ActiveMethotrexateFeature"/>
+    </input>
+    <input>
+      <type value="Observation"/>
+      <profile value="http://example.org/StructureDefinition/LastCbcPanelReportDateFeature"/>
+    </input>
+    <definitionCanonical value="http://example.org/ActivityDefinition/OrderCBCActivity"/>
+  </action>
+</PlanDefinition>

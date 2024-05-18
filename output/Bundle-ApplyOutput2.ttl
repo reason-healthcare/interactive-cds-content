@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/Bundle/ApplyOutput2> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ApplyOutput2"] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "http://example.org/RequestGroup/RequestGroup2"^^xsd:anyURI ] ;
+     fhir:resource ( <http://example.org/RequestGroup/RequestGroup2> )
+  ] ) . # 
+
+<http://example.org/RequestGroup/RequestGroup2> a fhir:RequestGroup ;
+  fhir:id [ fhir:v "RequestGroup2"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"RequestGroup_RequestGroup2\"> </a><p><b>Generated Narrative: RequestGroup</b><a name=\"RequestGroup2\"> </a><a name=\"hcRequestGroup2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource RequestGroup &quot;RequestGroup2&quot; </p></div><p><b>instantiatesCanonical</b>: <a href=\"PlanDefinition-SulfasalazineMonitoringRecommendation.html\">Sulfasalazine Monitoring Recommendation</a></p><p><b>status</b>: draft</p><p><b>intent</b>: proposal</p><p><b>subject</b>: <a href=\"Patient-Patient1.html\">Patient/Patient1</a> &quot; PATIENT1&quot;</p></div>"
+  ] ; # 
+  fhir:instantiatesCanonical ( [
+     fhir:v "http://example.org/PlanDefinition/SulfasalazineMonitoringRecommendation|0.1.0"^^xsd:anyURI ;
+     fhir:link <http://example.org/PlanDefinition/SulfasalazineMonitoringRecommendation|0.1.0>
+  ] ) ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:subject [
+     fhir:link <http://example.org/Patient/Patient1> ;
+     fhir:reference [ fhir:v "Patient/Patient1" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

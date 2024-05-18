@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1">
+   <annotation translatorOptions="EnableAnnotations,EnableLocators" signatureLevel="None" xsi:type="a:CqlToElmInfo"/>
+   <annotation message="The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation message="The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation message="The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation message="The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="74">
+         <a:s>library LastCbcPanelReportDateFeatureLogic version '0.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="LastCbcPanelReportDateFeatureLogic" system="http://example.org" version="0.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="1" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="1">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="2" locator="5:1-5:35" localIdentifier="FHIRHelpers" path="http://example.org/FHIRHelpers" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="2">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '0.1.0'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="3" locator="6:1-6:30" localIdentifier="Common" path="http://example.org/Common" version="0.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="3">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>Common</a:s>
+               </a:s>
+               <a:s> version '0.1.0'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <codeSystems>
+      <def localId="4" locator="8:1-8:79" name="CaseFeatureCodes" id="http://example.org/CodeSystem/CaseFeatureCodes" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="4">
+               <a:s>codesystem &quot;CaseFeatureCodes&quot;: 'http://example.org/CodeSystem/CaseFeatureCodes'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="7" locator="11:1-11:38" name="LOINC" id="http://loinc.org" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="7">
+               <a:s>codesystem &quot;LOINC&quot;: 'http://loinc.org'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </codeSystems>
+   <codes>
+      <def localId="6" locator="9:1-9:81" name="Last CBC Report Date" id="last-cbc-panel-report-date" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="6">
+               <a:s>code &quot;Last CBC Report Date&quot;: 'last-cbc-panel-report-date' from </a:s>
+               <a:s r="5">
+                  <a:s>&quot;CaseFeatureCodes&quot;</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="5" locator="9:64-9:81" name="CaseFeatureCodes"/>
+      </def>
+      <def localId="9" locator="12:1-12:40" name="CBC Panel" id="58410-2" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="9">
+               <a:s>code &quot;CBC Panel&quot;: '58410-2' from </a:s>
+               <a:s r="8">
+                  <a:s>&quot;LOINC&quot;</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="8" locator="12:34-12:40" name="LOINC"/>
+      </def>
+   </codes>
+   <contexts>
+      <def locator="14:1-14:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def locator="14:1-14:15" name="Patient" context="Patient">
+         <expression xsi:type="SingletonFrom">
+            <operand locator="14:1-14:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="17" locator="16:1-18:36" name="CBC Reports" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="17">
+               <a:s>define &quot;CBC Reports&quot;:
+  </a:s>
+               <a:s r="16">
+                  <a:s>
+                     <a:s r="11">
+                        <a:s r="10">
+                           <a:s r="10">
+                              <a:s>[DiagnosticReport: </a:s>
+                              <a:s>
+                                 <a:s>&quot;CBC Panel&quot;</a:s>
+                              </a:s>
+                              <a:s>]</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> CBCReport</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="15">
+                     <a:s>where </a:s>
+                     <a:s r="15">
+                        <a:s r="13">
+                           <a:s r="12">
+                              <a:s>CBCReport</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="13">
+                              <a:s>status</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> ~ </a:s>
+                        <a:s r="14">
+                           <a:s>'final'</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="16" locator="17:3-18:36" xsi:type="Query">
+            <source localId="11" locator="17:3-17:43" alias="CBCReport">
+               <expression localId="10" locator="17:3-17:33" dataType="fhir:DiagnosticReport" templateId="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" codeProperty="code" codeComparator="~" xsi:type="Retrieve">
+                  <codes xsi:type="ToList">
+                     <operand locator="17:22-17:32" name="CBC Panel" xsi:type="CodeRef"/>
+                  </codes>
+               </expression>
+            </source>
+            <where localId="15" locator="18:5-18:36" xsi:type="Equivalent">
+               <operand name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="13" locator="18:11-18:26" path="status" scope="CBCReport" xsi:type="Property"/>
+               </operand>
+               <operand localId="14" locator="18:30-18:36" valueType="t:String" value="final" xsi:type="Literal"/>
+            </where>
+         </expression>
+      </def>
+      <def localId="25" locator="20:1-21:53" name="Last CBC report" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="25">
+               <a:s>define &quot;Last CBC report&quot;:
+  </a:s>
+               <a:s r="24">
+                  <a:s>First(</a:s>
+                  <a:s r="23">
+                     <a:s>
+                        <a:s r="19">
+                           <a:s r="18">
+                              <a:s>
+                                 <a:s>&quot;CBC Reports&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> C</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> </a:s>
+                     <a:s r="22">
+                        <a:s>sort by </a:s>
+                        <a:s r="21">
+                           <a:s r="20">
+                              <a:s>effective</a:s>
+                           </a:s>
+                           <a:s> descending</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="24" locator="21:3-21:53" xsi:type="First">
+            <source localId="23" locator="21:9-21:52" xsi:type="Query">
+               <source localId="19" locator="21:9-21:23" alias="C">
+                  <expression localId="18" locator="21:9-21:21" name="CBC Reports" xsi:type="ExpressionRef"/>
+               </source>
+               <sort localId="22" locator="21:25-21:52">
+                  <by localId="21" locator="21:33-21:52" direction="descending" path="effective" xsi:type="ByColumn"/>
+               </sort>
+            </source>
+         </expression>
+      </def>
+      <def localId="60" locator="27:1-57:13" name="Last CBC Panel Report Date Inferred" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="60">
+               <a:s>/**
+ * @description
+ * Inference if the patient is taking drug with a Methotrexate code
+ */
+define &quot;Last CBC Panel Report Date Inferred&quot;:
+    </a:s>
+               <a:s r="59">
+                  <a:s>if </a:s>
+                  <a:s r="27">
+                     <a:s>exists</a:s>
+                     <a:s r="26">
+                        <a:s>(</a:s>
+                        <a:s r="26">
+                           <a:s>&quot;Last CBC report&quot;</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> then
+      </a:s>
+                  <a:s r="57">
+                     <a:s>Observation {
+        </a:s>
+                     <a:s>
+                        <a:s>meta: </a:s>
+                        <a:s r="31">
+                           <a:s>Meta {
+          </a:s>
+                           <a:s>
+                              <a:s>profile: </a:s>
+                              <a:s r="30">
+                                 <a:s>{
+            </a:s>
+                                 <a:s r="29">
+                                    <a:s>canonical { </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="28">
+                                          <a:s>'http://example.org/StructureDefinition/LastCbcPanelReportDateFeature'</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> }</a:s>
+                                 </a:s>
+                                 <a:s>
+          }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+        }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+        </a:s>
+                     <a:s>
+                        <a:s>extension: </a:s>
+                        <a:s r="42">
+                           <a:s>{
+          </a:s>
+                           <a:s r="36">
+                              <a:s>Extension {
+            </a:s>
+                              <a:s>
+                                 <a:s>url: </a:s>
+                                 <a:s r="33">
+                                    <a:s>url { </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="32">
+                                          <a:s>'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-instantiatesCaseFeature'</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> }</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>,
+            </a:s>
+                              <a:s>
+                                 <a:s>value: </a:s>
+                                 <a:s r="35">
+                                    <a:s>canonical { </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="34">
+                                          <a:s>'http://example.org/StructureDefinition/LastCbcPanelReportDateFeature'</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> }</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+          }</a:s>
+                           </a:s>
+                           <a:s>,
+          </a:s>
+                           <a:s r="41">
+                              <a:s>Extension {
+            </a:s>
+                              <a:s>
+                                 <a:s>url: </a:s>
+                                 <a:s r="38">
+                                    <a:s>url { </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="37">
+                                          <a:s>'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-caseFeatureType'</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> }</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>,
+            </a:s>
+                              <a:s>
+                                 <a:s>value: </a:s>
+                                 <a:s r="40">
+                                    <a:s>code { </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="39">
+                                          <a:s>'inferred'</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> }</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+          }</a:s>
+                           </a:s>
+                           <a:s>
+        }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+        </a:s>
+                     <a:s>
+                        <a:s>status: </a:s>
+                        <a:s r="44">
+                           <a:s>ObservationStatus { </a:s>
+                           <a:s>
+                              <a:s>value: </a:s>
+                              <a:s r="43">
+                                 <a:s>'final'</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+        </a:s>
+                     <a:s>
+                        <a:s>effective: </a:s>
+                        <a:s r="46">
+                           <a:s>dateTime { </a:s>
+                           <a:s>
+                              <a:s>value: </a:s>
+                              <a:s r="45">
+                                 <a:s>Now()</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+        </a:s>
+                     <a:s>
+                        <a:s>code: </a:s>
+                        <a:s r="53">
+                           <a:s>CodeableConcept {
+          </a:s>
+                           <a:s>
+                              <a:s>coding: </a:s>
+                              <a:s r="52">
+                                 <a:s>{
+            </a:s>
+                                 <a:s r="51">
+                                    <a:s>Coding {
+              </a:s>
+                                    <a:s>
+                                       <a:s>system: </a:s>
+                                       <a:s r="48">
+                                          <a:s>uri { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="47">
+                                                <a:s>'http://example.org/CodeSystem/CaseFeatureCodes'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+              </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="50">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="49">
+                                                <a:s>'last-cbc-panel-report-date'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+            }</a:s>
+                                 </a:s>
+                                 <a:s>
+          }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+        }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+        </a:s>
+                     <a:s>
+                        <a:s>value: </a:s>
+                        <a:s r="56">
+                           <a:s>dateTime { </a:s>
+                           <a:s>
+                              <a:s>value: </a:s>
+                              <a:s r="55">
+                                 <a:s r="54">
+                                    <a:s>&quot;Last CBC report&quot;</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="55">
+                                    <a:s>effective</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+      }</a:s>
+                  </a:s>
+                  <a:s r="58">
+    else null</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="59" locator="28:5-57:13" xsi:type="If">
+            <condition localId="27" locator="28:8-28:32" xsi:type="Exists">
+               <operand xsi:type="ToList">
+                  <operand localId="26" locator="28:14-28:32" name="Last CBC report" xsi:type="ExpressionRef"/>
+               </operand>
+            </condition>
+            <then localId="57" locator="29:7-56:7" classType="fhir:Observation" xsi:type="Instance">
+               <element name="meta">
+                  <value localId="31" locator="30:15-34:9" classType="fhir:Meta" xsi:type="Instance">
+                     <element name="profile">
+                        <value localId="30" locator="31:20-33:11" xsi:type="List">
+                           <element localId="29" locator="32:13-32:103" classType="fhir:canonical" xsi:type="Instance">
+                              <element name="value">
+                                 <value localId="28" locator="32:32-32:101" valueType="t:String" value="http://example.org/StructureDefinition/LastCbcPanelReportDateFeature" xsi:type="Literal"/>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </value>
+               </element>
+               <element name="extension">
+                  <value localId="42" locator="35:20-44:9" xsi:type="List">
+                     <element localId="36" locator="36:11-39:11" classType="fhir:Extension" xsi:type="Instance">
+                        <element name="url">
+                           <value localId="33" locator="37:18-37:108" classType="fhir:url" xsi:type="Instance">
+                              <element name="value">
+                                 <value localId="32" locator="37:31-37:106" valueType="t:String" value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-instantiatesCaseFeature" xsi:type="Literal"/>
+                              </element>
+                           </value>
+                        </element>
+                        <element name="value">
+                           <value xsi:type="As">
+                              <operand localId="35" locator="38:20-38:110" classType="fhir:canonical" xsi:type="Instance">
+                                 <element name="value">
+                                    <value localId="34" locator="38:39-38:108" valueType="t:String" value="http://example.org/StructureDefinition/LastCbcPanelReportDateFeature" xsi:type="Literal"/>
+                                 </element>
+                              </operand>
+                              <asTypeSpecifier xsi:type="ChoiceTypeSpecifier">
+                                 <choice name="fhir:base64Binary" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:canonical" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:date" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:id" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:instant" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:markdown" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:oid" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:positiveInt" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:time" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:unsignedInt" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:uri" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:url" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:uuid" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Address" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Age" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Annotation" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Attachment" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:ContactPoint" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Count" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Distance" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Duration" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:HumanName" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Identifier" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Money" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Quantity" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Range" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Ratio" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:SampledData" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Signature" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Timing" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:ContactDetail" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Contributor" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:DataRequirement" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Expression" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:ParameterDefinition" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:RelatedArtifact" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:TriggerDefinition" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:UsageContext" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Dosage" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Meta" xsi:type="NamedTypeSpecifier"/>
+                              </asTypeSpecifier>
+                           </value>
+                        </element>
+                     </element>
+                     <element localId="41" locator="40:11-43:11" classType="fhir:Extension" xsi:type="Instance">
+                        <element name="url">
+                           <value localId="38" locator="41:18-41:100" classType="fhir:url" xsi:type="Instance">
+                              <element name="value">
+                                 <value localId="37" locator="41:31-41:98" valueType="t:String" value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-caseFeatureType" xsi:type="Literal"/>
+                              </element>
+                           </value>
+                        </element>
+                        <element name="value">
+                           <value xsi:type="As">
+                              <operand localId="40" locator="42:20-42:45" classType="fhir:code" xsi:type="Instance">
+                                 <element name="value">
+                                    <value localId="39" locator="42:34-42:43" valueType="t:String" value="inferred" xsi:type="Literal"/>
+                                 </element>
+                              </operand>
+                              <asTypeSpecifier xsi:type="ChoiceTypeSpecifier">
+                                 <choice name="fhir:base64Binary" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:canonical" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:date" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:id" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:instant" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:markdown" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:oid" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:positiveInt" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:time" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:unsignedInt" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:uri" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:url" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:uuid" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Address" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Age" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Annotation" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Attachment" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:ContactPoint" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Count" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Distance" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Duration" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:HumanName" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Identifier" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Money" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Quantity" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Range" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Ratio" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Reference" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:SampledData" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Signature" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Timing" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:ContactDetail" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Contributor" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:DataRequirement" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Expression" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:ParameterDefinition" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:RelatedArtifact" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:TriggerDefinition" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:UsageContext" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Dosage" xsi:type="NamedTypeSpecifier"/>
+                                 <choice name="fhir:Meta" xsi:type="NamedTypeSpecifier"/>
+                              </asTypeSpecifier>
+                           </value>
+                        </element>
+                     </element>
+                  </value>
+               </element>
+               <element name="status">
+                  <value localId="44" locator="45:17-45:52" classType="fhir:ObservationStatus" xsi:type="Instance">
+                     <element name="value">
+                        <value localId="43" locator="45:44-45:50" valueType="t:String" value="final" xsi:type="Literal"/>
+                     </element>
+                  </value>
+               </element>
+               <element name="effective">
+                  <value xsi:type="As">
+                     <operand localId="46" locator="46:20-46:44" classType="fhir:dateTime" xsi:type="Instance">
+                        <element name="value">
+                           <value localId="45" locator="46:38-46:42" xsi:type="Now"/>
+                        </element>
+                     </operand>
+                     <asTypeSpecifier xsi:type="ChoiceTypeSpecifier">
+                        <choice name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:Timing" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:instant" xsi:type="NamedTypeSpecifier"/>
+                     </asTypeSpecifier>
+                  </value>
+               </element>
+               <element name="code">
+                  <value localId="53" locator="47:15-54:9" classType="fhir:CodeableConcept" xsi:type="Instance">
+                     <element name="coding">
+                        <value localId="52" locator="48:19-53:11" xsi:type="List">
+                           <element localId="51" locator="49:13-52:13" classType="fhir:Coding" xsi:type="Instance">
+                              <element name="system">
+                                 <value localId="48" locator="50:23-50:85" classType="fhir:uri" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="47" locator="50:36-50:83" valueType="t:String" value="http://example.org/CodeSystem/CaseFeatureCodes" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="code">
+                                 <value localId="50" locator="51:21-51:64" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="49" locator="51:35-51:62" valueType="t:String" value="last-cbc-panel-report-date" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </value>
+               </element>
+               <element name="value">
+                  <value xsi:type="As">
+                     <operand localId="56" locator="55:16-55:62" classType="fhir:dateTime" xsi:type="Instance">
+                        <element name="value">
+                           <value name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                              <operand asType="fhir:dateTime" xsi:type="As">
+                                 <operand localId="55" locator="55:34-55:60" path="effective" xsi:type="Property">
+                                    <source localId="54" locator="55:34-55:50" name="Last CBC report" xsi:type="ExpressionRef"/>
+                                 </operand>
+                              </operand>
+                           </value>
+                        </element>
+                     </operand>
+                     <asTypeSpecifier xsi:type="ChoiceTypeSpecifier">
+                        <choice name="fhir:Quantity" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:Range" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:Ratio" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:SampledData" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:time" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                        <choice name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                     </asTypeSpecifier>
+                  </value>
+               </element>
+            </then>
+            <else asType="fhir:Observation" xsi:type="As">
+               <operand localId="58" locator="57:10-57:13" xsi:type="Null"/>
+            </else>
+         </expression>
+      </def>
+      <def localId="64" locator="63:1-64:58" name="Last CBC Panel Report Date Asserted" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="64">
+               <a:s>/**
+ * @description
+ * Assertion is if there is a case feature directly documented
+ */
+define &quot;Last CBC Panel Report Date Asserted&quot;:
+  </a:s>
+               <a:s r="63">
+                  <a:s r="61">
+                     <a:s>Common</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="63">
+                     <a:s>MostRecent(</a:s>
+                     <a:s r="62">
+                        <a:s>[Observation: </a:s>
+                        <a:s>
+                           <a:s>&quot;Last CBC Report Date&quot;</a:s>
+                        </a:s>
+                        <a:s>]</a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="63" locator="64:3-64:58" name="MostRecent" libraryName="Common" xsi:type="FunctionRef">
+            <operand localId="62" locator="64:21-64:57" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="~" xsi:type="Retrieve">
+               <codes xsi:type="ToList">
+                  <operand locator="64:35-64:56" name="Last CBC Report Date" xsi:type="CodeRef"/>
+               </codes>
+            </operand>
+         </expression>
+      </def>
+      <def localId="68" locator="70:1-74:3" name="Last CBC Panel Report Date" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="68">
+               <a:s>/**
+ * @description
+ * Feature is asserted followed by inferred
+ */
+define &quot;Last CBC Panel Report Date&quot;:
+  </a:s>
+               <a:s r="67">
+                  <a:s>Coalesce(
+    </a:s>
+                  <a:s r="65">
+                     <a:s>&quot;Last CBC Panel Report Date Asserted&quot;</a:s>
+                  </a:s>
+                  <a:s>,
+    </a:s>
+                  <a:s r="66">
+                     <a:s>&quot;Last CBC Panel Report Date Inferred&quot;</a:s>
+                  </a:s>
+                  <a:s>
+  )</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="67" locator="71:3-74:3" xsi:type="Coalesce">
+            <operand localId="65" locator="72:5-72:41" name="Last CBC Panel Report Date Asserted" xsi:type="ExpressionRef"/>
+            <operand localId="66" locator="73:5-73:41" name="Last CBC Panel Report Date Inferred" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="74" locator="76:1-77:56" name="Value" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="74">
+               <a:s>define &quot;Value&quot;:
+  </a:s>
+               <a:s r="73">
+                  <a:s r="72">
+                     <a:s>(</a:s>
+                     <a:s r="72">
+                        <a:s r="70">
+                           <a:s r="69">
+                              <a:s>&quot;Last CBC Panel Report Date&quot;</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="70">
+                              <a:s>value</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> as </a:s>
+                        <a:s r="71">
+                           <a:s>dateTime</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="73">
+                     <a:s>value</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="73" locator="77:3-77:56" path="value" xsi:type="Property">
+            <source localId="72" locator="77:3-77:50" strict="false" xsi:type="As">
+               <operand localId="70" locator="77:4-77:37" path="value" xsi:type="Property">
+                  <source localId="69" locator="77:4-77:31" name="Last CBC Panel Report Date" xsi:type="ExpressionRef"/>
+               </operand>
+               <asTypeSpecifier localId="71" locator="77:42-77:49" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+            </source>
+         </expression>
+      </def>
+   </statements>
+</library>

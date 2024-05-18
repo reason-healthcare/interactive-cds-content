@@ -1,0 +1,172 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/ValueSet/2.16.840.1.113762.1.4.1116.181-20200902> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "2.16.840.1.113762.1.4.1116.181-20200902"] ; # 
+  fhir:meta [
+     fhir:versionId [ fhir:v "20" ] ;
+     fhir:lastUpdated [ fhir:v "2020-09-02T01:00:24.000-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://www.nlm.nih.gov/research/umls/rxnorm\"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a> version <code>01032023</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>105585</td><td>methotrexate 2.5 MG Oral Tablet</td></tr><tr><td>105586</td><td>methotrexate 10 MG Oral Tablet</td></tr><tr><td>1441402</td><td>0.4 ML methotrexate 25 MG/ML Auto-Injector</td></tr><tr><td>1441411</td><td>0.4 ML methotrexate 37.5 MG/ML Auto-Injector</td></tr><tr><td>1441416</td><td>0.4 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1441422</td><td>0.4 ML methotrexate 62.5 MG/ML Auto-Injector</td></tr><tr><td>1544378</td><td>0.2 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544385</td><td>0.25 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544387</td><td>0.3 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544389</td><td>0.35 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544395</td><td>0.45 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544397</td><td>0.5 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544401</td><td>0.6 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1544403</td><td>0.15 ML methotrexate 50 MG/ML Auto-Injector</td></tr><tr><td>1655956</td><td>40 ML methotrexate 25 MG/ML Injection</td></tr><tr><td>1655959</td><td>10 ML methotrexate 25 MG/ML Injection</td></tr><tr><td>1655960</td><td>2 ML methotrexate 25 MG/ML Injection</td></tr><tr><td>1655967</td><td>4 ML methotrexate 25 MG/ML Injection</td></tr><tr><td>1655968</td><td>8 ML methotrexate 25 MG/ML Injection</td></tr><tr><td>1747179</td><td>0.4 ML methotrexate 31.3 MG/ML Auto-Injector</td></tr><tr><td>1747185</td><td>0.4 ML methotrexate 43.8 MG/ML Auto-Injector</td></tr><tr><td>1747192</td><td>0.4 ML methotrexate 56.3 MG/ML Auto-Injector</td></tr><tr><td>1921592</td><td>methotrexate 2.5 MG/ML Oral Solution</td></tr><tr><td>1946772</td><td>methotrexate 25 MG/ML Injectable Solution</td></tr><tr><td>2377333</td><td>0.4 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377341</td><td>0.5 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377343</td><td>0.6 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377345</td><td>0.7 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377347</td><td>0.8 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377349</td><td>0.9 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377351</td><td>1 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>2377353</td><td>0.3 ML methotrexate 25 MG/ML Prefilled Syringe</td></tr><tr><td>283510</td><td>methotrexate 15 MG Oral Tablet</td></tr><tr><td>283511</td><td>methotrexate 5 MG Oral Tablet</td></tr><tr><td>283671</td><td>methotrexate 7.5 MG Oral Tablet</td></tr><tr><td>311625</td><td>methotrexate 1000 MG Injection</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-author"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "American Society of Clinical Oncology Author" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/resource-lastReviewDate"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2022-12-15"^^xsd:date ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-effectiveDate"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2020-09-02"^^xsd:date ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1116.181"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "Methotrexate"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2020-09-02T01:00:24-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Example Publisher"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Example Publisher" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://example.org/example-publisher" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This value set contains concepts that represent the medication Methotrexate"] ; # 
+  fhir:jurisdiction ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "(Clinical Focus: This value set contains concepts that represent the medication Methotrexate.),(Data Element Scope: This value set may use the Quality Data Model (QDM) category related to Medication.),(Inclusion Criteria: Includes only relevant concepts associated with semantic clinical drugs (concepts associated with component, form and strength); generic; prescribable; injectable; oral Methotrexate.),(Exclusion Criteria: Excludes branded drugs; components or ingredients only; non-prescribable.)"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "01032023" ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "105585" ] ;
+         fhir:display [ fhir:v "methotrexate 2.5 MG Oral Tablet" ]
+       ] [
+         fhir:code [ fhir:v "105586" ] ;
+         fhir:display [ fhir:v "methotrexate 10 MG Oral Tablet" ]
+       ] [
+         fhir:code [ fhir:v "1441402" ] ;
+         fhir:display [ fhir:v "0.4 ML methotrexate 25 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1441411" ] ;
+         fhir:display [ fhir:v "0.4 ML methotrexate 37.5 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1441416" ] ;
+         fhir:display [ fhir:v "0.4 ML methotrexate 50 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1441422" ] ;
+         fhir:display [ fhir:v "0.4 ML methotrexate 62.5 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1544378" ] ;
+         fhir:display [ fhir:v "0.2 ML methotrexate 50 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1544385" ] ;
+         fhir:display [ fhir:v "0.25 ML methotrexate 50 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1544387" ] ;
+         fhir:display [ fhir:v "0.3 ML methotrexate 50 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1544389" ] ;
+         fhir:display [ fhir:v "0.35 ML methotrexate 50 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1544395" ] ;
+         fhir:display [ fhir:v "0.45 ML methotrexate 50 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1544397" ] ;
+         fhir:display [ fhir:v "0.5 ML methotrexate 50 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1544401" ] ;
+         fhir:display [ fhir:v "0.6 ML methotrexate 50 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1544403" ] ;
+         fhir:display [ fhir:v "0.15 ML methotrexate 50 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1655956" ] ;
+         fhir:display [ fhir:v "40 ML methotrexate 25 MG/ML Injection" ]
+       ] [
+         fhir:code [ fhir:v "1655959" ] ;
+         fhir:display [ fhir:v "10 ML methotrexate 25 MG/ML Injection" ]
+       ] [
+         fhir:code [ fhir:v "1655960" ] ;
+         fhir:display [ fhir:v "2 ML methotrexate 25 MG/ML Injection" ]
+       ] [
+         fhir:code [ fhir:v "1655967" ] ;
+         fhir:display [ fhir:v "4 ML methotrexate 25 MG/ML Injection" ]
+       ] [
+         fhir:code [ fhir:v "1655968" ] ;
+         fhir:display [ fhir:v "8 ML methotrexate 25 MG/ML Injection" ]
+       ] [
+         fhir:code [ fhir:v "1747179" ] ;
+         fhir:display [ fhir:v "0.4 ML methotrexate 31.3 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1747185" ] ;
+         fhir:display [ fhir:v "0.4 ML methotrexate 43.8 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1747192" ] ;
+         fhir:display [ fhir:v "0.4 ML methotrexate 56.3 MG/ML Auto-Injector" ]
+       ] [
+         fhir:code [ fhir:v "1921592" ] ;
+         fhir:display [ fhir:v "methotrexate 2.5 MG/ML Oral Solution" ]
+       ] [
+         fhir:code [ fhir:v "1946772" ] ;
+         fhir:display [ fhir:v "methotrexate 25 MG/ML Injectable Solution" ]
+       ] [
+         fhir:code [ fhir:v "2377333" ] ;
+         fhir:display [ fhir:v "0.4 ML methotrexate 25 MG/ML Prefilled Syringe" ]
+       ] [
+         fhir:code [ fhir:v "2377341" ] ;
+         fhir:display [ fhir:v "0.5 ML methotrexate 25 MG/ML Prefilled Syringe" ]
+       ] [
+         fhir:code [ fhir:v "2377343" ] ;
+         fhir:display [ fhir:v "0.6 ML methotrexate 25 MG/ML Prefilled Syringe" ]
+       ] [
+         fhir:code [ fhir:v "2377345" ] ;
+         fhir:display [ fhir:v "0.7 ML methotrexate 25 MG/ML Prefilled Syringe" ]
+       ] [
+         fhir:code [ fhir:v "2377347" ] ;
+         fhir:display [ fhir:v "0.8 ML methotrexate 25 MG/ML Prefilled Syringe" ]
+       ] [
+         fhir:code [ fhir:v "2377349" ] ;
+         fhir:display [ fhir:v "0.9 ML methotrexate 25 MG/ML Prefilled Syringe" ]
+       ] [
+         fhir:code [ fhir:v "2377351" ] ;
+         fhir:display [ fhir:v "1 ML methotrexate 25 MG/ML Prefilled Syringe" ]
+       ] [
+         fhir:code [ fhir:v "2377353" ] ;
+         fhir:display [ fhir:v "0.3 ML methotrexate 25 MG/ML Prefilled Syringe" ]
+       ] [
+         fhir:code [ fhir:v "283510" ] ;
+         fhir:display [ fhir:v "methotrexate 15 MG Oral Tablet" ]
+       ] [
+         fhir:code [ fhir:v "283511" ] ;
+         fhir:display [ fhir:v "methotrexate 5 MG Oral Tablet" ]
+       ] [
+         fhir:code [ fhir:v "283671" ] ;
+         fhir:display [ fhir:v "methotrexate 7.5 MG Oral Tablet" ]
+       ] [
+         fhir:code [ fhir:v "311625" ] ;
+         fhir:display [ fhir:v "methotrexate 1000 MG Injection" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

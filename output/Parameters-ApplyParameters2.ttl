@@ -1,0 +1,169 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/Parameters/ApplyParameters2> a fhir:Parameters ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ApplyParameters2"] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "url" ] ;
+     fhir:value [ fhir:v "http://example.org/PlanDefinition/SulfasalazineMonitoringRecommendation" ]
+  ] [
+     fhir:name [ fhir:v "data" ] ;
+     fhir:Parameters.parameter.resource ( [
+       a fhir:Bundle ;
+       fhir:id [ fhir:v "BundleCase2Modified" ] ;
+       fhir:meta [
+         fhir:tag ( [
+           fhir:code [ fhir:v "test" ]
+         ] )
+       ] ;
+       fhir:type [ fhir:v "collection" ] ;
+       fhir:entry ( [
+         fhir:fullUrl [ fhir:v "http://example.org/Patient/Patient1"^^xsd:anyURI ] ;
+         fhir:resource ( <http://example.org/Patient/Patient1> )
+       ] [
+         fhir:fullUrl [ fhir:v "http://example.org/Practitioner/PractitionerShared"^^xsd:anyURI ] ;
+         fhir:resource ( <http://example.org/Practitioner/PractitionerShared> )
+       ] [
+         fhir:fullUrl [ fhir:v "http://example.org/Organization/OrganizationShared"^^xsd:anyURI ] ;
+         fhir:resource ( <http://example.org/Organization/OrganizationShared> )
+       ] [
+         fhir:fullUrl [ fhir:v "http://example.org/Encounter/Encounter1"^^xsd:anyURI ] ;
+         fhir:resource ( <http://example.org/Encounter/Encounter1> )
+       ] [
+         fhir:fullUrl [ fhir:v "http://example.org/MedictionRequest/MedicationRequest1"^^xsd:anyURI ] ;
+         fhir:resource ( <http://example.org/MedictionRequest/MedicationRequest1> )
+       ] [
+         fhir:fullUrl [ fhir:v "http://example.org/Observation/ActiveSulfasalazineFeatureObservation1"^^xsd:anyURI ] ;
+         fhir:resource ( <http://example.org/Observation/ActiveSulfasalazineFeatureObservation1> )
+       ] [
+         fhir:fullUrl [ fhir:v "http://example.org/Observation/LastCbcPanelReportDateFeatureObservation1"^^xsd:anyURI ] ;
+         fhir:resource ( <http://example.org/Observation/LastCbcPanelReportDateFeatureObservation1> )
+       ] )
+     ] )
+  ] [
+     fhir:name [ fhir:v "subject" ] ;
+     fhir:value [ fhir:v "Patient/Patient1" ]
+  ] ) . # 
+
+<http://example.org/Patient/Patient1> a fhir:Patient ;
+  fhir:id [ fhir:v "Patient1"] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Patient1" ]
+  ] ) . # 
+
+<http://example.org/Practitioner/PractitionerShared> a fhir:Practitioner ;
+  fhir:id [ fhir:v "PractitionerShared"] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "practitionershared" ]
+  ] ) . # 
+
+<http://example.org/Organization/OrganizationShared> a fhir:Organization ;
+  fhir:id [ fhir:v "OrganizationShared"] ; # 
+  fhir:name [ fhir:v "organizationshared"] . # 
+
+<http://example.org/Encounter/Encounter1> a fhir:Encounter ;
+  fhir:id [ fhir:v "Encounter1"] ; # 
+  fhir:status [ fhir:v "in-progress"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://example.org/Patient/Patient1> ;
+     fhir:reference [ fhir:v "Patient/Patient1" ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPRF" ] ;
+         fhir:display [ fhir:v "primary performer" ]
+       ] )
+     ] ) ;
+     fhir:individual [
+       fhir:link <http://example.org/Practitioner/PractitionerShared> ;
+       fhir:reference [ fhir:v "Practitioner/PractitionerShared" ]
+     ]
+  ] ) ; # 
+  fhir:serviceProvider [
+     fhir:link <http://example.org/Organization/OrganizationShared> ;
+     fhir:reference [ fhir:v "Organization/OrganizationShared" ]
+  ] . # 
+
+<http://example.org/MedictionRequest/MedicationRequest1> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "MedicationRequest1"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "A07EC01" ] ;
+       fhir:display [ fhir:v "Sulfasalazine" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://example.org/Patient/Patient1> ;
+     fhir:reference [ fhir:v "Patient/Patient1" ]
+  ] . # 
+
+<http://example.org/Observation/ActiveSulfasalazineFeatureObservation1> a fhir:Observation ;
+  fhir:id [ fhir:v "ActiveSulfasalazineFeatureObservation1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://example.org/StructureDefinition/ActiveSulfasalazineFeature"^^xsd:anyURI ;
+       fhir:link <http://example.org/StructureDefinition/ActiveSulfasalazineFeature>
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://example.org/CodeSystem/CaseFeatureCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "on-medication-sulfasalazine" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://example.org/Patient/Patient1> ;
+     fhir:reference [ fhir:v "Patient/Patient1" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2023-12-13"^^xsd:date] ; # 
+  fhir:value [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:derivedFrom ( [
+     fhir:link <http://example.org/Questionnaire/QuestionnaireResponse2> ;
+     fhir:reference [ fhir:v "Questionnaire/QuestionnaireResponse2" ]
+  ] ) . # 
+
+<http://example.org/Observation/LastCbcPanelReportDateFeatureObservation1> a fhir:Observation ;
+  fhir:id [ fhir:v "LastCbcPanelReportDateFeatureObservation1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature"^^xsd:anyURI ;
+       fhir:link <http://example.org/StructureDefinition/LastCbcPanelReportDateFeature>
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://example.org/CodeSystem/CaseFeatureCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "last-cbc-panel-report-date" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://example.org/Patient/Patient1> ;
+     fhir:reference [ fhir:v "Patient/Patient1" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2023-12-13"^^xsd:date] ; # 
+  fhir:value [ fhir:v "2023-12-04"^^xsd:date] ; # 
+  fhir:derivedFrom ( [
+     fhir:link <http://example.org/Questionnaire/QuestionnaireResponse2> ;
+     fhir:reference [ fhir:v "Questionnaire/QuestionnaireResponse2" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

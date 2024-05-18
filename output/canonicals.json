@@ -1,0 +1,167 @@
+[
+  {
+    "id" : "2.16.840.1.113762.1.4.1116.181-20200902",
+    "type" : "ValueSet",
+    "url" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1116.181",
+    "version" : "0.1.0",
+    "name" : "Methotrexate"
+  },
+  {
+    "id" : "OrderCBCActivity",
+    "type" : "ActivityDefinition",
+    "url" : "http://example.org/ActivityDefinition/OrderCBCActivity",
+    "version" : "0.1.0",
+    "name" : "OrderCBCActivity"
+  },
+  {
+    "id" : "CaseFeatureCodes",
+    "type" : "CodeSystem",
+    "url" : "http://example.org/CodeSystem/CaseFeatureCodes",
+    "version" : "0.1.0",
+    "name" : "CaseFeatureCodes"
+  },
+  {
+    "id" : "fhir.example",
+    "type" : "ImplementationGuide",
+    "url" : "http://example.org/ImplementationGuide/fhir.example",
+    "version" : "0.1.0",
+    "name" : "CPGTraining"
+  },
+  {
+    "id" : "ActiveMethotrexateFeatureLogic",
+    "type" : "Library",
+    "url" : "http://example.org/Library/ActiveMethotrexateFeatureLogic",
+    "version" : "0.1.0",
+    "name" : "ActiveMethotrexateFeatureLogic"
+  },
+  {
+    "id" : "ActiveSulfasalazineFeatureLogic",
+    "type" : "Library",
+    "url" : "http://example.org/Library/ActiveSulfasalazineFeatureLogic",
+    "version" : "0.1.0",
+    "name" : "ActiveSulfasalazineFeatureLogic"
+  },
+  {
+    "id" : "ApplicabilityLogic",
+    "type" : "Library",
+    "url" : "http://example.org/Library/ApplicabilityLogic",
+    "version" : "0.1.0",
+    "name" : "ApplicabilityLogic"
+  },
+  {
+    "id" : "Common",
+    "type" : "Library",
+    "url" : "http://example.org/Library/Common",
+    "version" : "0.1.0",
+    "name" : "Common"
+  },
+  {
+    "id" : "FHIRCommon",
+    "type" : "Library",
+    "url" : "http://example.org/Library/FHIRCommon",
+    "version" : "0.1.0",
+    "name" : "FHIRCommon"
+  },
+  {
+    "id" : "FHIRHelpers",
+    "type" : "Library",
+    "url" : "http://example.org/Library/FHIRHelpers",
+    "version" : "0.1.0",
+    "name" : "FHIRHelpers"
+  },
+  {
+    "id" : "LastCbcPanelReportDateFeatureLogic",
+    "type" : "Library",
+    "url" : "http://example.org/Library/LastCbcPanelReportDateFeatureLogic",
+    "version" : "0.1.0",
+    "name" : "LastCbcPanelReportDateFeatureLogic"
+  },
+  {
+    "id" : "MethotrexateMonitoringRecommendation",
+    "type" : "PlanDefinition",
+    "url" : "http://example.org/PlanDefinition/MethotrexateMonitoringRecommendation",
+    "version" : "0.1.0",
+    "name" : "MethotrexateMonitoringRecommendation"
+  },
+  {
+    "id" : "MonitoringTestsForAntirheumaticDrugTherapy",
+    "type" : "PlanDefinition",
+    "url" : "http://example.org/PlanDefinition/MonitoringTestsForAntirheumaticDrugTherapy",
+    "version" : "0.1.0",
+    "name" : "MonitoringTestsForAntirheumaticDrugTherapy"
+  },
+  {
+    "id" : "RheumatoidArthritisGuideline",
+    "type" : "PlanDefinition",
+    "url" : "http://example.org/PlanDefinition/RheumatoidArthritisGuideline",
+    "version" : "0.1.0",
+    "name" : "RheumatoidArthritisGuideline"
+  },
+  {
+    "id" : "SulfasalazineMonitoringRecommendation",
+    "type" : "PlanDefinition",
+    "url" : "http://example.org/PlanDefinition/SulfasalazineMonitoringRecommendation",
+    "version" : "0.1.0",
+    "name" : "SulfasalazineMonitoringRecommendation"
+  },
+  {
+    "id" : "ActiveMethotrexateFeature",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/StructureDefinition/ActiveMethotrexateFeature",
+    "version" : "0.1.0",
+    "name" : "ActiveMethotrexateFeature"
+  },
+  {
+    "id" : "ActiveSulfasalazineFeature",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/StructureDefinition/ActiveSulfasalazineFeature",
+    "version" : "0.1.0",
+    "name" : "ActiveSulfasalazineFeature"
+  },
+  {
+    "id" : "LastCbcPanelReportDateFeature",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/StructureDefinition/LastCbcPanelReportDateFeature",
+    "version" : "0.1.0",
+    "name" : "LastCbcPanelReportDateFeature"
+  },
+  {
+    "id" : "sulfasalazine-vs",
+    "type" : "ValueSet",
+    "url" : "http://example.org/ValueSet/sulfasalazine-vs",
+    "version" : "0.1.0",
+    "name" : "SulfasalazineVS"
+  },
+  {
+    "id" : "observation-status",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/ValueSet/observation-status",
+    "version" : "0.1.0",
+    "name" : "ObservationStatus",
+    "oids" : ["2.16.840.1.113883.4.642.3.400"]
+  },
+  {
+    "id" : "ActiveSulfasalazineFeatureQuestionnaire1",
+    "type" : "Questionnaire",
+    "url" : "http://questionnaire-processor/Questionnaire/ActiveSulfasalazineFeatureQuestionnaire1",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "LastCbcPanelReportDateFeatureQuestionnaire1",
+    "type" : "Questionnaire",
+    "url" : "http://questionnaire-processor/Questionnaire/LastCbcPanelReportDateFeatureQuestionnaire1",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "ModularQuestionnaire1",
+    "type" : "Questionnaire",
+    "url" : "http://questionnaire-processor/Questionnaire/ModularQuestionnaire1",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "QuestionnaireAssembled1",
+    "type" : "Questionnaire",
+    "url" : "http://questionnaire-processor/Questionnaire/QuestionnaireAssembled1",
+    "version" : "0.1.0"
+  }
+]

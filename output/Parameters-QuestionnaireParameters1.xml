@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="QuestionnaireParameters1"/>
+  <parameter>
+    <name value="url"/>
+    <valueUri value="http://example.org/PlanDefinition/SulfasalazineMonitoringRecommendation"/>
+  </parameter>
+  <parameter>
+    <name value="version"/>
+    <valueString value="0.1.0"/>
+  </parameter>
+  <parameter>
+    <name value="data"/>
+    <resource>
+      <Bundle>
+        <id value="InitialBundle"/>
+        <meta>
+          <tag>
+            <code value="test"/>
+          </tag>
+        </meta>
+        <type value="collection"/>
+        <entry>
+          <fullUrl value="http://example.org/Patient/Patient1"/>
+          <resource>
+            <Patient>
+              <id value="Patient1"/>
+              <name>
+                <family value="Patient1"/>
+              </name>
+            </Patient>
+          </resource>
+        </entry>
+        <entry>
+          <fullUrl value="http://example.org/Practitioner/PractitionerShared"/>
+          <resource>
+            <Practitioner>
+              <id value="PractitionerShared"/>
+              <name>
+                <family value="practitionershared"/>
+              </name>
+            </Practitioner>
+          </resource>
+        </entry>
+        <entry>
+          <fullUrl value="http://example.org/Organization/OrganizationShared"/>
+          <resource>
+            <Organization>
+              <id value="OrganizationShared"/>
+              <name value="organizationshared"/>
+            </Organization>
+          </resource>
+        </entry>
+        <entry>
+          <fullUrl value="http://example.org/Encounter/Encounter1"/>
+          <resource>
+            <Encounter>
+              <id value="Encounter1"/>
+              <status value="in-progress"/>
+              <class>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+                <code value="AMB"/>
+                <display value="ambulatory"/>
+              </class>
+              <subject>
+                <reference value="Patient/Patient1"/>
+              </subject>
+              <participant>
+                <type>
+                  <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+                    <code value="PPRF"/>
+                    <display value="primary performer"/>
+                  </coding>
+                </type>
+                <individual>
+                  <reference value="Practitioner/PractitionerShared"/>
+                </individual>
+              </participant>
+              <serviceProvider>
+                <reference value="Organization/OrganizationShared"/>
+              </serviceProvider>
+            </Encounter>
+          </resource>
+        </entry>
+        <entry>
+          <fullUrl value="http://example.org/MedicationRequest/MedicationRequest1"/>
+          <resource>
+            <MedicationRequest>
+              <id value="MedicationRequest1"/>
+              <status value="active"/>
+              <intent value="order"/>
+              <medicationCodeableConcept>
+                <coding>
+                  <system value="http://www.whocc.no/atc"/>
+                  <code value="A07EC01"/>
+                  <display value="Sulfasalazine"/>
+                </coding>
+              </medicationCodeableConcept>
+              <subject>
+                <reference value="Patient/Patient1"/>
+              </subject>
+            </MedicationRequest>
+          </resource>
+        </entry>
+      </Bundle>
+    </resource>
+  </parameter>
+</Parameters>
