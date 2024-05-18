@@ -26,32 +26,12 @@ SDCManager -> CDS: Combined Questionnaire
 ' note left
 '   See: [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/Questionnaire-QuestionnaireAssembled1.html Example Assembled]]
 ' end note
-CDS -> Clinician: Render Questionnaire
 
 == 2. Fill out Questionnaire ==
 
+CDS -> Clinician: Render Questionnaire
 Clinician -> CDS: Submit (with or without changes)
-break End
-    CDS X<--[#8B0000]>X CPG: Cycle End
-else Questionnaire Response Change
-    CDS -> CDS: Build QuestionnaireResponse
-end
-
-note left
-  Cycle ends when:
-    * All Questionnaire items have answers; And
-    * No answer changes are submitted
-end note
-
-' CDS X<--[#8B0000]>X CPG: Cycle End
-
-' note right
-'   Cycle ends when:
-'     * All Questionnaire items have answers; And
-'     * No answer changes are submitted
-' end note
-
-' CDS -> CDS: Build QuestionnaireResponse
+CDS -> CDS: Build QuestionnaireResponse
 
 ' note left
 '   * [[file:///Users/bkaney/projects/doudecim/CPGTraining/output/QuestionnaireResponse-QuestionnaireResponse1.html No change]]
