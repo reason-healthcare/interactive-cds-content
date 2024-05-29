@@ -1,7 +1,18 @@
 # CPG Example
 
 ## Setup content development environment
+Java and ruby are required to build the Implementation Guide.
+```
+ruby 3.3.0
+java openjdk-21
+```
 
+If using asdf
+```
+asdf install
+```
+
+To update the publisher and ensure fsh, jekyll, and jake are installed, run
 ```
 ./bin/setup
 ```
@@ -59,7 +70,7 @@ jake simplifier
 
 Once the content data is synchronized to Simplifier, you can view all the resources there.
 
-To apply the dependencies for your project, go to the Dependencies tab on the project and from the dropdown next to `Manage`, select `Restore (advanced)`. 
+To apply the dependencies for your project, go to the Dependencies tab on the project and from the dropdown next to `Manage`, select `Restore (advanced)`.
 
 From your Simplifier project page, find the `API` dropdown and copy the `Project FHIR API` endpoint url.
 
