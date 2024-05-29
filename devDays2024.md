@@ -1,14 +1,56 @@
-# Connectathon 36 CPG Example
+# DevDays 2024 CPG Example
 
-## Setup content development environment and IG build
+## Setup content development environment
 
-Follow README instructions for tooling and IG build instructions
+Java and ruby are required to build the Implementation Guide.
+```
+ruby 3.3.0
+java openjdk-21
+```
 
-## Content for Connectathon 36
+If using asdf
+```
+asdf install
+```
+
+To update the publisher and ensure fsh, jekyll, and jake are installed, run
+```
+./bin/setup
+```
+
+Then install the following plugins in VS Code:
+
+* FHIR Shorthand by MITRE-Health
+* Clinical Quality Language (CQL) by Clinical Quality Framework
+
+## Development
+
+There are several build and test tasks available (`jake -T` show the full list):
+
+### Build sushi
+The sushi command converts FHIR Shorthand to FHIR JSON, putting the resulting files in `./fsh-generated/resources`.
+
+```
+jake build:sushi
+```
+
+### Build IG
+This command runs the IG Publisher, which wraps the sushi command. Also converts the CQL to ELM and creates the corresponding FHIR library resources. It also runs validation and generates a static website. Lastly, it creates a FHIR package. The output of the publisher is in `./output`.
+```
+jake build:publish
+```
+
+### Test prepare
+This command calles sushi, then makes copies of use case fixtures and vocabulary in the directory structure that the VS Code CQL plugin expects.
+```
+jake test:prepare
+```
+
+## Content for DevDays 2024
 
 Content can be found at input/fsh
 
-## Test Cases
+### Test Cases
 
 Connecathon test cases are found at input/fsh/test-cases/pd-questionnaire-extract-apply-examples
 
