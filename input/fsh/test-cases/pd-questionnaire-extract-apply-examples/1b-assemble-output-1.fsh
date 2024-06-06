@@ -16,7 +16,7 @@ Description: "Assembeled Questionnaire - Case1"
     //   * expression = "On Sulfasalazine" // "On Sulfasalazine Asserted"?
     //   * reference = Canonical(ActiveSulfasalazineFeatureLogic)
   * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.value[x])
     * text = "Actual result"
     * type = #boolean
     * initial.valueBoolean = true
@@ -35,7 +35,7 @@ Description: "Assembeled Questionnaire - Case1"
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#on-medication-sulfasalazine
   * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.effectiveDateTime)
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.effective[x])
     * insert HiddenExtension
     * text = "Clinically relevant time/time-period for observation"
     * type = #dateTime
@@ -61,6 +61,6 @@ Description: "Assembeled Questionnaire - Case1"
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#last-cbc-panel-report-date
   * item[+]
-    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.value[x])
     * text = "Actual result"
     * type = #dateTime

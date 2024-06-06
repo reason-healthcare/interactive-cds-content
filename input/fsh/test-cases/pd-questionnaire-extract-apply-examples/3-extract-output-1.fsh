@@ -10,7 +10,7 @@ Description: "Bundle of observations from $extract - Case1"
 Instance: ActiveSulfasalazineFeatureObservation
 InstanceOf: ActiveSulfasalazineFeature
 Usage: #example
-* derivedFrom = Reference(Questionnaire/QuestionnaireResponse1)
+* derivedFrom = Reference(QuestionnaireResponse/QuestionnaireResponse1)
 * status = #final
 * code = CaseFeatureCodes#on-medication-sulfasalazine
 * subject = Reference(Patient1)

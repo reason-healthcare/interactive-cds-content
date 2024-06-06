@@ -47,7 +47,7 @@ Usage: #example
     //   * reference = Canonical(ActiveSulfasalazineFeatureLogic)
   // * item representing id of resource to update
   * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.value[x])
     * text = "Actual result"
     * type = #boolean
     * initial.valueBoolean = true
@@ -66,7 +66,7 @@ Usage: #example
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#on-medication-sulfasalazine
   * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.effectiveDateTime)
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.effective[x])
     * insert HiddenExtension
     * text = "Clinically relevant time/time-period for observation"
     * type = #dateTime
@@ -97,6 +97,6 @@ Usage: #example
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#last-cbc-panel-report-date
   * item[+]
-    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
+    * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.value[x])
     * text = "Actual result"
     * type = #dateTime
