@@ -25,6 +25,7 @@ Usage: #definition
 Instance: ActiveMethotrexateFeatureLogic
 InstanceOf: $cpg-executablelibrary
 Usage: #definition
+Title: "Active Methotrexate Feature Logic"
 * insert DefinitionMetadata(ActiveMethotrexateFeatureLogic, Library)
 * description = "Case Feature Definition Logic for Active Methotrexate"
 * type = $library-type#logic-library
@@ -33,6 +34,7 @@ Usage: #definition
 Instance: ActiveSulfasalazineFeatureLogic
 InstanceOf: $cpg-executablelibrary
 Usage: #definition
+Title: "Active Sulfasalazine Feature Logic"
 * insert DefinitionMetadata(ActiveSulfasalazineFeatureLogic, Library)
 * description = "Case Feature Definition Logic for Active Sulfasalazine"
 * type = $library-type#logic-library
@@ -41,6 +43,7 @@ Usage: #definition
 Instance: LastCbcPanelReportDateFeatureLogic
 InstanceOf: $cpg-executablelibrary
 Usage: #definition
+Title: "Last CBC Panel Report Date Feature Logic"
 * insert DefinitionMetadata(LastCbcPanelReportDateFeatureLogic, Library)
 * description = "Case Feature Definition Logic for CBC Panel Report Date"
 * type = $library-type#logic-library
@@ -49,6 +52,7 @@ Usage: #definition
 Instance: ApplicabilityLogic
 InstanceOf: $cpg-executablelibrary
 Usage: #definition
+Title: "Applicability Logic"
 * insert DefinitionMetadata(ApplicabilityLogic, Library)
 * description = "Applicability Logic Library"
 * type = $library-type#logic-library
