@@ -40,21 +40,6 @@ define "Missing last CBC result":
   else
     true
 
-define "DEBUG 1 (value)":
-  (LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value)
-
-define "DEBUG 2 (value.value)":
-  (LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value).value
-
-define "DEBUG 3 (exists)":
-  exists(LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date")
-
-define "DEBUG 4 (exists value as dateTime)":
-  exists(LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value as dateTime)
-
-define "DEBUG 5 (exists value as dateTime).value":
-  exists((LastCbcPanelReportDateFeatureLogic."Last CBC Panel Report Date".value as dateTime).value)
-
 /**
  * @description
  * Use case feature expressions to build out applicability

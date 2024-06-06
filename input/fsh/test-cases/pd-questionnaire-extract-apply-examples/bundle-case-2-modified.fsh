@@ -1,6 +1,6 @@
 Instance: BundleCase2Modified
 InstanceOf: Bundle
-Description: "Test case inferred Sulfasalazine and no CBC - with newly asserted Sulfasalazine and CBC observations - Case2"
+Description: "Test case inferred Sulfasalazine and user supplied CBC date - with newly asserted Sulfasalazine and CBC observations - Case2"
 Usage: #example
 * meta.tag = #test
 * type = #collection
