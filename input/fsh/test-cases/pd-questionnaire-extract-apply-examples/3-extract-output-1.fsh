@@ -16,6 +16,5 @@ Usage: #example
 * subject = Reference(Patient1)
 * performer = Reference(OrganizationShared)
 * valueBoolean = true
-* insert EffectiveDateCurrent
 
 
