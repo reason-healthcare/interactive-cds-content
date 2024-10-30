@@ -1,56 +1,54 @@
-Instance: QuestionnaireOutput1
-InstanceOf: Bundle
-Usage: #example
-Description: "Bundle of questionnaires from $questionnaire - Case1"
-* type = #collection
-* insert QuestionnaireBundleEntry(ModularQuestionnaire1)
-* insert QuestionnaireBundleEntry(ActiveSulfasalazineFeatureQuestionnaire1)
-* insert QuestionnaireBundleEntry(LastCbcPanelReportDateFeatureQuestionnaire1)
-
 Instance: ModularQuestionnaire1
 InstanceOf: SDCModularQuestionnaire
 Usage: #example
 * insert QuestionnaireMetaData(ModularQuestionnaire1)
-* extension[+]
-  * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
+* extension[assemble-expectation]
   * valueCode = #assemble-root
 * item[+]
   * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation)
-  * extension[+]
-    * url =  "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+  * extension[SubQuestionnaireExtension]
     * valueCanonical = Canonical(ActiveSulfasalazineFeatureQuestionnaire1)
   * type = #display
   * text = "ActiveSulfasalazineFeature sub-questionnaire"
 * item[+]
   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
-  * extension[+]
-    * url =  "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+  * extension[SubQuestionnaireExtension]
     * valueCanonical = Canonical(LastCbcPanelReportDateFeatureQuestionnaire1)
   * type = #display
   * text = "LastCbcPanelReportDateFeature sub-questionnaire"
+* contained[+] = ActiveSulfasalazineFeatureQuestionnaire1
+* contained[+] = LastCbcPanelReportDateFeatureQuestionnaire1
 
 Instance: ActiveSulfasalazineFeatureQuestionnaire1
 InstanceOf: Questionnaire
-Usage: #example
+Usage: #inline
 * insert QuestionnaireMetaData(ActiveSulfasalazineFeatureQuestionnaire1)
+* extension
+  * url = $launch-context
+  * extension[0]
+    * url = "name"
+    * valueCoding = $launch-context#patient
+  * extension[+]
+    * url = "type"
+    * valueCode = #Patient
 * item[+]
   * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation)
   * text = "Measurements and simple assertions"
   * type = #group
-  * extension[sdc-questionnaire-itemExtractionContext]
-  // CASE ONE
-    * valueCode = #Observation
-  // CASE TWO
-    // * valueExpression
-    //   * language = #text/cql-identifier
-    //   * expression = "On Sulfasalazine" // "On Sulfasalazine Asserted"?
-    //   * reference = Canonical(ActiveSulfasalazineFeatureLogic)
-  // * item representing id of resource to update
+  * extension[ItemPopulationContextExtension]
+    * valueExpression
+      * language = #text/cql-identifier
+      * expression = "On Sulfasalazine"
+      * reference = "http://example.org/Library/ActiveSulfasalazineFeatureLogic"
+      * name = "ActiveSulfasalazineFeature"
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
     * text = "Actual result"
     * type = #boolean
-    * initial.valueBoolean = true
+    * extension[InitialExpressionExtension]
+      * valueExpression
+        * language = #text/cql-expression
+        * expression = "%ActiveSulfasalazineFeature.value[x]"
   * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.status)
     * insert HiddenExtension
@@ -68,14 +66,26 @@ Usage: #example
 
 Instance: LastCbcPanelReportDateFeatureQuestionnaire1
 InstanceOf: Questionnaire
-Usage: #example
+Usage: #inline
 * insert QuestionnaireMetaData(LastCbcPanelReportDateFeatureQuestionnaire1)
+* extension
+  * url = $launch-context
+  * extension[0]
+    * url = "name"
+    * valueCoding = $launch-context#patient
+  * extension[+]
+    * url = "type"
+    * valueCode = #Patient
 * item[+]
   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
   * text = "Measurements and simple assertions"
   * type = #group
-  * extension[sdc-questionnaire-itemExtractionContext]
-    * valueCode = #Observation
+  * extension[ItemPopulationContextExtension]
+    * valueExpression
+      * language = #text/cql-identifier
+      * expression = "Last CBC Panel Report Date"
+      * reference = "http://example.org/Library/LastCbcPanelReportDateFeatureLogic"
+      * name = "LastCbcPanelReportDateFeature"
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.status)
     * insert HiddenExtension
@@ -94,3 +104,7 @@ Usage: #example
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
     * type = #dateTime
+    * extension[InitialExpressionExtension]
+      * valueExpression
+        * language = #text/cql-expression
+        * expression = "%LastCbcPanelReportDateFeature.value[x]"

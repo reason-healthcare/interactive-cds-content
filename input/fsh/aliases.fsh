@@ -63,3 +63,8 @@ Alias: $cpg-reportflagactivity = http://hl7.org/fhir/uv/cpg/StructureDefinition/
 Alias: $cpg-common-process = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process
 Alias: $cpg-recommendation-direction = http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-recommendation-direction
 Alias: $action-type = http://terminology.hl7.org/CodeSystem/action-type
+
+// Questionnaires
+Alias: $launch-context = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext
+Alias: $item-population-context = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext
+Alias: $initial-expression = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression
