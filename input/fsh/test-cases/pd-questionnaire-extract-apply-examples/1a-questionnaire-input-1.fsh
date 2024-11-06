@@ -8,5 +8,5 @@ Usage: #example
   * name = "version"
   * valueString = "0.1.0"
 * parameter[+]
-  * name = "data"
-  * resource = InitialBundle
+  * name = "minimal"
+  * valueBoolean = true
