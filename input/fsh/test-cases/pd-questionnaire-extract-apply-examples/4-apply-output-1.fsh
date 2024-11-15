@@ -1,7 +1,7 @@
-Instance: ApplyOutput1
+Instance: 4ApplyOutput1
 InstanceOf: Bundle
 Usage: #example
-Description: "Output with action.condition that does apply - Case1"
+Description: "Applicability does apply - Case1"
 * type = #collection
 * insert BundleEntry(RequestGroup, RequestGroup1)
 * insert BundleEntry(ServiceRequest, ServiceRequest1)

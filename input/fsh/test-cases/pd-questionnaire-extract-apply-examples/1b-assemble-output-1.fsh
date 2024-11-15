@@ -1,15 +1,15 @@
-Instance: QuestionnaireAssembled1
+Instance: 1bQuestionnaireAssembled1
 InstanceOf: Questionnaire
 Usage: #example
 Description: "Assembeled Questionnaire - Case1"
-* insert QuestionnaireMetaData(QuestionnaireAssembled1)
+* insert QuestionnaireMetaData(1bQuestionnaireAssembled1)
 * extension[sdc-questionnaire-assembledFrom]
   * valueCanonical = "http://questionnaire-processor/Questionnaire/ModularQuestionnaire1"
 * extension[+]
   * url = $launch-context
   * extension[0]
     * url = "name"
-    * valueCoding = $launch-context#patient
+    * valueCoding = $launch-context-codes#patient
   * extension[+]
     * url = "type"
     * valueCode = #Patient
@@ -24,15 +24,6 @@ Description: "Assembeled Questionnaire - Case1"
       * reference = "http://example.org/Library/ActiveSulfasalazineFeatureLogic"
       * name = "ActiveSulfasalazineFeature"
   * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
-    * text = "Actual result"
-    * type = #boolean
-    * initial.valueBoolean = true
-    * extension[InitialExpressionExtension]
-      * valueExpression
-        * language = #text/cql-expression
-        * expression = "%ActiveSulfasalazineFeature.value[x]"
-  * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.status)
     * insert HiddenExtension
     * text = "registered | preliminary | final | amended +"
@@ -46,6 +37,14 @@ Description: "Assembeled Questionnaire - Case1"
     * required = true
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#on-medication-sulfasalazine
+  * item[+]
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
+    * text = "Actual result"
+    * type = #boolean
+    * extension[InitialExpressionExtension]
+      * valueExpression
+        * language = #text/cql-expression
+        * expression = "%ActiveSulfasalazineFeature.value[x]"
 * item[+]
   * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation)
   * text = "Measurements and simple assertions"

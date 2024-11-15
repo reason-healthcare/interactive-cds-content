@@ -1,8 +1,8 @@
-Instance: QuestionnaireResponse2
+Instance: 2QuestionnaireResponse2
 InstanceOf: QuestionnaireResponse
 Usage: #example
-Description: "Questionnaire response with answer to 'Last CBC Report' - Case2"
-* insert QuestionnaireResponseMetaData(QuestionnaireAssembled1)
+Description: "Questionnaire response with modified answer 'Last CBC Report' - Case2"
+* insert QuestionnaireResponseMetaData(1bQuestionnaireAssembled1)
 * subject = Reference(Patient/Patient1)
 * authored = "2023-12-05T11:45:33+11:00"
 * author = Reference(Practitioner/PractitionerShared)
@@ -35,4 +35,4 @@ Description: "Questionnaire response with answer to 'Last CBC Report' - Case2"
   * item[+]
     * insert QuestionnaireItem(LastCbcPanelReportDateFeature, Observation.valueDateTime)
     * text = "Actual result"
-    * insert AnswerValueDate1
+    * insert CBCDateCurrentAnswer

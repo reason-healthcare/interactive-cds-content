@@ -1,29 +1,25 @@
-Instance: ExtractOutput2
+Instance: 3ExtractOutput2
 InstanceOf: Bundle
 Usage: #example
 Description: "Bundle of observations from $extract - Case2"
-* type = #transaction
-* entry[+]
-  * insert BundleEntryPut(ActiveSulfasalazineFeature/ActiveSulfasalazineFeatureObservation1)
-  * resource = ActiveSulfasalazineFeatureObservation1
-* entry[+]
-  * insert BundleEntryPut(LastCbcPanelReportDate/LastCbcPanelReportDateFeatureObservation1)
-  * resource = LastCbcPanelReportDateFeatureObservation1
+* type = #collection
+* insert BundleEntry(ActiveSulfasalazineFeature, ActiveSulfasalazineFeatureObservation2)
+* insert BundleEntry(LastCbcPanelReportDate, LastCbcPanelReportDateFeatureObservation2)
 
-Instance: ActiveSulfasalazineFeatureObservation1
+Instance: ActiveSulfasalazineFeatureObservation2
 InstanceOf: ActiveSulfasalazineFeature
 Usage: #example
-* derivedFrom = Reference(QuestionnaireResponse/QuestionnaireResponse2)
+* derivedFrom = Reference(QuestionnaireResponse/2QuestionnaireResponse2)
 * status = #final
 * code = CaseFeatureCodes#on-medication-sulfasalazine
 * subject = Reference(Patient/Patient1)
 * valueBoolean = true
 
-Instance: LastCbcPanelReportDateFeatureObservation1
+Instance: LastCbcPanelReportDateFeatureObservation2
 InstanceOf: LastCbcPanelReportDateFeature
 Usage: #example
-* derivedFrom = Reference(QuestionnaireResponse/QuestionnaireResponse2)
+* derivedFrom = Reference(QuestionnaireResponse/2QuestionnaireResponse2)
 * status = #final
 * code = CaseFeatureCodes#last-cbc-panel-report-date
 * subject = Reference(Patient/Patient1)
-* insert ValueDateTime1
+* insert CBCDateCurrentValue

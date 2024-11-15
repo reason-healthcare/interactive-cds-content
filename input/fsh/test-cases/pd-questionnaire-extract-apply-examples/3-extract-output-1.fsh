@@ -1,16 +1,14 @@
-Instance: ExtractOutput1
+Instance: 3ExtractOutput1
 InstanceOf: Bundle
 Usage: #example
 Description: "Bundle of observations from $extract - Case1"
-* type = #transaction
-* entry[+]
-  * insert BundleEntryPut(ActiveSulfasalazineFeature/ActiveSulfasalazineFeatureObservation)
-  * resource = ActiveSulfasalazineFeatureObservation
+* type = #collection
+* insert BundleEntry(ActiveSulfasalazineFeature, ActiveSulfasalazineFeatureObservation1)
 
-Instance: ActiveSulfasalazineFeatureObservation
+Instance: ActiveSulfasalazineFeatureObservation1
 InstanceOf: ActiveSulfasalazineFeature
 Usage: #example
-* derivedFrom = Reference(QuestionnaireResponse/QuestionnaireResponse1)
+* derivedFrom = Reference(QuestionnaireResponse/2QuestionnaireResponse1)
 * status = #final
 * code = CaseFeatureCodes#on-medication-sulfasalazine
 * subject = Reference(Patient1)

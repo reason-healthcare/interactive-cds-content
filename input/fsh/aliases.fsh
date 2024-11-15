@@ -66,5 +66,6 @@ Alias: $action-type = http://terminology.hl7.org/CodeSystem/action-type
 
 // Questionnaires
 Alias: $launch-context = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext
+Alias: $launch-context-codes = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 Alias: $item-population-context = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext
 Alias: $initial-expression = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression

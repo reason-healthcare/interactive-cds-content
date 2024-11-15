@@ -1,6 +1,6 @@
-Instance: AssembleParameters1
+Instance: 1bAssembleParameters1
 InstanceOf: Parameters
 Usage: #example
 * parameter[+]
   * name = "questionnaire"
-  * resource = ModularQuestionnaire1
+  * resource = 1aModularQuestionnaire1

@@ -22,7 +22,7 @@ Usage: #example
 * subject = Reference(Patient1)
 * medicationCodeableConcept = $ATC#A07EC01 "Sulfasalazine"
 
-Instance: InitialBundle
+Instance: BundleInitial
 InstanceOf: Bundle
 Description: "Test case inferred Sulfasalazine and no CBC"
 Usage: #example

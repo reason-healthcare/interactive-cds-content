@@ -76,18 +76,8 @@ RuleSet: EffectiveDateTime2
 RuleSet: EffectiveDateCurrent // Use in place of current date from inferred observation
 * effectiveDateTime = "2024-06-06"
 
-RuleSet: ValueDateTime1
-* valueDateTime = "2023-12-04"
-RuleSet: ValueDateTime2
-* valueDateTime = "2023-06-21"
+RuleSet: CBCDateCurrentValue
+* valueDateTime = "2024-12-04"
 
-RuleSet: AnswerValueDate1
-* answer[+].valueDateTime = "2023-12-04"
-RuleSet: AnswerValueDate2
-* answer[+].valueDateTime = "2023-06-21"
-RuleSet: AnswerEffectiveDate1
-* answer[+].valueDateTime = "2021-01-01"
-RuleSet: AnswerEffectiveDate2
-* answer[+].valueDateTime = "2023-06-21"
-RuleSet: AnswerEffectiveDateCurrent
-* answer[+].valueDateTime = "2024-06-06"
+RuleSet: CBCDateCurrentAnswer
+* answer[+].valueDateTime = "2024-12-04"

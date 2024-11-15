@@ -1,7 +1,7 @@
-Instance: ModularQuestionnaire1
+Instance: 1aModularQuestionnaire1
 InstanceOf: SDCModularQuestionnaire
 Usage: #example
-* insert QuestionnaireMetaData(ModularQuestionnaire1)
+* insert QuestionnaireMetaData(1aModularQuestionnaire1)
 * extension[assemble-expectation]
   * valueCode = #assemble-root
 * item[+]
@@ -27,7 +27,7 @@ Usage: #inline
   * url = $launch-context
   * extension[0]
     * url = "name"
-    * valueCoding = $launch-context#patient
+    * valueCoding = $launch-context-codes#patient
   * extension[+]
     * url = "type"
     * valueCode = #Patient
@@ -42,14 +42,6 @@ Usage: #inline
       * reference = "http://example.org/Library/ActiveSulfasalazineFeatureLogic"
       * name = "ActiveSulfasalazineFeature"
   * item[+]
-    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
-    * text = "Actual result"
-    * type = #boolean
-    * extension[InitialExpressionExtension]
-      * valueExpression
-        * language = #text/cql-expression
-        * expression = "%ActiveSulfasalazineFeature.value[x]"
-  * item[+]
     * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.status)
     * insert HiddenExtension
     * text = "registered | preliminary | final | amended +"
@@ -63,6 +55,14 @@ Usage: #inline
     * required = true
     * type = #choice
     * initial.valueCoding = CaseFeatureCodes#on-medication-sulfasalazine
+  * item[+]
+    * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation.valueBoolean)
+    * text = "Actual result"
+    * type = #boolean
+    * extension[InitialExpressionExtension]
+      * valueExpression
+        * language = #text/cql-expression
+        * expression = "%ActiveSulfasalazineFeature.value[x]"
 
 Instance: LastCbcPanelReportDateFeatureQuestionnaire1
 InstanceOf: Questionnaire
@@ -72,7 +72,7 @@ Usage: #inline
   * url = $launch-context
   * extension[0]
     * url = "name"
-    * valueCoding = $launch-context#patient
+    * valueCoding = $launch-context-codes#patient
   * extension[+]
     * url = "type"
     * valueCode = #Patient

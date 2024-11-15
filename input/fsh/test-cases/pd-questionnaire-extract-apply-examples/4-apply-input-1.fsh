@@ -1,4 +1,4 @@
-Instance: ApplyParameters1
+Instance: 4ApplyParameters1
 InstanceOf: Parameters
 Usage: #example
 * parameter[0]

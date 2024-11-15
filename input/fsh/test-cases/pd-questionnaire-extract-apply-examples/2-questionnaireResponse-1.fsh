@@ -1,8 +1,8 @@
-Instance: QuestionnaireResponse1
+Instance: 2QuestionnaireResponse1
 InstanceOf: QuestionnaireResponse
 Usage: #example
 Description: "Questionnaire response with no modified answers - Case1"
-* insert QuestionnaireResponseMetaData(QuestionnaireAssembled1)
+* insert QuestionnaireResponseMetaData(1bQuestionnaireAssembled1)
 * subject = Reference(Patient/Patient1)
 * authored  = "2023-12-06T11:45:33+11:00"
 * author = Reference(Practitioner/PractitionerShared)
