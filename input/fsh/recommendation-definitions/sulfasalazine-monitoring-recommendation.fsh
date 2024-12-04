@@ -20,11 +20,6 @@ Title: "Sulfasalazine Monitoring Recommendation"
     * expression
       * language = #text/cql-identifier
       * expression = "Should order CBC if on Sulfasalazine therapy and missing test"
-  * condition[+]
-    * kind = #applicability
-    * expression
-      * language = #text/cql-identifier
-      * expression = "Should order CBC if on Sulfasalazine therapy and missing test"
   * input[+]
     * type = #Observation
     * profile = Canonical(ActiveSulfasalazineFeature)
