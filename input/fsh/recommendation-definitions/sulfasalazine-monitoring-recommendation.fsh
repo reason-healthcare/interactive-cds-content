@@ -15,7 +15,12 @@ Title: "Sulfasalazine Monitoring Recommendation"
   * extension[$cqf-qualityOfEvidence].valueCodeableConcept = $evidence-quality#high
   * extension[$cqf-strengthOfRecommendation].valueCodeableConcept = $recommendation-strength#strong
   * extension[$cpg-directionOfRecommendation].valueCodeableConcept = $cpg-recommendation-direction#for
-  * condition
+  * condition[+]
+    * kind = #applicability
+    * expression
+      * language = #text/cql-identifier
+      * expression = "Should order CBC if on Sulfasalazine therapy and missing test"
+  * condition[+]
     * kind = #applicability
     * expression
       * language = #text/cql-identifier

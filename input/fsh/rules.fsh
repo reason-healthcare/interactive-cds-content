@@ -1,5 +1,4 @@
 RuleSet: DefinitionMetadata(id, type)
-* extension[knowledgeCapability].valueCode = #computable
 * url = "http://example.org/{type}/{id}"
 * name = "{id}"
 * version = "0.1.0"
@@ -9,10 +8,6 @@ RuleSet: DefinitionMetadata(id, type)
 
 RuleSet: ConformanceMetadata
 * ^meta.profile = $cpg-casefeaturedefinition
-* ^extension[$cpg-knowledgeCapability][+].valueCode = #shareable
-* ^extension[$cpg-knowledgeCapability][+].valueCode = #computable
-* ^extension[$cpg-knowledgeCapability][+].valueCode = #publishable
-* ^extension[$cpg-knowledgeRepresentationLevel].valueCode = #structured
 * ^experimental = true
 * ^publisher = "Acme Co."
 
