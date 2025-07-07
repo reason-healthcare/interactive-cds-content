@@ -10,6 +10,7 @@ Title: "Methotrexate Monitoring Recommendation"
   * citation = "Criswell LA, Saag KG, Sems KM et al. Moderate-term, low-dose corticosteroids for rheumatoid arthritis. Cochrane Database Syst Rev 2000;(2):CD001158 PubMed."
   * url = "https://pubmed.ncbi.nlm.nih.gov/10796420"
 * action
+  * id = "Order monitoring tests for antirheumatic drug therapy (Methotrexate)."
   * title = "Order monitoring tests for antirheumatic drug therapy (Methotrexate)."
   * description = "Order monitoring tests for antirheumatic drug therapy (Methotrexate)."
   * extension[$cqf-qualityOfEvidence].valueCodeableConcept = $evidence-quality#high

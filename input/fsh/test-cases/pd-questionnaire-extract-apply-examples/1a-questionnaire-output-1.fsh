@@ -23,14 +23,14 @@ Instance: ActiveSulfasalazineFeatureQuestionnaire1
 InstanceOf: Questionnaire
 Usage: #inline
 * insert QuestionnaireMetaData(ActiveSulfasalazineFeatureQuestionnaire1)
-* extension
-  * url = $launch-context
-  * extension[0]
-    * url = "name"
-    * valueCoding = $launch-context-codes#patient
-  * extension[+]
-    * url = "type"
-    * valueCode = #Patient
+// * extension
+//   * url = $launch-context
+//   * extension[0]
+//     * url = "name"
+//     * valueCoding = $launch-context-codes#patient
+//   * extension[+]
+//     * url = "type"
+//     * valueCode = #Patient
 * item[+]
   * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation)
   * text = "Measurements and simple assertions"

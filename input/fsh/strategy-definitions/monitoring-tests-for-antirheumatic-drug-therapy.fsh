@@ -44,6 +44,7 @@ Tests should also be performed 2-3 weeks after any increase in drug dose. ESR an
 * If, due to disease activity, major changes have had to be made to the medication or a biological agent or JAK inhibitor has had to be started, follow-up should be started from the beginning again, scheduling visits at 3 and 6 months.
 """
 * action
+  * id = "Recommend monitoring tests for RA therapy"
   * title = "Recommend monitoring tests for RA therapy"
   * description = "Recommend monitoring tests for RA therapy"
   * trigger
@@ -51,11 +52,13 @@ Tests should also be performed 2-3 weeks after any increase in drug dose. ESR an
     * name = "patient-view"
   * code = $cpg-common-process#guideline-based-care
   * action[+]
+    * id = "Recommend testing due to Methotrexate"
     * title = "Recommend testing due to Methotrexate"
     * description = "Recommend testing due to Methotrexate"
     * code = $cpg-common-process#guideline-based-care
     * definitionCanonical = Canonical(MethotrexateMonitoringRecommendation)
   * action[+]
+    * id = "Recommend testing due to Sulfasalazine"
     * title = "Recommend testing due to Sulfasalazine"
     * description = "Recommend testing due to Sulfasalazine"
     * code = $cpg-common-process#guideline-based-care

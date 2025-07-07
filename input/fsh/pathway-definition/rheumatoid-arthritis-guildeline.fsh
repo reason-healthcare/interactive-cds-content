@@ -49,14 +49,17 @@ Title: "Rheumatoid Arthritis Guideline"
 ---
 """
 * action[+]
+  * id = "Beginning of treatment"
   * title = "Beginning of treatment"
   * description = "Strategy for beginning treatment for RA"
   * code = $cpg-common-process#guideline-based-care
 * action[+]
+  * id = "Screening"
   * title = "Screening"
   * description = "Strategy for screening before starting to use immunosuppressive medication"
   * code = $cpg-common-process#guideline-based-care
 * action[+]
+  * id = "Monitoring of treatment"
   * title = "Monitoring of treatment"
   * description = "Strategy for monitoring during antirheumatic medication treatment"
   * code = $cpg-common-process#guideline-based-care

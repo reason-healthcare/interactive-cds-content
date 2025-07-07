@@ -19,3 +19,5 @@ else
 fi
 
 echo "✔️ Done setting up environment."
+
+./_genonce.sh

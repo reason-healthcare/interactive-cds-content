@@ -5,14 +5,14 @@ Description: "Assembeled Questionnaire - Case1"
 * insert QuestionnaireMetaData(1bQuestionnaireAssembled1)
 * extension[sdc-questionnaire-assembledFrom]
   * valueCanonical = "http://questionnaire-processor/Questionnaire/ModularQuestionnaire1"
-* extension[+]
-  * url = $launch-context
-  * extension[0]
-    * url = "name"
-    * valueCoding = $launch-context-codes#patient
-  * extension[+]
-    * url = "type"
-    * valueCode = #Patient
+// * extension[+]
+//   * url = $launch-context
+//   * extension[0]
+//     * url = "name"
+//     * valueCoding = $launch-context-codes#patient
+//   * extension[+]
+//     * url = "type"
+//     * valueCode = #Patient
 * item[+]
   * insert QuestionnaireItem(ActiveSulfasalazineFeature, Observation)
   * text = "Measurements and simple assertions"
